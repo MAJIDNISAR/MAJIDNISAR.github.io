@@ -4,17 +4,17 @@
 # baseurl is the website's URL without the hostname
 
 # If you are building a simple GitHub user page (http://username.github.io) then use these settings:
-url: "http://majidnisar.github.io"
-baseurl: "majidnisar.com"
+url: "http://username.github.io"
+baseurl: ""
 
 # If you are building a GitHub project page then use these settings:
-#url: "MAJIDNISAR/MAJIDNISAR.github.io"
-#baseurl: "/"
+#url: "http://username.github.io/projectname"
+#baseurl: "/projectname"
 
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: MAJIDNISAR.COM
+title: My website
 
 # Short description of your site
 description: A virtual proof that name is awesome!
@@ -25,10 +25,10 @@ description: A virtual proof that name is awesome!
 navbar-links:
   About Me: "aboutme"
   Resources:
-    - MAJIDNISAR WORDPRESS: "http://MAJIDNISAR.WORDPRESS.com"
+    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
     - Learn markdown: "http://www.markdowntutorial.com/"
     - GitHub Pages: "https://pages.github.com/"
-    - Author's home: "http://MAJIDNISAR.com"
+  Author's home: "http://deanattali.com"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
@@ -56,17 +56,17 @@ avatar: "/img/avatar-icon.png"
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
   name: Some Person
-  email: "MAJID@MAJIDNISAR.com"
-  facebook: MAJIDNISAR  # eg. daattali
-  github: MAJIDNISAR   # eg. daattali
-  twitter: MAJIDNISAR   # eg. daattali
+  email: "youremail@domain.com"
+  facebook: yourname  # eg. daattali
+  github: yourname    # eg. daattali
+  twitter: yourname   # eg. daattali
   reddit: yourname    # eg. daattali
-  google-plus: +MAJIDNISAR   # eg. +DeanAttali or 109424658772469020925
-  linkedin: MAJIDNISAR  # eg. daattali
+  google-plus: +yourname   # eg. +DeanAttali or 109424658772469020925
+  linkedin: yourname  # eg. daattali
   xing: yourname      # eg. daattali
   stackoverflow: yourlink  # eg. "3943160/daattali"
-  snapchat: MAJIDNISAR  # eg. daattali
-  instagram: MAJIDNISAR # eg. daattali
+  snapchat: yourname  # eg. daattali
+  instagram: yourname # eg. daattali
   youtube: yourlink   # eg. user/daattali or channel/daattali
   spotify: yourname   # eg. daattali
   telephone: yourphone   # eg. +14159998888
@@ -227,3 +227,4 @@ gems:
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
+
