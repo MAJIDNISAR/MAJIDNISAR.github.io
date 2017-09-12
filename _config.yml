@@ -8,13 +8,13 @@ url: "http://majidnisar.github.io"
 baseurl: ""
 
 # If you are building a GitHub project page then use these settings:
-#url: "http://username.github.io/projectname"
+#url: "http://MAJIDNISAR.github.io/projectname"
 #baseurl: "/projectname"
 
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: Majid Nisar's Website
+title: Majid Nisar.com
 
 # Short description of your site
 description: A virtual proof that name is awesome!
@@ -55,7 +55,7 @@ avatar: "/img/avatar-icon.png"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: Some Person
+  name: MAJID NISAR
   email: "MAJIDNISAR@MAJIDNISAR.com"
   facebook: MAJIDNISAR  # eg. daattali
   github: MAJIDNISAR    # eg. daattali
