@@ -25,12 +25,8 @@ description: A virtual proof that name is awesome!
 navbar-links:
   About Me: "aboutme"
   Resources:
-<<<<<<< HEAD
-        - Learn markdown: "http://www.markdowntutorial.com/"
-=======
     - My word press: "http://majidnisar.wordpress.com/"
     - Learn markdown: "http://www.markdowntutorial.com/"
->>>>>>> 545e37f6bf2028b7ba5cffc0ff686c7d6052b67c
     - GitHub Pages: "https://pages.github.com/"
   Author's home: "http://majidnisar.com"
 
@@ -61,21 +57,21 @@ title-img: "/img/avatar.jpg"
 author:
   name: MAJID NISAR
   email: "MAJIDNISAR@MAJIDNISAR.com"
-  facebook: MAJIDNISAR  # eg. daattali
-  github: MAJIDNISAR    # eg. daattali
-  twitter: MAJIDNISAR   # eg. daattali
-  reddit: yourname    # eg. daattali
-  google-plus: +MAJIDNISAR   # eg. +DeanAttali or 109424658772469020925
-  linkedin: MAJIDNSIAR  # eg. daattali
-  xing: yourname      # eg. daattali
-  stackoverflow: yourlink  # eg. "3943160/daattali"
-  snapchat: MAJIDNISAR  # eg. daattali
-  instagram: MAJIDNISAR # eg. daattali
-  youtube: yourlink   # eg. user/daattali or channel/daattali
-  spotify: yourname   # eg. daattali
-  telephone: yourphone   # eg. +14159998888
-  steam: yourname     # eg. daattali
-  twitch: yourname    # eg. daattali
+  facebook: MAJIDNISAR 
+  github: MAJIDNISAR   
+  twitter: MAJIDNISAR  
+  reddit: yourname   
+  google-plus: +MAJIDNISAR  
+  linkedin: MAJIDNSIAR   
+  xing: yourname     
+  stackoverflow: yourlink  
+  snapchat: MAJIDNISAR  
+  instagram: MAJIDNISAR 
+  youtube: yourlink  
+  spotify: yourname   
+  telephone: yourphone   
+  steam: yourname    
+  twitch: yourname    
   yelp: yourname      # eg. daattali
 
 # Select which links to show in the footer
@@ -108,7 +104,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "MajidNisar.com"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "MajdiNisar.com"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Misc --- #
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
