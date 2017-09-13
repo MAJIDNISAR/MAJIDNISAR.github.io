@@ -222,6 +222,7 @@ prose:
           label: "Publish"
           help: "Check to publish post, uncheck to hide."
 
+theme: jekyll-theme-cayman
 gems:
   - jekyll-paginate
 
