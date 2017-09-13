@@ -25,7 +25,12 @@ description: A virtual proof that name is awesome!
 navbar-links:
   About Me: "aboutme"
   Resources:
+<<<<<<< HEAD
         - Learn markdown: "http://www.markdowntutorial.com/"
+=======
+    - My word press: "http://majidnisar.wordpress.com/"
+    - Learn markdown: "http://www.markdowntutorial.com/"
+>>>>>>> 545e37f6bf2028b7ba5cffc0ff686c7d6052b67c
     - GitHub Pages: "https://pages.github.com/"
   Author's home: "http://majidnisar.com"
 
@@ -35,7 +40,7 @@ avatar: "/img/avatar.jpg"
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
-# title-img: /path/to/image
+title-img: "/img/avatar.jpg"
 
 # --- Background colour/image options --- #
 
