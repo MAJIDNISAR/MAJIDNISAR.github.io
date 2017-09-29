@@ -25,6 +25,7 @@ description: A virtual proof that name is awesome!
 navbar-links:
   About Me: "aboutme"
   Resources:
+    - My Posts:"http://majidnisar.com"
     - My word press: "http://majidnisar.wordpress.com/"
     - Learn markdown: "http://www.markdowntutorial.com/"
     - GitHub Pages: "https://pages.github.com/"
@@ -67,7 +68,7 @@ author:
   stackoverflow: yourlink  
   snapchat: MAJIDNISAR  
   instagram: MAJIDNISAR 
-  youtube: yourlink  
+  youtube: MAJIDNISAR  
   spotify: yourname   
   telephone: yourphone   
   steam: yourname    
