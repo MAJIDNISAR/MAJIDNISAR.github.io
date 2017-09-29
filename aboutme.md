@@ -2,6 +2,7 @@
 layout: page
 title: About me
 subtitle: Why you'd want to go on a date with me
+bigimg:me.jpg
 ---
 
 My name is Majid Nisar. My experiences have taught a lot in the journey called life:
