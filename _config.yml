@@ -73,7 +73,7 @@ author:
   steam: yourname    
   twitch: yourname    
   yelp: yourname      # eg. daattali
-  instagram:majidnisar
+  instagram: majidnisar
 
 # Select which links to show in the footer
 footer-links-active:
@@ -81,21 +81,21 @@ footer-links-active:
   facebook: true
   email: true
   twitter: true
-  google-plus: false
+  google-plus: true
   github: true
   reddit: false
-  linkedin: false
+  linkedin: true
   xing: false
   stackoverflow: false
   snapchat: false
-  instagram: false
+  instagram: true
   youtube: false
   spotify: false
   telephone: false
   steam: false
   twitch: false
   yelp: false
-  instagram: true 
+  
 
 # Select which share links to show in posts
 share-links-active:
