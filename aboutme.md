@@ -16,3 +16,4 @@ What else do you need?
 ### My Other Site
 
 To be honest, I'm having some trouble remembering right now, so why don't you just watch [my wordpress site](http://majidnisar.wordpress.com) and it will answer **all** your questions.
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
