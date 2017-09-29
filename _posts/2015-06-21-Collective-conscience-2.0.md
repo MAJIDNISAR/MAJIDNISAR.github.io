@@ -4,9 +4,6 @@ title: Collective Conscience 2.0
 subtitle: ... (Kante say Kanta Nikalna)
 ---
 
-Collective Conscience 2.0
-(Kante say Kanta Nikalna)
-Majid Nisar
 With the Right wing Government setting its feet at the throne, Indian Collective conscience, took a swing rightwards to collective conscience 2.0, so did the policies and policy makers. This shift in collective conscience has led to a paradigm shift in every area of the governance.
 Be it the MHRD minister asking for a change in study material, where focus would be on Hindu rulers and their contribution, to yoga being made essential part of curricula across the country, to the controversial “surya namaskaar”. To statements being made “people of the other faith should move to Pakistan” and even for the first time a Defense ministers openly advocated  the use of terrorism in another country on the pretext of preventing terrorism, the proverbial “Kante say Kanta Nikalna”, using an evil to stop another evil from happening. In another case infringing the border of another country to kill the citizens of that country and then boasting about it.  And to take situation from bad to worse issuing statements like the Indian army’s importance has diminished because the country hasn’t gone to battle in the past 40-50 years by the honorable defense minister
 But one logical Indian would think that it’s the neighboring country the honorable minister is talking about and not about the people and the state which country says is the integral part of it. But then again the treatment dealt to the very essence of democracy where you can have a separate ideology is far too great, be it development, be it any facet of life you would see situation growing from bad to worse.
