@@ -20,4 +20,3 @@ He also said that, “UJC strongly condemns these killings, and are dead sure th
 And mostly importantly the side of local sources and the families of the victims have blamed Indian agencies on two counts either they have failed to protect them or are directly involved in cold and calculated murder to strike fear among the people who are among last of their kind in fighting a battle of ideologies of freedom against tyranny and occupation.
 According to Syed Ali Shah Geelani in an analogy, it is the responsibility of the state to protect and provide for the people in prison be it security.
 But Kashmir is becoming an open prison, a Petri dish for experimenting right wing ideology. Indian classic model of a bouquet is fast being crushed under the feet of the right wing ideology and turned into a melting pot model where you have to lose your religion to be a Hindu to be called an Indian.
-
