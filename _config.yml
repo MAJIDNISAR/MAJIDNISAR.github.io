@@ -23,7 +23,7 @@ description: A virtual proof that name is awesome!
 
 # List of links in the navigation bar
 navbar-links:
-  My Posts:"http://majidnisar.com"
+  My Post: "http://majidnisar.com"
   About Me: "aboutme"
   Resources:    
     - My word press: "http://majidnisar.wordpress.com/"
