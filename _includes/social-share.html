@@ -45,6 +45,14 @@
       <span class="sr-only">LinkedIn</span>
     </a>
   {% endif %}
+  {% if site.share-links-active.instagram %}
+  <!--- Share on Instagram -->
+    <a href="https://www.instagram.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}"
+      class="btn btn-social-icon btn-instagram" title="Share on Instagram">
+      <span class="fa fa-fw fa-instagram" aria-hidden="true"></span>
+      <span class="sr-only">Instagram</span>
+    </a>
+  {% endif %}
 
 </section>
 
