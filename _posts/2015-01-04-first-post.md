@@ -5,4 +5,7 @@ image: /img/hello_world.jpeg
 tags: [random, exciting-stuff]
 ---
 
-This is my first post, how exciting!
+Asalamu Alaikum World,
+This is my first post, this is just a starting point ...
+Goodthings In sha ALLAH will follow
+
