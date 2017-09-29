@@ -23,9 +23,9 @@ description: A virtual proof that name is awesome!
 
 # List of links in the navigation bar
 navbar-links:
+  My Posts:"http://majidnisar.com"
   About Me: "aboutme"
-  Resources:
-    - My Posts:"http://majidnisar.com"
+  Resources:    
     - My word press: "http://majidnisar.wordpress.com/"
     - Learn markdown: "http://www.markdowntutorial.com/"
     - GitHub Pages: "https://pages.github.com/"
