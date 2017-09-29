@@ -1,0 +1,26 @@
+---
+layout: post
+title: Collective Conscience 2.0
+subtitle: ... (Kante say Kanta Nikalna)
+---
+
+Collective Conscience 2.0
+(Kante say Kanta Nikalna)
+Majid Nisar
+With the Right wing Government setting its feet at the throne, Indian Collective conscience, took a swing rightwards to collective conscience 2.0, so did the policies and policy makers. This shift in collective conscience has led to a paradigm shift in every area of the governance.
+Be it the MHRD minister asking for a change in study material, where focus would be on Hindu rulers and their contribution, to yoga being made essential part of curricula across the country, to the controversial “surya namaskaar”. To statements being made “people of the other faith should move to Pakistan” and even for the first time a Defense ministers openly advocated  the use of terrorism in another country on the pretext of preventing terrorism, the proverbial “Kante say Kanta Nikalna”, using an evil to stop another evil from happening. In another case infringing the border of another country to kill the citizens of that country and then boasting about it.  And to take situation from bad to worse issuing statements like the Indian army’s importance has diminished because the country hasn’t gone to battle in the past 40-50 years by the honorable defense minister
+But one logical Indian would think that it’s the neighboring country the honorable minister is talking about and not about the people and the state which country says is the integral part of it. But then again the treatment dealt to the very essence of democracy where you can have a separate ideology is far too great, be it development, be it any facet of life you would see situation growing from bad to worse.
+
+In wake of the civilian killings, in north Kashmir, which began on May 25th when unknown gunmen killed a BSNL Franchise, where there have been 6 killings in 22 days, situation of fear and terror has been created by the accounts of people living in the area it’s a curfew like situation every day here.
+On Monday June 15, 2015, the death ran one more lap in the northern Kashmir again in sopore as a suspected militant was shot dead. Aijaz Ahmad Reshi was shot dead by unknown gunmen in Mundji area of Sopore. Resh was the second former militant to be killed in the town since Sunday. Mairaj-ul-din Dar was shot near his shop at Badami Bagh in Sopore. He was rushed to a nearby hospital, where he died. Dar was a former member of the Jammu and Kashmir Liberation Front (JKLF) who had become a petty businessman and was running a poultry farm.
+The killing occurred just two days after another shopkeeper, Altaf-ul-Rahman, was shot by suspected militants on Friday night. A government employee, who was an activist of the hardline Hurriyat conference, was killed on Tuesday. Baramulla observed a shutdown over the killing of Altaf-ul-Rahman.
+The situation is so palpable and tense that while taking a stroll on the road it’s a ghost town, and there is an uneasy calm before the storm and people hope, pray that there should not be any further killings in the area to further the situation in darkness and chaos.
+
+On one side, the police version of the story is that killing were carried out by militants according to the DIG of police Gareeb Daas. Police earlier claimed they had identified some local youngsters associated with the indigenous terror group Hizbul Mujahideen who were targeting telecom workers and infrastructure in a string of attacks that began last month, disrupting communications in the trouble-torn state. Police had earlier said the Lashkar-e-Islam is a front for the Hizb, though Hizbul Mujahideen chief Syed Salauddin had condemned the attacks. 
+On the other side, in a statement today to CNS, United Jahad Council spokesman Syed Sadaqat Hussain quoting UJC chief Syed Salahuddin said, “Civilian Killings in Sopore is a plot of Indian defense minister Manohar Parrikar which is aimed at intimidating and killing of pro-freedom people in Kashmir. State Police and Task Force and the paid agents of India are part of his dreadful and shameful plot.”
+He also said that, “UJC strongly condemns these killings, and are dead sure that such tactics are adopted by Modi government and its allied government lead by Mufti Mohammed Sayed can’t weaken the resolve of freedom loving people of Kashmir. Kashmiri people understand these tactics and conspiracies. Defense minister is trying hard to revive the kuka parrey era in Kashmir.”
+
+And mostly importantly the side of local sources and the families of the victims have blamed Indian agencies on two counts either they have failed to protect them or are directly involved in cold and calculated murder to strike fear among the people who are among last of their kind in fighting a battle of ideologies of freedom against tyranny and occupation.
+According to Syed Ali Shah Geelani in an analogy, it is the responsibility of the state to protect and provide for the people in prison be it security.
+But Kashmir is becoming an open prison, a Petri dish for experimenting right wing ideology. Indian classic model of a bouquet is fast being crushed under the feet of the right wing ideology and turned into a melting pot model where you have to lose your religion to be a Hindu to be called an Indian.
+
