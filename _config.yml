@@ -73,6 +73,7 @@ author:
   steam: yourname    
   twitch: yourname    
   yelp: yourname      # eg. daattali
+  instagram:majidnisar
 
 # Select which links to show in the footer
 footer-links-active:
@@ -94,6 +95,7 @@ footer-links-active:
   steam: false
   twitch: false
   yelp: false
+  instagram: true 
 
 # Select which share links to show in posts
 share-links-active:
@@ -101,6 +103,7 @@ share-links-active:
   facebook: true
   google: false
   linkedin: true
+  instagram: true
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
