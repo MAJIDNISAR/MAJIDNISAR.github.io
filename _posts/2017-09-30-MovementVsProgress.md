@@ -2,11 +2,12 @@
 layout: post
 title: Note to Self
 image: /img/methinking.jpg
-subtitle: "Dont Confuse Movement with progress"***"Growth is the only Guarantee, that tomorrow is going to be better"
+subtitle: "Dont Confuse Movement with progress...Growth is the only Guarantee, that tomorrow is going to be better"
 bigimg: /img/movementvsprogress.jpg
 ---
 
 #NoteToSelf
+***
 "Dont Just Inspire to make a Living , Inspire to make a Difference,
 Any thing you want ,Good, you can have , claim it , work hard to get it, 
 when you get it,reach back, pull some one else  up
