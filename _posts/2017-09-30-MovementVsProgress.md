@@ -8,7 +8,9 @@ bigimg: /img/movementvsprogress.jpg
 
 #NoteToSelf
 ***
-&quot; **Don&#39;t Just Inspire to make a Living, Inspire to make a Difference** ,
+
+
+&quot;Don&#39;t Just Inspire to make a Living, Inspire to make a Difference** ,
 
 Anything you want, good, you can have, claim it, work hard to get it,
 
