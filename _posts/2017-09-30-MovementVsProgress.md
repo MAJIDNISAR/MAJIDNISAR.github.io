@@ -7,8 +7,6 @@ bigimg: /img/movementvsprogress.jpg
 ---
 
 #NoteToSelf
-***
-
 
 &quot;Don&#39;t Just Inspire to make a Living, Inspire to make a Difference,
 
