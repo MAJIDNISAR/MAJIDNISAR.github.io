@@ -7,24 +7,41 @@ bigimg: /img/movementvsprogress.jpg
 ---
 
 #NoteToSelf
-my education never stopped, my gorwth never stopped, it hasnt finished
 
-i am discovering me every day with limitations and powers,
+I have made my peace, emptied my buckets...
 
-i am becoming me every day with addon and new layers 
+I have emptied my quirks, pulled out my pockets...
+
+I have nothing that drags me, pulls me, or holds me down
+
+I smile more, live more , at times die more but no more frown
+
+I pray more , love more , wait more, endure in silence more
+
+I own more, more of faults, more of my mistakes, patience galore
+
+I fail more, i try more, listen more, i try harder more,
+
+I fail again , i try more again, i push more, failure is accepted
+
+Not accepted as an impedence to my growth, my studies might have finished
+
+My education never stopped, my gorwth never stopped, it hasnt finished
+
+I am discovering me every day with limitations and powers,
+
+I am becoming me every day with addon and new layers 
 
 My existence is pushing my ego, yet i am trying to strech my servant towel
 
-i want it to exist more than my ego, i want my ego to be less than my towel
+I want it to exist more than my ego, i want my ego to be less than my towel
 
-i looking for that broom to clean every day , of quirks , of fake ego
+I looking for that broom to clean every day , of quirks , of fake ego
 
-i want to clean it every day , so i become a mirrow that always tells the truth
-
-i want to be like that shadow that never leaves... 
-
-perfume that is subtle but always there in existence to lift your mood and your spirits
+I want to clean it every day , so i become a mirrow that always tells the truth
 
 That makes you to fall in love all over again...
+
+
 
 -Majid Nisar
