@@ -6,7 +6,7 @@ subtitle: "By Majid Nisar"
 bigimg: /img/movementvsprogress.jpg
 ---
 
-# Fallacies of I, Me, Myself, My World and Educated Mind
+# Fallacies of I Me Myself My World and Educated Mind
 
 #### By Majid Nisar
 
