@@ -13,6 +13,7 @@ bigimg: /img/movementvsprogress.jpg
 ------
 
 > *Trappings of crystal heart,*
+
 > *That it fears breaking,*
 >
 > *It lacks the leap of faith,*
