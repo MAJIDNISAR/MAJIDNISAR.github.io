@@ -125,7 +125,7 @@ bigimg: /img/movementvsprogress.jpg
 
 ------
 
-> *I remember a quote which my father a taught me for my farewell speech,*
+> *I remember a quote which my father taught me for my farewell speech,*
 >
 > *As the CR of my outgoing 10th Class in CMP High School,*
 >
