@@ -38,13 +38,13 @@ bigimg: /img/movementvsprogress.jpg
 >
 > *With accepted level of significances,*
 >
-> *Wise look to history /time,*
+> *Wise look to history / time,*
 >
 > *Which is ample proof in itself testifying,*
 >
-> *The Rabbis of education should look to educationitself,*
+> *The Rabbis of education should look to education itself,*
 >
-> *It has taken too many U-turns, and will take one toHIS Time,*
+> *It has taken too many U-turns, and will take one to HIS Time,*
 >
 >  
 >
@@ -82,13 +82,13 @@ bigimg: /img/movementvsprogress.jpg
 >
 > *There are destinations beyond this world...*
 >
-> *For travelling to proximal abys is destiny &destination.*
+> *For travelling to proximal abys is destiny & destination.*
 >
 >  
 >
 > *Oh my self, the fallacy of the self is as such,*
 >
-> *If I Could not be, the best worldly me, what could Ibe???.*
+> *If I Could not be, the best worldly me, what could I be???.*
 >
 > *If I could not be an achiever, what could I be???*
 >
