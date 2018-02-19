@@ -12,7 +12,7 @@ bigimg: /img/movementvsprogress.jpg
 
 ------
 
-> *"I have looked down the saddest city lane.
+> "I have looked down the saddest city lane.
 > I have passed by the watchman on his beat
 > And dropped my eyes, unwilling to explain."*
 
@@ -35,7 +35,7 @@ bigimg: /img/movementvsprogress.jpg
 > Proclaimed the time was neither wrong nor right. 
 > I have been one acquainted with the night.”
 >
-> [Robert Frost]*
+> [Robert Frost]
 
 
 
