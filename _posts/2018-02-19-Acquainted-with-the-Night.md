@@ -14,9 +14,9 @@ bigimg: /img/movementvsprogress.jpg
 
 > "I have looked down the saddest city lane.
 > I have passed by the watchman on his beat
-> And dropped my eyes, unwilling to explain."*
+> And dropped my eyes, unwilling to explain."
 
-> *I have been one acquainted with the night.
+> I have been one acquainted with the night.
 > I have walked out in rain—and back in rain.
 > I have outwalked the furthest city light.
 >
