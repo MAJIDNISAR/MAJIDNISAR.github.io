@@ -7,8 +7,8 @@ bigimg:me.jpg
 
 My name is Majid Nisar. My experiences have taught a lot in the journey called life:
 
-- I am working as Project Manager Eresolute Consultancy and services
-- I'm a guest faculty for computer science at Islamic University of Science & Technology
+- I am working as solutions Architect previously Senior Project Manager Eresolute Consultancy and services
+- I have been a guest faculty for computer science at Islamic University of Science & Technology
 - I have worked as an Assistant Professor of Computer Science and Information Technology for more than 5 years at Islamic University of Science & Technology
 
 What else do you need?
