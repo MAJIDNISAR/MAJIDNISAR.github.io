@@ -1,3 +1,9 @@
+---
+layout: post
+title: About me
+subtitle: Why you'd want to go on a date with me
+bigimg:me.jpg
+---
 As November approaches, the beautiful vale of Kashmir is enveloped in a fiery shade of crimson thrown by the majestic Chinar Tree.
 
 Locally known as "Booin",  the tree is at its magnificent best during the autumnal season. Its matchless beauty has never failed to mesmerize famous personalities of all eras. The poet of the East, Allama Iqbal traces the warmth of the Kashmiri soil to the "blaze of the Chinars it nurses in its bosom".
