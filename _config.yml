@@ -24,13 +24,14 @@ description: A Humble Beginning!
 
 # List of links in the navigation bar
 navbar-links:
-  My Post: "http://majidnisar.com"
+  Kaeshur Quran : "https://majidnisar.github.io/KashurQuran/"
+  My Post: "http://majidnisar.github.io"
   About Me: "aboutme"
   Resources:    
     - My word press: "http://majidnisar.wordpress.com/"
     - Learn markdown: "http://www.markdowntutorial.com/"
     - GitHub Pages: "https://pages.github.com/"
-  Author's home: "http://majidnisar.com"
+  Author's home: "http://majidnisar.github.io"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
