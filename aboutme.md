@@ -5,15 +5,14 @@ subtitle: Why you'd want to go on a date with me
 bigimg:me.jpg
 ---
 
-My name is Majid Nisar. My experiences have taught a lot in the journey called life:
+Peace! Asalamu Alaikum Warahmatullah Wabarakathu,
+My name is Majid Nisar and I am an eternal student of life:
 
-- I am working as solutions Architect previously Senior Project Manager Eresolute Consultancy and services
-- I have been a guest faculty for computer science at Islamic University of Science & Technology
+- I am working V.P technology, earlier discharged my duties as  Solutions Architect and before that Senior Project Manager Eresolute Consultancy and services LLC.
+- I have been a guest faculty for Computer Science and Information & Technology at Islamic University of Science & Technology
 - I have worked as an Assistant Professor of Computer Science and Information Technology for more than 5 years at Islamic University of Science & Technology
 
 What else do you need?
 
-### My Other Site
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my wordpress site](http://majidnisar.wordpress.com) and it will answer **all** your questions.
+### Nature is an Inspiration for a learner
 ![m'lady](/img/Me.jpg)
