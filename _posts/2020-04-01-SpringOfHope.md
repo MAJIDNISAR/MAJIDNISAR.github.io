@@ -29,7 +29,6 @@ Spring of Hope,
 
 **It Always has.**..
 ---
-
 > Spring Will Find a way,
 
 > It Always Has...
@@ -59,9 +58,7 @@ Spring of Hope,
 > Our Beloved Homes...
 
 > It Always Has...
-
->
-> 
+ 
 >
 > Spring will Find a way,
 
@@ -73,12 +70,12 @@ Spring of Hope,
 
 > It Always Has...
 
->
+
 > Spring Will Find a Way,
 
 > Through the Autumns,
 
-> our Chinas, a flame within us
+> our Chinars, a flame within us
 
 > It Always Has ...
 
