@@ -2,7 +2,7 @@
 layout: post
 title: Kashur Quran
 subtitle: A Kashmiri Quran translation by Mulana Mohammad Yousuf Shah Saeb (Rahmatullah-i-Allah)
-bigimg:me.jpg
+bigimg:kashurquran.png
 
 ---
 
