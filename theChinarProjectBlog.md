@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: Chinar Project Blog
+subtitle:a fiery shade of crimson
 bigimg:me.jpg
 ---
 As November approaches, the beautiful vale of Kashmir is enveloped in a fiery shade of crimson thrown by the majestic Chinar Tree.
