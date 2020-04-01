@@ -18,7 +18,7 @@ bigimg:me.jpg
 
 ### BROWSING SURAHS ON THIS WEBSITE
 
-#### We have redesigned the website with a user friendly approach in mind. To browse through the surahs in data table, click on the button in the audio column to play the surah of the Quran and in download column, one can download the Surah of Quran as well. In future iterations, we will be integrating more search and audio features In Sha Allah. If you have any suggestions on how we can make the website a better experience please do not hesitate to [contact us](https://mailto:majidnisar@gmail.com?Subject=ContactUs-KashurQuran).
+#### We have redesigned the website with a user friendly approach in mind. To browse through the surahs in data table, click on the button in the audio column to play the surah of the Quran and in download column, one can download the Surah of Quran as well. In future iterations, we will be integrating more search and audio features In Sha Allah. If you have any suggestions on how we can make the website a better experience please do not hesitate to [contact us](https://mailto:majidnisar@gmail.com?Subject=ContactUs%20KashurQuran).
 
 ### **CREDITS**
 
