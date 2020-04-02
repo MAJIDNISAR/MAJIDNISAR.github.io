@@ -5,8 +5,8 @@
 
 # If you are building a simple GitHub user page (http://username.github.io) then use these settings:
 #url: "http://majidnisar.github.io"
-url: "http://majidnisar.github.io"
-baseurl: ""
+url: "https://www.majidnisar.com"
+baseurl: "https://majidnisar.com"
 
 # If you are building a GitHub project page then use these settings:
 #url: "http://MAJIDNISAR.github.io/projectname"
@@ -24,14 +24,14 @@ description: A Humble Beginning!
 
 # List of links in the navigation bar
 navbar-links:
-  Kaeshur Quran : "https://majidnisar.github.io/KashurQuran/"
-  My Post: "http://majidnisar.github.io"
+  Kaeshur Quran : "https://majidnisar.com/KashurQuran/"
+  My Post: "https://majidnisar.com"
   About Me: "aboutme"
   Resources:    
-    - My word press: "http://majidnisar.wordpress.com/"
+    - My word press: "https://majidnisar.wordpress.com/"
     - Learn markdown: "http://www.markdowntutorial.com/"
     - GitHub Pages: "https://pages.github.com/"
-  Author's home: "http://majidnisar.github.io"
+  Author's home: "https://majidnisar.com"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
