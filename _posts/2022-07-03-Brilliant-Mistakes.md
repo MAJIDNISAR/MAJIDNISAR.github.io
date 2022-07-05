@@ -37,3 +37,7 @@ Making and learning from brilliant mistakes entails a disciplined process of del
 4.	Create strategies for making mistakes. If you always spend 70% of your marketing dollars on traditional media, consider spending a greater portion on social media. If you use interviews to identify appropriate job candidates, consider using a combination of testing and interviews. Think the way advertising legend David Ogilvy did; he ran a few ads that he thought would not work, just to test his thinking.
 5.	Execute the mistake efficiently. Ogilvy would just run a few of his “loser” ads, not many. The goal is to fail quickly and inexpensively.
 6.	Learn from the outcome using a forensic mindset. Note all unexpected outcomes of your test, even those that seem minor or peripheral. Then think deeply about what these deviations from expectation tell you — generate multiple hypotheses for each and run further tests to understand them. Be persistent the way scientists, journalists, and forensic specialists are.
+
+Inspiration: Brilliant Mistakes: Finding Success on the Far Side of Failure
+
+[Link to Book: Brilliant Mistakes](https://www.amazon.in/Brilliant-Mistakes-Finding-Success-Failure/dp/1613630123)
