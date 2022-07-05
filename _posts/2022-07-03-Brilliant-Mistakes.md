@@ -11,7 +11,7 @@ bigimg: /img/movementvsprogress.jpg
 
 #### By Majid Nisar
 
-- **<u>*F*</u>irst**    **<u>*A*</u>ttempt**   **<u>*I*</u>n**   **<u>*L*</u>earning**
+**FAIL**  = **F**irst **A**ttempt **I**n **L**earning   
 
 **THE GOAL:**
 
