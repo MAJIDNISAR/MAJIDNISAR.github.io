@@ -3,13 +3,25 @@
 # set up your website you should go through all these settings and edit them, but after
 # the initial set up you won't need to come back to this file often.
 
-# --- Required options --- #
+# url is the full website URL
+# baseurl is the website's URL without the hostname
+
+# If you are building a simple GitHub user page (http://username.github.io) then use these settings:
+#url: "http://majidnisar.github.io"
+url: "https://www.majidnisar.com"
+baseurl: ""
+
+# If you are building a GitHub project page then use these settings:
+#url: "http://MAJIDNISAR.github.io/projectname"
+#baseurl: "/projectname"
+
+# Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: MAJID NISAR.COM
+title: Majid Nisar.com
 
-# Your name to show in the footer
-author: MAJID NISAR
+# Short description of your site
+description: A Humble Beginning!
 
 # --- List of links in the navigation bar --- #
 
@@ -27,14 +39,14 @@ navbar-links:
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/assets/img/avatar.png"
+avatar: "/img/avatar.jpg"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: true
 
 # If you want to have an image logo in the top-left corner instead of having the title of the website,
 # then specify the following parameter
-#title-img: /path/to/image
+title-img: "/img/avatar.jpg"
 
 
 # --- Footer social media links --- #
@@ -46,17 +58,17 @@ social-network-links:
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
   facebook: MAJIDNISAR
   github: MAJIDNISAR
-  twitter: MAJIDNISR
+  twitter: MAJIDNISAR
   patreon: MAJIDNISAR
   youtube: c/MAJIDNISAR
-  medium: MAJIDNISAR
+#  medium: yourname
 #  reddit: yourname
-  linkedin: MAJIDNISAR
+#  linkedin: daattali
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
 #  instagram: deanat78
-  spotify: MAJIDNISAR
+#  spotify: yourname
 #  telephone: +14159998888
 #  steam: deanat78
 #  twitch: yourname
@@ -70,9 +82,53 @@ social-network-links:
 #  kaggle: yourname
 #  hackerrank: yourname
 
+# Change all these values or delete the ones you don't want.
+# Important: you must keep the "name" parameter, everything else you can remove
+author:
+  name: MAJID NISAR
+  email: 
+  facebook: MAJIDNISAR 
+  github: MAJIDNISAR   
+  twitter: MAJIDNISAR  
+  reddit: yourname   
+  google-plus: +MAJIDNISAR  
+  linkedin: MAJIDNSIAR   
+  xing: yourname     
+  stackoverflow: yourlink  
+  snapchat: MAJIDNISAR  
+  instagram: MAJIDNISAR 
+  youtube: MAJIDNISAR  
+  spotify: yourname   
+  telephone: yourphone   
+  steam: yourname    
+  twitch: yourname    
+  yelp: yourname      # eg. daattali
+  instagram: majidnisar
+
+# Select which links to show in the footer
+footer-links-active:
+  rss: false
+  facebook: true
+  email: true
+  twitter: true
+  google-plus: true
+  github: true
+  reddit: false
+  linkedin: true
+  xing: false
+  stackoverflow: false
+  snapchat: false
+  instagram: true
+  youtube: false
+  spotify: false
+  telephone: false
+  steam: false
+  twitch: false
+  yelp: false
+  
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
-rss-description: A Humble Beginning!
+rss-description: This website is a virtual proof that I'm awesome
 
 # --- General options --- #
 
@@ -80,12 +136,21 @@ rss-description: A Humble Beginning!
 share-links-active:
   twitter: true
   facebook: true
+  google: true
+  instagram: true
   linkedin: true
   vk: false
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "MajidNisar.com"
+
+# --- Misc --- #
+# Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
+disqus: "majidnisar-com"
+
+# Fill in your Google Analytics ID to track your website using GA
+google_analytics: "G-7QFLGNJJWC"
+url-pretty: "MajidNisar.Com"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
 excerpt_length: 50
@@ -121,7 +186,7 @@ footer-hover-col: "#0085A1"
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour
 
-navbar-img: "/assets/img/avatar.png"
+#navbar-img: "/assets/img/bgimage.png"
 #footer-img: "/assets/img/bgimage.png"
 #page-img: "/assets/img/bgimage.png"
 
@@ -139,13 +204,13 @@ navbar-img: "/assets/img/avatar.png"
 # --- Web Analytics Section --- #
 
 # Fill in your Google Analytics gtag.js ID to track your website using gtag
-gtag: "G-3WBJ12R9ED"
+#gtag: ""
 
 # Fill in your Google Analytics ID to track your website using Google Analytics
-google_analytics: "G-3WBJ12R9ED"
+#google_analytics: ""
 
 # Fill in your Cloudflare Analytics beacon token to track your website using Cloudflare Analytics
-#cloudflare_analytics: ""
+cloudflare_analytics: "G-3WBJ12R9ED"
 
 # Google Tag Manager ID
 gtm: "G-3WBJ12R9ED"
@@ -161,7 +226,7 @@ gtm: "G-3WBJ12R9ED"
 # --- Comments --- #
 
 # To use Disqus comments, sign up to https://disqus.com and fill in your Disqus shortname (NOT the userid)
-disqus: "majidnisar-com"
+#disqus: "majidnisar-com"
 
 # To use Facebook Comments, create a Facebook app and fill in the Facebook App ID
 #fb_comment_id: ""
@@ -259,3 +324,4 @@ exclude:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
+
