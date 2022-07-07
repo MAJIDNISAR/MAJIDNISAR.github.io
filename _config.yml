@@ -136,7 +136,7 @@ rss-description: This website is a virtual proof that I'm awesome
 share-links-active:
   twitter: true
   facebook: true
-  google: false
+  google: true
   instagram: true
   linkedin: true
   vk: false
@@ -210,7 +210,7 @@ footer-hover-col: "#0085A1"
 #google_analytics: ""
 
 # Fill in your Cloudflare Analytics beacon token to track your website using Cloudflare Analytics
-#cloudflare_analytics: ""
+cloudflare_analytics: "G-3WBJ12R9ED"
 
 # Google Tag Manager ID
 gtm: "G-3WBJ12R9ED"
@@ -226,7 +226,7 @@ gtm: "G-3WBJ12R9ED"
 # --- Comments --- #
 
 # To use Disqus comments, sign up to https://disqus.com and fill in your Disqus shortname (NOT the userid)
-#disqus: ""
+#disqus: "majidnisar-com"
 
 # To use Facebook Comments, create a Facebook app and fill in the Facebook App ID
 #fb_comment_id: ""
