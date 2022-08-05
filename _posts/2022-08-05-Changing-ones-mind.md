@@ -1,7 +1,7 @@
 ---
 title: "Changing One's Mind"
 subtitle: "Changing One's Mind: A new approach"
-thumbnail-img: "/assets/img/blog/changingOnesMind/useThis.webp"
+thumbnail-img: "/assets/img/blog/changing-ones-mind/useThis.webp"
 tags: [changing,ones,mind,new, approach, github actions, tutorial, youtube]
 permalink: /blog/changing-ones-mind/
 date: 2022-08-05 12:00:00 -0500
