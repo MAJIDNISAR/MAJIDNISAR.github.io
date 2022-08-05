@@ -1,13 +1,12 @@
 ---
 layout: post
 title: Note to Self
-image: /img/methinking.jpg
+image: /assets/img/methinking.jpg
 subtitle: "Purposeful Thinking!"
-cover-img
-: /img/movementvsprogress.jpg
+cover-img: /assets/img/movementvsprogress.jpg
 ---
 
-#NoteToSelf
+# NoteToSelf
 
 I have made my peace, emptied my buckets...
 

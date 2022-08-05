@@ -3,7 +3,7 @@ layout: post
 title: Note to Self
 image: /img/methinking.jpg
 subtitle: "Wishful Thinking!"
-bigimg: /img/movementvsprogress.jpg
+cover-img: /assets/img/movementvsprogress.jpg
 ---
 
 #NoteToSelf

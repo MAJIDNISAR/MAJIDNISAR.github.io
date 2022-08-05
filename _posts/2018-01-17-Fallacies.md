@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Fallacies of I, Me, Myself, My World and Educated Mind
-image: /img/methinking.jpg
+image: /assets/img/methinking.jpg
 subtitle: "By Majid Nisar"
-bigimg: /img/movementvsprogress.jpg
+cover-img: /assets/img/movementvsprogress.jpg
 ---
 
 # Fallacies of I, Me, Myself, My World and Educated Mind

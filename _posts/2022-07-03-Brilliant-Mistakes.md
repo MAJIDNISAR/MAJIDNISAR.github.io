@@ -1,10 +1,9 @@
 ---
 layout: post
 title: Brilliant Mistakes
-image: /img/methinking.jpg
+image: /assets/img/methinking.jpg
 subtitle: "By Majid Nisar"
-cover-img
-: /img/movementvsprogress.jpg
+cover-img: /assets/img/movementvsprogress.jpg
 
 ---
 
