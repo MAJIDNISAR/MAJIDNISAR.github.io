@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Spring Of Hope!
-image: /img/crop me.jpg
+thumbnail-image: /assets/img/crop me.jpg
 subtitle: "By Majid Nisar"
 
-bigimg: /img/SpringMajidNisar.jpg
+cover-img: /assets/img/SpringMajidNisar.jpg
 
 ---
 
