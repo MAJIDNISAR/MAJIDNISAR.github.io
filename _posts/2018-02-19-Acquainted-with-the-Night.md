@@ -3,7 +3,8 @@ layout: post
 title: Acquainted with the Night
 image: /img/crop me.jpg
 subtitle: "By Majid Nisar"
-bigimg: /img/movementvsprogress.jpg
+cover-img
+: /img/movementvsprogress.jpg
 ---
 
 # Acquainted with the Night

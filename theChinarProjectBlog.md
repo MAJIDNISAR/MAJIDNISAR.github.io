@@ -2,7 +2,8 @@
 layout: post
 title: Chinar Project Blog
 subtitle:a fiery shade of crimson
-bigimg:me.jpg
+cover-img
+:me.jpg
 ---
 As November approaches, the beautiful vale of Kashmir is enveloped in a fiery shade of crimson thrown by the majestic Chinar Tree.
 

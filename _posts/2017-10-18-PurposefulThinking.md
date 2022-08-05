@@ -3,7 +3,8 @@ layout: post
 title: Note to Self
 image: /img/methinking.jpg
 subtitle: "Purposeful Thinking!"
-bigimg: /img/movementvsprogress.jpg
+cover-img
+: /img/movementvsprogress.jpg
 ---
 
 #NoteToSelf

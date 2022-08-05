@@ -3,7 +3,8 @@ layout: post
 title: Brilliant Mistakes
 image: /img/methinking.jpg
 subtitle: "By Majid Nisar"
-bigimg: /img/movementvsprogress.jpg
+cover-img
+: /img/movementvsprogress.jpg
 
 ---
 
