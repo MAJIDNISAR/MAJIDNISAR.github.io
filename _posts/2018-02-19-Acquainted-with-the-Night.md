@@ -4,6 +4,7 @@ title: Acquainted with the Night
 thumbnail-img: /assets/img/crop me.jpg
 subtitle: "By Majid Nisar"
 cover-img: /assets/img/movementvsprogress.jpg
+share-img: /assets/img/movementvsprogress.jpg
 tags: [acquainted, night,Majid,Majid Nisar, Robert Frost]
 readtime: true
 permalink: /blog/acquainted-with-the-night/
