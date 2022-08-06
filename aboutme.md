@@ -2,7 +2,7 @@
 layout: post
 title: About me
 subtitle: Why you'd want to go on a date with me
-cover-img:me.jpg
+cover-img:/assets/big-img/Green-Tunnel-park.jpg
 ---
 
 Peace! Asalamu Alaikum Warahmatullah Wabarakathu,
@@ -15,4 +15,4 @@ My name is Majid Nisar and I am an eternal student of life:
 What else do you need?
 
 ### Nature is an Inspiration for a learner
-![m'lady](/img/Me.jpg)
+![m'lady](/assets/big-img/Green-Tunnel-park.jpg)
