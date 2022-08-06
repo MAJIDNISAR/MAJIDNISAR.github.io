@@ -1,16 +1,19 @@
 ---
 layout: post
 title: Acquainted with the Night
-image: /assets/img/crop me.jpg
+thumbnail-img: /assets/img/crop me.jpg
 subtitle: "By Majid Nisar"
 cover-img: /assets/img/movementvsprogress.jpg
+tags: [acquainted, night,Majid,Majid Nisar, Robert Frost]
+readtime: true
+permalink: /blog/acquainted-with-the-night/
+date: 2018-02-19 12:00:00 -0500
 ---
-
 # Acquainted with the Night
 
 #### By Majid Nisar
 
-------
+---
 
 > "I have looked down the saddest city lane.
 > I have passed by the watchman on his beat
@@ -32,14 +35,12 @@ cover-img: /assets/img/movementvsprogress.jpg
 > And further still at an unearthly height,
 > One luminary clock against the sky
 >
-> Proclaimed the time was neither wrong nor right. 
+> Proclaimed the time was neither wrong nor right.
 > I have been one acquainted with the night.”
 >
 > [Robert Frost]
 
-
-
-------
+---
 
 > # Robert Frost: Poems Summary and Analysis of "Acquainted with the Night" (1928)
 >
@@ -56,4 +57,3 @@ cover-img: /assets/img/movementvsprogress.jpg
 > Ironically, since night is the only time that he emerges from his solitude, the narrator has even less opportunity to meet someone who can pull him from his depression. His acquaintance with the night constructs a cycle of depression that he cannot escape.
 >
 > Frost adds to the uncertainty inherent in the poem by incorporating the present perfect tense, which is used to describe something from the recent past, as well as something from the past that is still ongoing in the present. It seems as if the narrator’s depression could be from the recent past because of the phrase: “I have been…” However, the verb tense also suggests that his depression could still be a constant, if unseen, force. With that in mind, it is unclear whether the narrator will truly be able to come back to society or if his depression will resurface and force him to be, once again, acquainted with the night.
-
