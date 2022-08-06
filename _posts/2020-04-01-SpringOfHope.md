@@ -3,9 +3,7 @@ layout: post
 title: Spring Of Hope!
 thumbnail-image: /assets/img/crop me.jpg
 subtitle: "By Majid Nisar"
-
 cover-img: /assets/img/SpringMajidNisar.jpg
-
 ---
 
 # Spring Of Hope!
