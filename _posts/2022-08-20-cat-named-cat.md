@@ -7,8 +7,6 @@ readtime: true
 permalink: /blog/cat-named-cat/
 date: 2022-08-20 12:00:00 -0500
 ---
-#“Cat named Cat - There is an Aha behind the Ha-Ha…”
-
 Humour is a multi-tool, a swiss army knife. It enables you to connect with your audience, it can alleviate tension, elevate status, and persuade others to your point of view, and it can do so & much more. While humour can help you and your message stand out, most of us are hesitant to use it, particularly in our professional lives.
 
 The epiphany of having a cat named cat or people believing that we do. Although it is quite funny and clever the idea of having a cat named cat, but the joke will not last, and will have short shelf life.
