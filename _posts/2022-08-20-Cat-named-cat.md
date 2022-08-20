@@ -2,7 +2,8 @@
 title: "Cat Named Cat"
 subtitle: "Humour at workplace: There is an Aha behind the Ha Ha..."
 thumbnail-img: "/assets/img/blog/cat-named-cat/cat-named-cat.jpg"
-tags: [Humour,humor,workplace humour, trust building, bonding, bridging, hybrid work, environments]
+cover-img: "/assets/img/movementvsprogress.jpg"
+tags: [Humour,humor,workplace-humour,trust-building,bonding,bridging,hybrid-work,environments]
 readtime: true
 permalink: /blog/cat-named-cat/
 date: 2022-08-20 12:00:00
