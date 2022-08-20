@@ -5,7 +5,7 @@ thumbnail-img: "/assets/img/blog/cat-named-cat/cat-named-cat.jpg"
 tags: [Humour,humor,workplace humour, trust building, bonding, bridging, hybrid work, environments]
 readtime: true
 permalink: /blog/cat-named-cat/
-date: 2022-08-20 12:00:00 -0500
+date: 2022-08-20 12:00:00
 ---
 Humour is a multi-tool, a swiss army knife. It enables you to connect with your audience, it can alleviate tension, elevate status, and persuade others to your point of view, and it can do so & much more. While humour can help you and your message stand out, most of us are hesitant to use it, particularly in our professional lives.
 
