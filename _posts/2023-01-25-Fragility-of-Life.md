@@ -1,8 +1,8 @@
 ---
 title: "Fragility of Life!"
 subtitle: "Life is a an Oxymoron of strength and fragility"
-thumbnail-img: "/assets/img/blog/life/life4.jpg"
-cover-img: "/assets/img/blog/life/life3.jpg"
+thumbnail-img: "/assets/img/blog/life/life4.png"
+cover-img: "/assets/img/blog/life/life3.png"
 tags: [Life,Oxymoron,strength,fragility]
 readtime: true
 permalink: /blog/fragility-of-life/
