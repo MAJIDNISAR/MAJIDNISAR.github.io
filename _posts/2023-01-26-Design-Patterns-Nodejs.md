@@ -1,12 +1,12 @@
 ---
-title: "Fragility of Life!"
-subtitle: "Life is a an Oxymoron of strength and fragility"
+title: "NodeJS Backend!"
+subtitle: "Focus on Design Pattersn"
 thumbnail-img: "/assets/img/blog/nodejs/node1.png"
 cover-img: "/assets/img/blog/nodejs/node2.png"
-tags: [Life,Oxymoron,strength,fragility]
+tags: [NodeJS,MVC,ServiceLayer, Repository pattern,Event-driven,Design Pattersn,Nodejs]
 readtime: true
-permalink: /blog/fragility-of-life/
-date: 2023-01-25 11:33:00
+permalink: /blog/Design-pattersn-nodejs/
+date: 2023-01-27 01:28:00
 ---
 
 # NodeJS Backend Design: A Focus on Design Patterns
