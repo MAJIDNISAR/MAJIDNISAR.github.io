@@ -1,8 +1,8 @@
 ---
 title: "NodeJS Backend!"
 subtitle: "Focus on Design Pattersn"
-thumbnail-img: "/assets/img/blog/nodejs/node1.png"
-cover-img: "/assets/img/blog/nodejs/node2.png"
+thumbnail-img: "/assets/img/blog/nodejs/nodejs1.png"
+cover-img: "/assets/img/blog/nodejs/nodejs2.png"
 tags: [NodeJS,MVC,ServiceLayer, Repository pattern,Event-driven,Design Pattersn,Nodejs]
 readtime: true
 permalink: /blog/Design-pattersn-nodejs/
