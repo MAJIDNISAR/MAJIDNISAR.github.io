@@ -1,12 +1,12 @@
 ---
-title: "NodeJS Backend!"
-subtitle: "Focus on Design Patterns"
+title: "Nodejs BackEnd!"
+subtitle: "A Focus on Design Patterns"
 thumbnail-img: "/assets/img/blog/nodejs/nodejs1.png"
 cover-img: "/assets/img/blog/nodejs/nodejs2.png"
-tags: [NodeJS,MVC,ServiceLayer,Repository-pattern,Event-driven]
+tags: [Nodejs,DesignPattern]
 readtime: true
-permalink: /blog/design-pattersn-nodejs/
-date: 2023-01-27 12:28:00
+permalink: /blog/Design-Patterns-NodeJS/
+date: 2023-01-25 11:36:00
 ---
 # NodeJS Backend Design: A Focus on Design Patterns
 
