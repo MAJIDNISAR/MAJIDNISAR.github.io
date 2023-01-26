@@ -6,11 +6,9 @@ cover-img: "/assets/img/blog/nodejs/nodejs2.png"
 tags: [NodeJS,MVC,ServiceLayer, Repository pattern,Event-driven,Design Pattersn,Nodejs]
 readtime: true
 permalink: /blog/Design-pattersn-nodejs/
-date: 2023-01-27 01:28:00
+date: 2023-01-27 12:28:00
 ---
-
 # NodeJS Backend Design: A Focus on Design Patterns
-
 
 Node.js is a powerful backend technology that allows developers to build fast and scalable web applications. It is built on top of the V8 JavaScript engine, which is the same engine that powers Google Chrome. This means that Node.js applications can run JavaScript code on the server side, making it a popular choice for building full-stack web applications.
 
