@@ -8,7 +8,7 @@ readtime: true
 permalink: /blog/be-that-person/
 date: 2023-01-28 12:28:00
 ---
-# Be the Person you would want to meet!
+# Be the person you would want to meet!
 
 Belive starts with Be!
 
