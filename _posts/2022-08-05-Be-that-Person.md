@@ -3,7 +3,7 @@ title: "Person you would want to meet!"
 subtitle: "Belive starts with Be!"
 thumbnail-img: "/assets/img/blog/person/person1.png"
 cover-img: "/assets/img/blog/person/person2.png"
-tags: [Belive,Kindness,Person,Positivity,strive]
+tags: [Belive,Kindness,Person,Positivity]
 readtime: true
 permalink: /blog/be-that-person/
 date: 2023-01-28 12:00:00 -0500
