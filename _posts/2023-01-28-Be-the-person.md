@@ -1,6 +1,6 @@
 ---
 title: "Person you would want to meet!"
-subtitle: "Belive starts with Be"
+subtitle: "Belive starts with Be!"
 thumbnail-img: "/assets/img/blog/person/person1.png"
 cover-img: "/assets/img/blog/person/person2.png"
 tags: [Belive,Kindness,Person,Positivity,strive]
