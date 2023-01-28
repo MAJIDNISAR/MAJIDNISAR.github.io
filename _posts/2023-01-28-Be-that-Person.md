@@ -6,7 +6,7 @@ cover-img: "/assets/img/blog/person/person2.png"
 tags: [belive,Mindfullness,new,person,positivity]
 readtime: true
 permalink: /blog/be-that-person/
-date: 2023-01-28 12:00:00
+date: 2023-01-28 11:00:00
 ---
 # Be the person you would want to meet!
 
