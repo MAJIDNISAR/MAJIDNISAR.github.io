@@ -3,10 +3,10 @@ title: "Person you would want to meet!"
 subtitle: "Belive starts with Be!"
 thumbnail-img: "/assets/img/blog/person/person1.png"
 cover-img: "/assets/img/blog/person/person2.png"
-tags: [belive,pindness,new,person,positivity]
+tags: [belive,Mindfullness,new,person,positivity]
 readtime: true
 permalink: /blog/be-that-person/
-date: 2023-01-28 12:00:00 -0500
+date: 2023-01-28 12:00:00
 ---
 # Be the person you would want to meet!
 

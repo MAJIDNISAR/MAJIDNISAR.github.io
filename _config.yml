@@ -64,12 +64,12 @@ social-network-links:
   linkedin: MAJIDNISAR
 #  xing: yourname
 #  stackoverflow: ""
-#  snapchat: deanat78
-#  instagram: deanat78
+#  snapchat: 
+  instagram: majidnisar
   spotify: MAJIDNISAR
-#  telephone: +14159998888
-#  steam: deanat78
-#  twitch: yourname
+#  telephone: 
+#  steam: 
+  twitch: Majidnisar
 #  yelp: yourname
 #  telegram: yourname
 #  calendly: yourname
@@ -252,10 +252,11 @@ date_format: "%B %-d, %Y"
 #################################################################################
 
 # Output options (more information on Jekyll's site)
-timezone: "Asia/India"
+timezone: "Asia/Calcutta"
 markdown: kramdown
 highlighter: rouge
-permalink: /:year-:month-:day-:title/
+# permalink: /:year-:month-:day-:title/
+permalink: "/:year/:month/:day/:title"
 paginate: 5
 
 kramdown:
