@@ -3,7 +3,7 @@ title: "Heaven must be a Library!"
 subtitle: "Heaven: A place of books and lore"
 thumbnail-img: "/assets/img/blog/heaven-must-be-a-library/heaven-library/heaven-library1.png"
 cover-img: "/assets/img/blog/heaven-must-be-a-library/heaven-library2.jpg"
-tags: [library,heaven,Courage,Read,heart,resting,place]
+tags: [library,heaven,Courage,Read,heart,resting,place,beauty]
 readtime: true
 permalink: /blog/heaven-must-be-a-libary/
 date: 2023-01-25 11:33:00
