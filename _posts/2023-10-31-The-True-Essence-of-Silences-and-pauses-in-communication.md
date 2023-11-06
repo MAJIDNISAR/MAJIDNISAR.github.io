@@ -1,8 +1,8 @@
 ---
 title: "The true essence of Silences and Pauses in communication"
 subtitle: "Breathing the key to communication"
-thumbnail-img: "/assets/img/blog/the-magnetic-Hill-of-Civilization/deception.webp"
-cover-img: "/assets/img/blog/the-magnetic-Hill-of-Civilization/believe.png"
+thumbnail-img: "/assets/img/big-img/calm-mindful-old.jpg"
+cover-img: "/assets/img/big-img/little-boy-child-put-his-finger.jpg"
 tags: [Communication,breathing,essence,silence,meaningful pauses,clarity,getting the point across]
 readtime: true
 permalink: /blog/true-essence-of-Silences-and-Pauses-in-communication/
