@@ -1,8 +1,8 @@
 ---
 title: "AI & Data Engineering Trends 2024"
 subtitle: "Opportunities, Challenges, and a Roadmap for Success"
-thumbnail-img: "assets/img/methinking.jpg"
-cover-img: "assets/img/methinking.jpg"
+thumbnail-img: "assets/img/ai.jpg"
+cover-img: "assets/img/ai.jpg"
 tags: [AI,DataEngineering,TechTrends,AI2024,Leadership,InnovationEducation]
 readtime: true
 permalink: /blog/AI-&-Data-Engineering-Trends 2024/
