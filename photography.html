@@ -1,0 +1,76 @@
+---
+layout: page
+title: "Photography"
+subtitle: "Kashmir and beyond — landscapes, light, and quiet moments"
+permalink: /photography/
+full-width: true
+---
+
+<div class="photo-gallery-page">
+
+  {% if site.photos.size > 0 %}
+
+    <section class="creative-intro reveal reveal-up">
+      <span class="creative-kicker">Photography</span>
+      <h2 class="creative-heading">Images from Kashmir and beyond, shaped by light, weather, memory, and quiet attention.</h2>
+      <p class="creative-lead">
+        This gallery is less about volume and more about atmosphere. The photographs here follow landscape, texture,
+        people, and places that hold stillness long enough to be noticed.
+      </p>
+    </section>
+
+    <div class="photo-tag-filters" id="photo-filters">
+      <button class="pf-btn active" data-filter="all">All</button>
+      {% assign photo_tags = site.photos | map: 'tags' | join: ',' | split: ',' | uniq | sort %}
+      {% for tag in photo_tags %}
+        {% assign t = tag | strip %}
+        {% if t != "" %}
+          <button class="pf-btn" data-filter="{{ t }}">{{ t }}</button>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="photo-masonry" id="photo-masonry">
+      {% assign photos = site.photos | sort: 'date' | reverse %}
+      {% for photo in photos %}
+        {% assign photo_tags_str = photo.tags | join: ' ' %}
+        <figure class="photo-item" data-tags="{{ photo_tags_str }}" data-index="{{ forloop.index0 }}">
+          <a href="#" class="photo-lightbox-trigger"
+             data-src="{{ photo.image | absolute_url }}"
+             data-title="{{ photo.title }}"
+             data-location="{{ photo.location }}"
+             data-date="{{ photo.date_taken }}"
+             data-description="{{ photo.description }}">
+            <img src="{{ photo.thumbnail | default: photo.image | absolute_url }}"
+                 alt="{{ photo.title }}"
+                 loading="lazy" />
+            <figcaption>
+              <span class="photo-title">{{ photo.title }}</span>
+              {% if photo.location %}<span class="photo-location">{{ photo.location }}</span>{% endif %}
+            </figcaption>
+          </a>
+        </figure>
+      {% endfor %}
+    </div>
+
+    <div id="photo-lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+      <button class="lightbox-close" aria-label="Close">&times;</button>
+      <button class="lightbox-prev" aria-label="Previous">&#8249;</button>
+      <button class="lightbox-next" aria-label="Next">&#8250;</button>
+      <div class="lightbox-content">
+        <img class="lightbox-img" src="" alt="" />
+        <div class="lightbox-info">
+          <h2 class="lightbox-title"></h2>
+          <p class="lightbox-location"></p>
+          <p class="lightbox-description"></p>
+        </div>
+      </div>
+    </div>
+
+  {% else %}
+    <p class="collection-empty">Photography gallery coming soon.</p>
+  {% endif %}
+
+</div>
+
+<script src="{{ '/assets/js/photo-lightbox.js' | absolute_url }}" defer></script>
