@@ -123,6 +123,25 @@ author:
   yelp: yourname      # eg. daattali
   instagram: majidnisar
 
+# --- Structured Data (Schema.org JSON-LD) --- #
+
+language: en
+
+person:
+  name: "Majid Nisar"
+  job_title: "Head of Technology — Software, Web & AI"
+  works_for: "iQuasar LLC"
+  email: "majidnisar@gmail.com"
+  image: "/assets/img/me.jpeg"
+  same_as:
+    - "https://linkedin.com/in/majidnisar"
+    - "https://twitter.com/MAJIDNISAR"
+    - "https://github.com/MAJIDNISAR"
+
+organization:
+  name: "Majid Nisar"
+  logo: "/assets/img/me.jpeg"
+
 # Select which links to show in the footer
 footer-links-active:
   rss: false
@@ -166,8 +185,8 @@ share-links-active:
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
 disqus: "majidnisar-com"
 
-# Fill in your Google Analytics ID to track your website using GA
-google_analytics: "G-7QFLGNJJWC"
+# GA4 ID is set in the gtag section below — do not use this legacy UA field
+#google_analytics: ""
 url-pretty: "MajidNisar.Com"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
@@ -183,7 +202,7 @@ feed_show_tags: true
 post_search: true
 
 # The keywords to associate with your website, for SEO purposes
-#keywords: "my,list,of,keywords"
+keywords: "technology executive,CTO,head of technology,AI product leadership,generative AI,LLM implementation,software engineering leadership,engineering org builder,digital transformation,technology strategy"
 
 # --- Colours / background image --- #
 
@@ -222,17 +241,17 @@ footer-hover-col: "#0085A1"
 
 # --- Web Analytics Section --- #
 
-# Fill in your Google Analytics gtag.js ID to track your website using gtag
-#gtag: ""
+# Google Analytics 4 (GA4) — gtag.js measurement ID
+gtag: "G-3WBJ12R9ED"
 
-# Fill in your Google Analytics ID to track your website using Google Analytics
+# Legacy Universal Analytics — disabled (UA was sunset July 2023)
 #google_analytics: ""
 
-# Fill in your Cloudflare Analytics beacon token to track your website using Cloudflare Analytics
-cloudflare_analytics: "G-3WBJ12R9ED"
+# Cloudflare Analytics — requires a Cloudflare beacon token (not a GA4 ID)
+#cloudflare_analytics: ""
 
-# Google Tag Manager ID
-gtm: "G-3WBJ12R9ED"
+# Google Tag Manager — requires a GTM container ID (format: GTM-XXXXXXX)
+#gtm: ""
 
 # Matomo (aka Piwik) Web statistics
 # Uncomment the following section to enable Matomo. The opt-out parameter controls
