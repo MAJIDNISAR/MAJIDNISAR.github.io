@@ -2,7 +2,6 @@
 layout: page
 title: "Majid Nisar"
 subtitle: "Technology leadership for software, AI products, and systems of execution."
-permalink: /
 full-width: true
 use-site-title: true
 css: "/assets/css/index.css"
@@ -255,6 +254,35 @@ cover-img:
       <span class="engagement-label">For paid engagements</span>
       <strong>See advisory, workshop, and speaking formats if you are looking for a practical technology leader rather than a generic consultant.</strong>
     </a>
+  </div>
+</section>
+
+<section class="testimonials-section reveal reveal-up">
+  <div class="section-header">
+    <span class="kicker kicker-animate">Colleagues</span>
+    <h2 class="section-heading">What colleagues say</h2>
+  </div>
+  <div class="testimonials-carousel" id="testimonials-carousel">
+    <div class="testimonials-track" id="testimonials-track">
+      {% assign all_testimonials = site.data.testimonials %}
+      {% for t in all_testimonials %}
+      <article class="testimonial-card card-lift">
+        <blockquote class="testimonial-quote">{{ t.quote }}</blockquote>
+        <footer class="testimonial-author">
+          <span class="testimonial-avatar">{{ t.initials }}</span>
+          <div class="testimonial-meta">
+            <strong class="testimonial-name">{{ t.name }}</strong>
+            <span class="testimonial-role">{{ t.role }}</span>
+          </div>
+        </footer>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="testimonials-nav">
+    <button type="button" class="testimonials-btn" id="testimonials-prev" aria-label="Previous testimonials">&#8592;</button>
+    <div class="testimonials-dots" id="testimonials-dots"></div>
+    <button type="button" class="testimonials-btn" id="testimonials-next" aria-label="Next testimonials">&#8594;</button>
   </div>
 </section>
 

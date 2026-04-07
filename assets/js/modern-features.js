@@ -556,6 +556,101 @@
   // INITIALIZE ALL FEATURES
   // ========================================
   
+  // ========================================
+  // TESTIMONIALS CAROUSEL
+  // ========================================
+
+  const TestimonialsCarousel = {
+    perPage: 3,
+    current: 0,
+    cards: [],
+    total: 0,
+
+    init() {
+      const track = document.getElementById('testimonials-track');
+      if (!track) return;
+
+      this.cards = Array.from(track.querySelectorAll('.testimonial-card'));
+      this.total = this.cards.length;
+      if (this.total === 0) return;
+
+      this.updatePerPage();
+      this.render();
+      this.buildDots();
+      this.bindNav();
+
+      window.addEventListener('resize', () => {
+        this.updatePerPage();
+        this.clampCurrent();
+        this.render();
+        this.buildDots();
+      });
+    },
+
+    updatePerPage() {
+      const w = window.innerWidth;
+      if (w <= 580) this.perPage = 1;
+      else if (w <= 900) this.perPage = 2;
+      else this.perPage = 3;
+    },
+
+    pages() {
+      return Math.ceil(this.total / this.perPage);
+    },
+
+    clampCurrent() {
+      this.current = Math.min(this.current, this.pages() - 1);
+    },
+
+    render() {
+      const start = this.current * this.perPage;
+      const end = start + this.perPage;
+      const track = document.getElementById('testimonials-track');
+
+      track.classList.add('is-animating');
+      setTimeout(() => {
+        this.cards.forEach((card, i) => {
+          card.classList.toggle('is-visible', i >= start && i < end);
+        });
+        track.classList.remove('is-animating');
+      }, 150);
+
+      const prev = document.getElementById('testimonials-prev');
+      const next = document.getElementById('testimonials-next');
+      if (prev) prev.disabled = this.current === 0;
+      if (next) next.disabled = this.current >= this.pages() - 1;
+
+      document.querySelectorAll('.testimonials-dot').forEach((dot, i) => {
+        dot.classList.toggle('is-active', i === this.current);
+      });
+    },
+
+    buildDots() {
+      const container = document.getElementById('testimonials-dots');
+      if (!container) return;
+      container.innerHTML = '';
+      for (let i = 0; i < this.pages(); i++) {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'testimonials-dot' + (i === this.current ? ' is-active' : '');
+        btn.setAttribute('aria-label', 'Go to page ' + (i + 1));
+        btn.addEventListener('click', () => { this.current = i; this.render(); });
+        container.appendChild(btn);
+      }
+    },
+
+    bindNav() {
+      const prev = document.getElementById('testimonials-prev');
+      const next = document.getElementById('testimonials-next');
+      if (prev) prev.addEventListener('click', () => {
+        if (this.current > 0) { this.current--; this.render(); }
+      });
+      if (next) next.addEventListener('click', () => {
+        if (this.current < this.pages() - 1) { this.current++; this.render(); }
+      });
+    }
+  };
+
   document.addEventListener('DOMContentLoaded', () => {
     ThemeManager.init();
     ReadingProgress.init();
@@ -564,8 +659,7 @@
     AnimationManager.init();
     CodeCopyManager.init();
     PerformanceManager.init();
-    
-    console.log('✅ Modern features initialized successfully');
+    TestimonialsCarousel.init();
   });
 
 })();
