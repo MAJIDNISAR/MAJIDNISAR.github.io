@@ -266,13 +266,14 @@ cover-img:
     <div class="testimonials-track" id="testimonials-track">
       {% assign all_testimonials = site.data.testimonials %}
       {% for t in all_testimonials %}
-      <article class="testimonial-card card-lift">
+      <article class="testimonial-card signature-card card-lift">
         <blockquote class="testimonial-quote">{{ t.quote }}</blockquote>
         <footer class="testimonial-author">
           <span class="testimonial-avatar">{{ t.initials }}</span>
           <div class="testimonial-meta">
             <strong class="testimonial-name">{{ t.name }}</strong>
             <span class="testimonial-role">{{ t.role }}</span>
+            {% if t.relation %}<span class="testimonial-relation">{{ t.relation }}</span>{% endif %}
           </div>
         </footer>
       </article>
