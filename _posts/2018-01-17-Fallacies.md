@@ -3,7 +3,8 @@ content-type: essay
 layout: post
 title: Fallacies of I, Me, Myself, My World and Educated Mind
 image: /assets/img/methinking.jpg
-subtitle: "By Majid Nisar"
+subtitle: "On the educated mind, ego, and the illusions we build around ourselves"
+share-description: "An essay exploring the fallacies of the self — how education, ego, and insular thinking create barriers to genuine understanding and growth."
 cover-img: /assets/img/movementvsprogress.jpg
 ---
 

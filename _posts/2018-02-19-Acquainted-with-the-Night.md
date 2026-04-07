@@ -3,7 +3,8 @@ content-type: poetry
 layout: post
 title: Acquainted with the Night
 thumbnail-img: /assets/img/crop me.jpg
-subtitle: "By Majid Nisar"
+subtitle: "A poem on solitude, restlessness, and the long walk through the dark"
+share-description: "A poem by Majid Nisar on solitude, inner restlessness, and walking through darkness before finding ground."
 cover-img: /assets/img/movementvsprogress.jpg
 share-img: /assets/img/movementvsprogress.jpg
 tags: [acquainted, night,Majid,Majid Nisar, Robert Frost,poetry]

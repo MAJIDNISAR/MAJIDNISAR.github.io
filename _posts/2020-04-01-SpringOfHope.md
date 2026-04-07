@@ -3,7 +3,8 @@ content-type: poetry
 layout: post
 title: Spring Of Hope!
 thumbnail-image: /assets/img/crop me.jpg
-subtitle: "By Majid Nisar"
+subtitle: "A poem on renewal, hope, and the quiet return of light"
+share-description: "A poem by Majid Nisar written in spring 2020 — on renewal, hope, and finding light in difficult times."
 cover-img: /assets/img/SpringMajidNisar.jpg
 ---
 

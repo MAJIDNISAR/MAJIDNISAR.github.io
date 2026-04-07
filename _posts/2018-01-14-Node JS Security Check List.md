@@ -1,3 +1,16 @@
+---
+content-type: technical
+layout: post
+title: "Node.js Security Checklist"
+subtitle: "The essential security checklist every Node.js developer should follow"
+share-description: "A practical Node.js security checklist covering HTTP headers, authentication, input validation, error handling, and dependency management."
+cover-img: /assets/img/big-img/wall-IUST.jpg
+tags: [NodeJS, Security, Backend, OWASP, Checklist]
+readtime: true
+permalink: /blog/nodejs-security-checklist/
+date: 2018-01-14 12:00:00
+---
+
 > # **ELEPHANT in the ROOM**
 
 **Security - the elephant in the room.** Everyone agrees that it is very important but few takes it seriously. 

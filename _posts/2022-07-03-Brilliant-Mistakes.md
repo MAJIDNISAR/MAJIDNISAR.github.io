@@ -3,7 +3,8 @@ content-type: essay
 layout: post
 title: Brilliant Mistakes
 thumbnail-image: /assets/img/methinking.jpg
-subtitle: "By Majid Nisar"
+subtitle: "Why the best learning comes from failure — and how to make your mistakes count"
+share-description: "FAIL = First Attempt In Learning. An essay on embracing mistakes as the most honest path to growth, resilience, and genuine expertise."
 cover-img: /assets/img/movementvsprogress.jpg
 
 ---

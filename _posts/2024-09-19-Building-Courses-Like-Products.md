@@ -2,8 +2,9 @@
 content-type: essay
 title: "Building Courses Like Products"
 subtitle: "How Modern Universities Can Leverage VPC and BMC for Educational Excellence"
-thumbnail-img: "https://media.licdn.com/dms/image/v2/D5612AQEw8HmJy4Irfw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1726736127415?e=1732147200&v=beta&t=41Uh2oJCvt_JX2hDO8eQhhgC6WrgnlpjA2-ZUqJRLks"
-cover-img: "https://media.licdn.com/dms/image/v2/D5612AQEw8HmJy4Irfw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1726736127415?e=1732147200&v=beta&t=41Uh2oJCvt_JX2hDO8eQhhgC6WrgnlpjA2-ZUqJRLks"
+thumbnail-img: "/assets/img/AI.png"
+cover-img: "/assets/img/AI.png"
+share-description: "How modern universities can leverage the Value Proposition Canvas and Business Model Canvas to design courses that meet real workforce needs."
 tags: [Education,Higher Education,Building,courses,Products VPC,BMC,Educational Institutions, Universities]
 readtime: true
 permalink: /blog/Building-Courses-Like-Products/
