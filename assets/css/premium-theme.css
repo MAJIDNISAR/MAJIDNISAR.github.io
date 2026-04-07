@@ -1,8 +1,8 @@
 /* Premium site-wide theme layer */
 
 :root {
-  --premium-ink: #161311;
-  --premium-muted: #6c645d;
+  --premium-ink: #1C1917;
+  --premium-muted: #78716C;
   --premium-border: rgba(22, 19, 17, 0.08);
   --premium-border-strong: rgba(22, 19, 17, 0.12);
   --premium-surface: rgba(255, 255, 255, 0.84);

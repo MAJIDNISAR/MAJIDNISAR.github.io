@@ -67,6 +67,19 @@
   --z-tooltip: 1070;
 }
 
+/* Base overrides — ensure design system tokens win over beautifuljekyll Liquid injections */
+body {
+  color: var(--text-color);
+}
+
+a {
+  color: var(--accent-color);
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
 /* Dark Mode */
 [data-theme="dark"] {
   --background-color: var(--dark-bg);
