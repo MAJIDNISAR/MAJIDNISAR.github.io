@@ -10,11 +10,11 @@
     {% if js contains 'jquery' %}
       <script>
         if (typeof jQuery == 'undefined') {
-          document.write('<script src="{{ js | relative_url }}"></scr' + 'ipt>');
+          document.write('<script src="{{ js | relative_url }}" defer><\/script>');
         }
       </script>
     {% else %}
-      <script src="{{ js | relative_url }}"></script>
+      <script src="{{ js | relative_url }}" defer></script>
     {% endif %}
   {% endfor %}
 {% endif %}

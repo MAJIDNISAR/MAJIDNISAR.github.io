@@ -554,10 +554,16 @@ a:hover {
 
 .header-section .intro-header.no-img {
   position: relative;
-  margin: 1.25rem auto 2rem;
+  margin: 5rem auto 2rem;
   width: min(100%, 1200px);
   padding: 2.75rem 1.5rem 1rem;
   background: transparent;
+}
+
+@media (min-width: 1200px) {
+  .header-section .intro-header.no-img {
+    margin-top: 6.5rem;
+  }
 }
 
 .header-section .intro-header.no-img .page-heading,
@@ -812,6 +818,7 @@ a:hover {
   }
 
   .header-section .intro-header.no-img {
+    margin-top: 4.5rem;
     padding: 2.25rem 1rem 0.5rem;
   }
 

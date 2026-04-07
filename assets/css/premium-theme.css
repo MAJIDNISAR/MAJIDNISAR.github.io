@@ -404,3 +404,199 @@ body {
     border-radius: 18px;
   }
 }
+
+/* ============================================================
+   FOOTER — override EAEAEA background from beautifuljekyll
+   ============================================================ */
+footer {
+  background-color: transparent !important;
+  background-image: none !important;
+  border-top: 1px solid var(--premium-border);
+  margin-top: 1rem;
+}
+
+footer p.text-muted {
+  color: var(--premium-muted) !important;
+  text-align: center;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  margin-top: 1rem;
+}
+
+footer a {
+  color: var(--text-color, #1C1917) !important;
+}
+
+footer a:hover,
+footer a:focus {
+  color: var(--accent-color, #2563EB) !important;
+}
+
+footer .list-inline {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Social icons in footer */
+footer .list-inline-item a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  border: 1px solid var(--premium-border);
+  background: rgba(255,255,255,0.7);
+  color: var(--premium-ink) !important;
+  font-size: 0.95rem;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+footer .list-inline-item a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(22, 19, 17, 0.1);
+  background: rgba(255,255,255,0.92);
+  color: var(--accent-color, #2563EB) !important;
+}
+
+[data-theme="dark"] footer .list-inline-item a {
+  background: rgba(28,25,23,0.72);
+  border-color: rgba(231,229,228,0.1);
+  color: var(--dark-text, #E7E5E4) !important;
+}
+
+/* ============================================================
+   INTRO HEADER BIG-IMG — better hero showcase
+   ============================================================ */
+.intro-header.big-img {
+  min-height: 52vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.intro-header.big-img .page-heading,
+.intro-header.big-img .post-heading {
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.18) 60%, transparent 100%);
+}
+
+@media (min-width: 768px) {
+  .intro-header.big-img {
+    min-height: 60vh;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro-header.big-img {
+    min-height: 65vh;
+  }
+}
+
+/* ============================================================
+   POST THUMBNAIL IMAGES — proper fill in fixed container
+   ============================================================ */
+.post-preview .post-image {
+  overflow: hidden;
+  border-radius: 16px;
+  filter: none;
+}
+
+.post-preview .post-image:hover {
+  filter: none;
+}
+
+.post-preview .post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: transform 0.3s ease;
+}
+
+.post-preview .post-image:hover img {
+  transform: scale(1.04);
+}
+
+/* ============================================================
+   BLOG TAGS — premium pill style
+   ============================================================ */
+.blog-tags {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.78rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 1.5rem 0;
+}
+
+.blog-tags span {
+  color: var(--premium-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  margin-right: 0.25rem;
+  opacity: 1;
+}
+
+.blog-tags a {
+  display: inline-block;
+  padding: 0.28rem 0.72rem;
+  border-radius: 999px;
+  border: 1px solid var(--premium-border-strong);
+  background: rgba(255,255,255,0.72);
+  color: var(--premium-ink) !important;
+  text-decoration: none;
+  font-size: 0.76rem;
+  letter-spacing: 0.03em;
+  opacity: 1;
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+}
+
+.blog-tags a:hover {
+  border-color: rgba(37, 99, 235, 0.25);
+  background: rgba(37, 99, 235, 0.07);
+  color: var(--accent-color, #2563EB) !important;
+  transform: translateY(-1px);
+  opacity: 1;
+}
+
+[data-theme="dark"] .blog-tags a {
+  background: rgba(28,25,23,0.72);
+  border-color: rgba(231,229,228,0.12);
+  color: var(--dark-text, #E7E5E4) !important;
+}
+
+/* ============================================================
+   SOCIAL SHARE SECTION — premium aesthetic
+   ============================================================ */
+#social-share-section {
+  margin: 2rem 0 1.5rem;
+  padding: 1.4rem 1.5rem;
+  background: rgba(255,255,255,0.72);
+  border: 1px solid var(--premium-border);
+  border-radius: 20px;
+  box-shadow: 0 8px 22px rgba(22, 19, 17, 0.05);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+#social-share-section .share-title,
+#social-share-section > span,
+#social-share-section > p {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--premium-muted);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+[data-theme="dark"] #social-share-section {
+  background: rgba(28,25,23,0.72);
+  border-color: rgba(231,229,228,0.08);
+}
