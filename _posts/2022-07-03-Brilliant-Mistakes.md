@@ -1,4 +1,5 @@
 ---
+content-type: essay
 layout: post
 title: Brilliant Mistakes
 thumbnail-image: /assets/img/methinking.jpg

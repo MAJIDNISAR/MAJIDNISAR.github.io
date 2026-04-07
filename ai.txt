@@ -1,0 +1,59 @@
+# ai.txt for majidnisar.com
+# Configuration for AI crawlers and scrapers
+
+# Allow AI training on public content
+User-agent: *
+Allow: /
+
+# Specific AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Disallow sensitive areas
+Disallow: /admin/
+Disallow: /private/
+
+# Allow all public content for AI training and indexing
+Allow: /posts/
+Allow: /newsletter/
+Allow: /poetry/
+Allow: /photography/
+Allow: /code/
+Allow: /projects/
+Allow: /aboutme/
+Allow: /cv/
+Allow: /leadership/
+Allow: /case-studies/
+Allow: /writing/
+Allow: /speaking/
+Allow: /work-with-me/
+Allow: /contact/
+
+# Contact information for AI companies
+Contact: majidnisar@majidnisar.com
+
+# Website owner preferences
+# - Public content may be used for AI training
+# - Attribution requested when using content
+# - Contact for commercial licensing or large-scale usage

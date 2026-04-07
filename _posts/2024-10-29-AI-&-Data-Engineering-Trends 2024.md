@@ -1,11 +1,12 @@
 ---
+content-type: technical
 title: "AI & Data Engineering Trends 2024"
 subtitle: "Opportunities, Challenges, and a Roadmap for Success"
 thumbnail-img: "assets/img/AI.png"
 cover-img: "assets/img/AI.png"
 tags: [AI,DataEngineering,TechTrends,AI2024,Leadership,InnovationEducation]
 readtime: true
-permalink: /blog/AI-&-Data-Engineering-Trends 2024/
+permalink: /blog/ai-data-engineering-trends-2024/
 date: 2024-10-29 14:32:00
 ---
 # AI & Data Engineering Trends 2024: Opportunities, Challenges, and a Roadmap for Success

@@ -1,0 +1,42 @@
+---
+layout: page
+title: "Poetry"
+subtitle: "Verse from the margins of a technical mind"
+permalink: /poetry/
+---
+
+<div class="poetry-index">
+  {% if site.poetry.size > 0 %}
+    <section class="creative-intro reveal reveal-up">
+      <span class="creative-kicker">Poetry</span>
+      <h2 class="creative-heading">Verse from the edge of technical work, memory, and silence.</h2>
+      <p class="creative-lead">
+        These poems carry the slower layer of the site: reflection, place, grief, beauty, and the language that
+        remains when explanation is no longer enough.
+      </p>
+    </section>
+
+    <div class="poetry-grid">
+      {% assign poems = site.poetry | sort: 'date' | reverse %}
+      {% for poem in poems %}
+        <article class="poem-card">
+          <h2 class="poem-card-title"><a href="{{ poem.url | absolute_url }}">{{ poem.title }}</a></h2>
+          {% if poem.date_written %}
+            <span class="poem-date">{{ poem.date_written }}</span>
+          {% else %}
+            <span class="poem-date">{{ poem.date | date: "%Y" }}</span>
+          {% endif %}
+          {% if poem.epigraph %}
+            <p class="poem-epigraph">{{ poem.epigraph }}</p>
+          {% endif %}
+          <div class="poem-first-lines">
+            {{ poem.content | strip_html | truncatewords: 20 }}
+          </div>
+          <a href="{{ poem.url | absolute_url }}" class="poem-read-link">Read poem →</a>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="collection-empty">Poems coming soon.</p>
+  {% endif %}
+</div>

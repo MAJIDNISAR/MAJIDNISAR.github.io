@@ -1,16 +1,17 @@
 ---
 layout: page
-title: "Hi, I am Majid"
-subtitle: Open Source Enthusiast!, Wana be traveller ...
+title: "Popular Posts"
+subtitle: "Writing worth starting with — essays, leadership thinking, and technology insight."
+permalink: /popular/
 use-site-title: true
 css: "/assets/css/index.css"
 share-img: /assets/img/me.jpg
-share-title: "Majid Nisar - Software Engineer/ Web developer at Core, Poet by discreation."
-share-description: "Learning every day, earning my keep, a developer, project/project manager, teacher"
+share-title: "Popular Writing — Majid Nisar"
+share-description: "Selected essays and writing on software leadership, AI implementation, and execution systems."
 support_promo_box: true
 cover-img:
-  - "/assets/img/big-img/swing.jpg" : "Leadership Retreat,iQuasar Sonmarg(2022)"
-  - "/assets/img/big-img/armsout.jpg" : "Leadership Retreat,iQuasar Sonmarg(2022)"
+  - "/assets/img/big-img/swing.jpg" : "Leadership Retreat, iQuasar Sonmarg (2022)"
+  - "/assets/img/big-img/armsout.jpg" : "Leadership Retreat, iQuasar Sonmarg (2022)"
 ---
 
 <div class="list-filters">

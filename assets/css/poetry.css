@@ -1,0 +1,203 @@
+/* Poetry Page Styles */
+
+.poetry-page {
+  position: relative;
+}
+
+.poetry-ambient {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.poetry-ambient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), var(--background-color, #FAFAF8));
+}
+
+.poetry-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+.poetry-page .kicker {
+  display: inline-block;
+  color: var(--accent-warm, #B45309);
+  margin-bottom: 0.75rem;
+}
+
+.poetry-title {
+  font-family: var(--font-display, 'Playfair Display', Georgia, serif);
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0 0 0.5rem;
+  color: var(--text-color, #1C1917);
+}
+
+.poetry-dedication {
+  font-family: var(--font-poetry, 'Cormorant Garamond', Georgia, serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--text-muted, #78716C);
+  margin: 0.5rem 0;
+}
+
+.poetry-epigraph {
+  font-family: var(--font-poetry, 'Cormorant Garamond', Georgia, serif);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--text-muted, #78716C);
+  border-left: 3px solid var(--accent-warm, #B45309);
+  padding-left: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.poetry-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted, #78716C);
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  margin-top: 1rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color, #E7E5E4);
+}
+
+.poetry-meta-sep { opacity: 0.4; }
+
+.poetry-tag {
+  color: var(--accent-warm, #B45309);
+  text-decoration: none;
+  font-size: 0.75rem;
+}
+.poetry-tag:hover { text-decoration: underline; }
+
+.poetry-container {
+  font-family: var(--font-poetry, 'Cormorant Garamond', Georgia, serif);
+  font-size: 1.3rem;
+  line-height: 2;
+  margin: 2.5rem 0;
+  color: var(--text-color, #1C1917);
+}
+
+.poetry-container p {
+  margin: 0 0 2rem;
+  white-space: pre-line;
+}
+
+.poetry-container br { display: none; }
+
+.poetry-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color, #E7E5E4);
+  margin-top: 2rem;
+}
+
+.poetry-back {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.8rem;
+  color: var(--accent-color, #2563EB);
+  text-decoration: none;
+}
+.poetry-back:hover { text-decoration: underline; }
+
+.poetry-share { display: flex; gap: 0.75rem; }
+.poetry-share a {
+  color: var(--text-muted, #78716C);
+  font-size: 1.1rem;
+  transition: color 0.15s;
+}
+.poetry-share a:hover { color: var(--accent-color, #2563EB); }
+
+/* Poetry Index */
+.poetry-index { padding: 2rem 0; }
+
+.poetry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.poem-card {
+  padding: 2rem;
+  background: var(--surface-card, #fff);
+  border: 1px solid var(--border-color, #E7E5E4);
+  border-radius: 8px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.poem-card:hover {
+  border-color: var(--accent-warm, #B45309);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.poem-card-title {
+  font-family: var(--font-display, 'Playfair Display', Georgia, serif);
+  font-size: 1.35rem;
+  margin: 0 0 0.5rem;
+}
+
+.poem-card-title a {
+  color: var(--text-color, #1C1917);
+  text-decoration: none;
+}
+.poem-card-title a:hover { color: var(--accent-warm, #B45309); }
+
+.poem-date {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.75rem;
+  color: var(--text-muted, #78716C);
+  letter-spacing: 0.05em;
+}
+
+.poem-epigraph {
+  font-family: var(--font-poetry, 'Cormorant Garamond', Georgia, serif);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--text-muted, #78716C);
+  margin: 0.75rem 0;
+}
+
+.poem-first-lines {
+  font-family: var(--font-poetry, 'Cormorant Garamond', Georgia, serif);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-color, #1C1917);
+  margin: 1rem 0;
+  opacity: 0.8;
+}
+
+.poem-read-link {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.75rem;
+  color: var(--accent-warm, #B45309);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+.poem-read-link:hover { text-decoration: underline; }
+
+/* Dark mode */
+[data-theme="dark"] .poem-card {
+  background: var(--dark-card, #1C1917);
+  border-color: var(--dark-border, #292524);
+}
+
+[data-theme="dark"] .poetry-container,
+[data-theme="dark"] .poetry-title,
+[data-theme="dark"] .poem-card-title a {
+  color: var(--dark-text, #E7E5E4);
+}

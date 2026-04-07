@@ -1,4 +1,5 @@
 ---
+content-type: reflection
 layout: post
 title: Note to Self
 image: /assets/img/methinking.jpg

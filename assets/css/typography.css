@@ -1,0 +1,130 @@
+/* Typography System — majidnisar.com */
+
+:root {
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Source Serif Pro', Georgia, serif;
+  --font-ui: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-poetry: 'Cormorant Garamond', 'Source Serif Pro', Georgia, serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+
+  --type-scale-xs: 0.75rem;
+  --type-scale-sm: 0.875rem;
+  --type-scale-base: 1rem;
+  --type-scale-lg: 1.125rem;
+  --type-scale-xl: 1.25rem;
+  --type-scale-2xl: 1.5rem;
+  --type-scale-3xl: 1.875rem;
+  --type-scale-4xl: 2.25rem;
+  --type-scale-5xl: 3rem;
+  --type-scale-display: 3.75rem;
+
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.4;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.75;
+  --line-height-reading: 1.85;
+  --line-height-poetry: 2;
+
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.05em;
+  --letter-spacing-wider: 0.1em;
+  --letter-spacing-widest: 0.2em;
+}
+
+/* Display headings — Playfair Display for page-level hero titles */
+.display-heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing-tight);
+  line-height: var(--line-height-tight);
+}
+
+.display-heading-xl {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(var(--type-scale-3xl), 5vw, var(--type-scale-display));
+  letter-spacing: var(--letter-spacing-tight);
+  line-height: 1.1;
+}
+
+/* Section headings — Inter for structural UI */
+.section-heading {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+/* Essay body — generous line-height for long-form reading */
+.essay-body,
+.post-content {
+  font-family: var(--font-body);
+  font-size: var(--type-scale-lg);
+  line-height: var(--line-height-reading);
+}
+
+/* Kicker labels — JetBrains Mono, uppercase, spaced */
+.kicker,
+.section-kicker,
+.hero-kicker,
+.content-type-badge {
+  font-family: var(--font-mono);
+  font-size: var(--type-scale-xs);
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing-widest);
+  text-transform: uppercase;
+}
+
+/* Poetry typography */
+.poetry-container {
+  font-family: var(--font-poetry);
+  font-size: var(--type-scale-xl);
+  line-height: var(--line-height-poetry);
+  font-weight: 400;
+}
+
+.poetry-container em {
+  font-style: italic;
+}
+
+.poetry-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--type-scale-3xl);
+  letter-spacing: var(--letter-spacing-tight);
+  margin-bottom: 0.25em;
+}
+
+.poetry-epigraph {
+  font-family: var(--font-poetry);
+  font-style: italic;
+  font-size: var(--type-scale-base);
+  color: var(--text-muted, #78716C);
+  border-left: 2px solid var(--accent-warm, #B45309);
+  padding-left: 1rem;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.poetry-dedication {
+  font-family: var(--font-poetry);
+  font-style: italic;
+  font-size: var(--type-scale-sm);
+  color: var(--text-muted, #78716C);
+  margin-bottom: 2rem;
+}
+
+/* Code prose */
+.code-prose {
+  font-family: var(--font-body);
+  font-size: var(--type-scale-lg);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Responsive type scale */
+@media (max-width: 768px) {
+  :root {
+    --type-scale-4xl: 1.875rem;
+    --type-scale-5xl: 2.25rem;
+    --type-scale-display: 2.5rem;
+  }
+}

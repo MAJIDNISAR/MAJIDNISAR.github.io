@@ -1,4 +1,5 @@
 ---
+content-type: essay
 layout: post
 title: Collective Conscience 2.0
 subtitle: ... (Kante say Kanta Nikalna)

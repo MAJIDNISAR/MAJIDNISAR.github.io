@@ -1,11 +1,12 @@
 ---
+content-type: essay
 title: "Heaven must be a Library!"
 subtitle: "Heaven: A place of books and lore"
 thumbnail-img: "/assets/img/blog/heaven-must-be-a-library/heaven-library1.png"
 cover-img: "/assets/img/blog/heaven-must-be-a-library/heaven-library2.jpg"
 tags: [library,heaven,Courage,Read,heart,resting,place,beauty]
 readtime: true
-permalink: /blog/heaven-must-be-a-libary/
+permalink: /blog/heaven-must-be-a-library/
 date: 2023-02-01 11:33:00
 ---
 # Heaven Must Be a Library

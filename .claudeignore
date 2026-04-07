@@ -1,0 +1,114 @@
+# .claudeignore - Protect sensitive files while allowing public content promotion
+
+# ============================================
+# PROTECT: Secrets and Credentials
+# ============================================
+.env
+.env.*
+*.env
+.env.local
+.env.production
+.env.staging
+
+# API Keys and Tokens
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+secrets.yml
+secrets.yaml
+credentials.yml
+credentials.yaml
+
+# GitHub/GitLab Secrets
+.github/secrets/
+.gitlab/secrets/
+
+# ============================================
+# PROTECT: Configuration with Sensitive Data
+# ============================================
+# Jekyll config might contain analytics IDs
+_config.yml
+_config.*.yml
+_config.production.yml
+
+# Staticman config (contains secrets)
+staticman.yml
+
+# ============================================
+# PROTECT: Private Drafts and Notes
+# ============================================
+_drafts/
+_notes/
+_private/
+*.draft.md
+*.draft.html
+TODO.md
+NOTES.md
+
+# ============================================
+# PROTECT: Build Artifacts and Dependencies
+# ============================================
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+node_modules/
+vendor/
+Gemfile.lock
+package-lock.json
+yarn.lock
+
+# ============================================
+# PROTECT: IDE and Editor Files
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ============================================
+# PROTECT: Documentation (Internal)
+# ============================================
+CLAUDE.md
+LOCAL-TESTING-GUIDE.md
+MODERNIZATION-SUMMARY.md
+README-MODERNIZATION.md
+RUBY-VERSION-FIX.md
+
+# ============================================
+# ALLOW: Public Website Content (Not Ignored)
+# ============================================
+# Blog posts
+# _posts/            # ALLOWED - Public content
+# _newsletter/       # ALLOWED - Public newsletters
+# _poetry/           # ALLOWED - Public poetry
+# _photos/           # ALLOWED - Public photos
+# _code_samples/     # ALLOWED - Public code samples
+
+# Pages
+# index.html         # ALLOWED
+# aboutme.html       # ALLOWED
+# cv.html            # ALLOWED
+# leadership.html    # ALLOWED
+# case-studies.html  # ALLOWED
+# writing.html       # ALLOWED
+# contact.html       # ALLOWED
+# projects.md        # ALLOWED
+
+# Assets (Public)
+# assets/            # ALLOWED - CSS, JS, images
+# _includes/         # ALLOWED - Public templates
+# _layouts/          # ALLOWED - Public layouts
+
+# ============================================
+# ALLOW: SEO and Crawlers (Not Ignored)
+# ============================================
+# robots.txt         # ALLOWED
+# ai.txt             # ALLOWED
+# sitemap.xml        # ALLOWED
+# feed.xml           # ALLOWED

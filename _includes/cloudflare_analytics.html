@@ -1,4 +1,4 @@
-{% if site.cloudflare_analytics %}
+{% if site.cloudflare_analytics and jekyll.environment == "production" %}
 <!-- Cloudflare Web Analytics -->
 <script defer
     src='https://static.cloudflareinsights.com/beacon.min.js'

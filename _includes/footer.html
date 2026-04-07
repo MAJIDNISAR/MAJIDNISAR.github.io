@@ -2,46 +2,124 @@
   <div class="container-md beautiful-jekyll-footer">
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
-      {% include social-networks-links.html %}
-      {% if page.footer-extra %}
-        <div class="footer-custom-content">
-          {% for file in page.footer-extra %}
-            {% include {{ file }} %}
-          {% endfor %}
-        </div>
-      {% endif %}
-      <p class="copyright text-muted">
-      {% if site.author %}
-        {{ site.author }}
-        &nbsp;&bull;&nbsp;
-      {% endif %}
-      {{ site.time | date: '%Y' }}
 
-      {% if site.url-pretty %}
-        &nbsp;&bull;&nbsp;
-        <span class="author-site">
-          <a href="{% if site.url-canonical %}{{ site.url-canonical }}{% else %}{{ '' | absolute_url }}{% endif %}">{{ site.url-pretty }}</a>
-        </span>
-      {% endif %}
+        <nav class="footer-content-nav">
+          <div class="footer-nav-group">
+            <span class="footer-nav-label">Leadership</span>
+            <a href="/leadership/">Operating Model</a>
+            <a href="/case-studies/">Case Studies</a>
+            <a href="/speaking/">Speaking &amp; Advisory</a>
+            <a href="/work-with-me/">Work With Me</a>
+            <a href="/cv/">Executive CV</a>
+          </div>
+          <div class="footer-nav-group">
+            <span class="footer-nav-label">Writing</span>
+            <a href="/writing/">Topic Archive</a>
+            <a href="/writing/#ai-leadership">AI Leadership</a>
+            <a href="/writing/#technical-essays">Technical Essays</a>
+            <a href="/writing/newsletter/">Newsletter</a>
+            <a href="/poetry/">Poetry</a>
+          </div>
+          <div class="footer-nav-group">
+            <span class="footer-nav-label">Work</span>
+            <a href="/projects/kun/">Project KUN</a>
+            <a href="/projects/astra/">Astra</a>
+            <a href="/projects/">All Projects</a>
+          </div>
+          <div class="footer-nav-group">
+            <span class="footer-nav-label">Site</span>
+            <a href="/aboutme/">About</a>
+            <a href="/media-kit/">Media Kit</a>
+            <a href="/photography/">Photography</a>
+            <a href="/now/">Now</a>
+            <a href="/contact/">Contact</a>
+          </div>
+          <div class="footer-nav-group footer-nav-group--newsletter">
+            <span class="footer-nav-label">Newsletter</span>
+            <span class="footer-newsletter-name">THE SYSTEM LAYER</span>
+            <a href="https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/" target="_blank" rel="noopener">Subscribe on LinkedIn →</a>
+          </div>
+        </nav>
 
-      {% if site.matomo %}
-        {% if site.matomo.opt-out %}
-          &nbsp;&bull;&nbsp;
-          <a href="http://{{- site.matomo.uri -}}/index.php?module=CoreAdminHome&action=optOut" target="_blank" class="text_muted">Do-not-Track</a>
+        {% include social-networks-links.html %}
+
+        {% if page.footer-extra %}
+          <div class="footer-custom-content">
+            {% for file in page.footer-extra %}
+              {% include {{ file }} %}
+            {% endfor %}
+          </div>
         {% endif %}
-      {% endif%}
 
-      {% if site.edit_page_button and site.github.repository_url %}
-        &nbsp;&bull;&nbsp;
-        <a title="Edit this page on GitHub" href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}" class="text_muted">Edit page</a>
-       {% endif%}
+        <p class="copyright text-muted">
+          {% if site.author %}{{ site.author.name }}&nbsp;&bull;&nbsp;{% endif %}
+          {{ site.time | date: '%Y' }}
+          {% if site.url-pretty %}
+            &nbsp;&bull;&nbsp;
+            <span class="author-site">
+              <a href="{% if site.url-canonical %}{{ site.url-canonical }}{% else %}{{ '' | absolute_url }}{% endif %}">{{ site.url-pretty }}</a>
+            </span>
+          {% endif %}
+        </p>
 
-      </p>
-      {% unless site.remove-ads %}<p class="theme-by text-muted">
-        Powered by
-        <a href="https:/majidnisar.com">majidnisar.com</a>
-      </p>{% endunless %}
       </div>
     </div>
   </div>
 </footer>
+
+<style>
+.footer-content-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.4rem;
+  padding: 1.75rem;
+  border: 1px solid rgba(22, 19, 17, 0.08);
+  background: linear-gradient(180deg, rgba(255,255,255,0.76), rgba(255,255,255,0.6));
+  box-shadow: 0 16px 36px rgba(22, 19, 17, 0.06);
+  margin-bottom: 1.5rem;
+  border-radius: 28px;
+  backdrop-filter: blur(12px);
+}
+.footer-nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.2rem 0.1rem;
+}
+.footer-nav-group--newsletter {
+  max-width: 16rem;
+}
+.footer-nav-label {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted, #78716C);
+  margin-bottom: 0.25rem;
+}
+.footer-nav-group a {
+  font-size: 0.88rem;
+  color: var(--footer-link-col, #1C1917);
+  text-decoration: none;
+  opacity: 0.78;
+  transition: opacity 0.15s, color 0.15s;
+}
+.footer-nav-group a:hover { opacity: 1; color: var(--accent-color, #2563EB); }
+.footer-newsletter-name {
+  font-family: var(--font-display, 'Playfair Display', Georgia, serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent-warm, #B45309);
+}
+[data-theme="dark"] .footer-content-nav {
+  background: rgba(28,25,23,0.72);
+  border-color: rgba(231,229,228,0.08);
+  box-shadow: 0 18px 38px rgba(0,0,0,0.28);
+}
+@media (max-width: 768px) {
+  .footer-content-nav { grid-template-columns: 1fr 1fr; gap: 1rem; padding: 1.25rem; border-radius: 22px; }
+}
+@media (max-width: 480px) {
+  .footer-content-nav { grid-template-columns: 1fr; }
+}
+</style>

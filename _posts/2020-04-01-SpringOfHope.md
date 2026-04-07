@@ -1,4 +1,5 @@
 ---
+content-type: poetry
 layout: post
 title: Spring Of Hope!
 thumbnail-image: /assets/img/crop me.jpg

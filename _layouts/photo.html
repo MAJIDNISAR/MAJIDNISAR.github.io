@@ -1,0 +1,58 @@
+---
+layout: base
+---
+
+<div class="photo-page">
+
+  <div class="photo-page-hero">
+    <img src="{{ page.image | absolute_url }}" alt="{{ page.title }}" class="photo-page-img" />
+  </div>
+
+  <div class="photo-page-content">
+
+    <header class="photo-page-header">
+      <span class="kicker">Photography</span>
+      <h1 class="photo-page-title">{{ page.title }}</h1>
+      <div class="photo-page-meta">
+        {% if page.location %}<span class="photo-location-label">{{ page.location }}</span>{% endif %}
+        {% if page.date_taken %}<span class="photo-meta-sep">·</span><span>{{ page.date_taken }}</span>{% endif %}
+        {% if page.camera %}<span class="photo-meta-sep">·</span><span>{{ page.camera }}</span>{% endif %}
+      </div>
+    </header>
+
+    {% if page.description %}
+      <p class="photo-page-description">{{ page.description }}</p>
+    {% endif %}
+
+    {{ content }}
+
+    {% if page.tags.size > 0 %}
+      <div class="photo-page-tags">
+        {% for tag in page.tags %}
+          <a href="{{ '/tags' | absolute_url }}#{{ tag }}" class="writing-tag">{{ tag }}</a>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <div class="photo-page-nav">
+      <a href="{{ '/photography' | absolute_url }}" class="poetry-back">← All photography</a>
+    </div>
+
+  </div>
+
+  {% assign related = site.photos | where_exp: "p", "p.url != page.url" | sample: 3 %}
+  {% if related.size > 0 %}
+    <div class="photo-related">
+      <h2 class="photo-related-heading">More photographs</h2>
+      <div class="photo-related-grid">
+        {% for rel in related %}
+          <a href="{{ rel.url | absolute_url }}" class="photo-related-item">
+            <img src="{{ rel.thumbnail | default: rel.image | absolute_url }}" alt="{{ rel.title }}" loading="lazy" />
+            <span>{{ rel.title }}</span>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+
+</div>

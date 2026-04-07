@@ -1,4 +1,5 @@
 ---
+content-type: reflection
 layout: post
 title: First post!
 image: /img/Me.jpg

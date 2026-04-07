@@ -1,4 +1,5 @@
 ---
+content-type: essay
 title: "Person you would want to meet!"
 subtitle: "Belive starts with Be!"
 thumbnail-img: "/assets/img/blog/person/person1.png"

@@ -1,0 +1,42 @@
+---
+layout: base
+---
+
+<div class="code-sample-page">
+
+  <header class="code-sample-header">
+    <span class="kicker">Code</span>
+    <h1 class="code-sample-title">{{ page.title }}</h1>
+    {% if page.subtitle %}
+      <p class="code-sample-subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+    <div class="code-sample-meta">
+      {% if page.language %}
+        <span class="lang-badge lang-{{ page.language | downcase }}">{{ page.language }}</span>
+      {% endif %}
+      {% if page.github_url %}
+        <a href="{{ page.github_url }}" class="code-github-link" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> View on GitHub
+        </a>
+      {% endif %}
+      <span class="writing-date">{{ page.date | date: "%B %-d, %Y" }}</span>
+    </div>
+  </header>
+
+  <div class="code-sample-body">
+    {{ content }}
+  </div>
+
+  {% if page.tags.size > 0 %}
+    <div class="code-sample-tags">
+      {% for tag in page.tags %}
+        <a href="{{ '/tags' | absolute_url }}#{{ tag }}" class="writing-tag">{{ tag }}</a>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <div class="code-sample-nav">
+    <a href="{{ '/code' | absolute_url }}" class="poetry-back">← All code</a>
+  </div>
+
+</div>

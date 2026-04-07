@@ -5,6 +5,10 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', '{{ site.gtag }}');
+  gtag('config', '{{ site.gtag }}', {
+    page_path: window.location.pathname,
+    anonymize_ip: true,
+    transport_type: 'beacon'
+  });
 </script>
 {% endif %}

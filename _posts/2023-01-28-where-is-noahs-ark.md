@@ -1,11 +1,12 @@
 ---
+content-type: essay
 title: "Noah's Ark in Kashmir!"
 subtitle: "Where is Noah's Ark in Kashmir"
 thumbnail-img: "/assets/img/blog/life/life4.png"
 cover-img: "/assets/img/blog/life/life3.png"
 tags: [Noah,Ark,Kashmir,Courage,conflict]
 readtime: true
-permalink: /blog/fragility-of-life/
+permalink: /blog/where-is-noahs-ark/
 date: 2023-01-25 11:33:00
 ---
 # Where is Noah's Ark In Kashmir

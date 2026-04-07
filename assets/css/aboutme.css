@@ -1,46 +1,91 @@
-#aboutme-section {
-  font-size: 1.1875rem;
+.about-shell {
+  width: min(100%, 1280px);
+  margin: 2rem 0 3rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.about-text {
-  position: relative;
-  margin-left: 1.875rem;
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  gap: 1.5rem;
+  align-items: start;
 }
 
-.about-icon {
-  font-size: 1.5rem;
-  position: absolute;
-  left: -2.5rem;
-  margin-top: 0.3125rem;
+.about-main,
+.about-side {
+  display: grid;
+  gap: 1.5rem;
 }
 
-#aboutme-section p:last-child {
+.about-lead,
+.about-card,
+.about-panel {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(26, 26, 46, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+.about-lead {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  padding: 1.5rem 1.75rem;
+  margin: 0;
+}
+
+.about-card,
+.about-panel {
+  padding: 1.5rem 1.75rem;
+}
+
+.about-card h2,
+.about-panel h3 {
+  margin-top: 0;
+  margin-bottom: 0.9rem;
+}
+
+.about-card p:last-child,
+.about-panel ul:last-child {
   margin-bottom: 0;
 }
 
-#contactme-section {
-  font-size: 1.1875rem;
-  margin-top: 3.75rem;
+.about-list,
+.profile-facts {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.75rem;
 }
 
-#contactme-section h1 {
-  font-size: 3.125rem;
+.profile-facts li,
+.about-list li {
+  line-height: 1.6;
 }
 
-#contact-form p {
-  margin-bottom: 0.625rem;
+[data-theme="dark"] .about-lead,
+[data-theme="dark"] .about-card,
+[data-theme="dark"] .about-panel {
+  background: rgba(22, 27, 34, 0.94);
+  border-color: rgba(201, 209, 217, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28);
 }
 
-#contact-form .form-control {
-  margin-bottom: 0.9375rem;
+@media (max-width: 991px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-#paypalbtn {
-  text-align: center;
-}
+@media (max-width: 767px) {
+  .about-shell {
+    margin-top: 1rem;
+  }
 
-#paypalbtn a {
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-family: arial;
+  .about-lead,
+  .about-card,
+  .about-panel {
+    padding: 1.25rem;
+    border-radius: 18px;
+  }
 }

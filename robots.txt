@@ -1,0 +1,15 @@
+# robots.txt for majidnisar.com
+# Generated for SEO optimization
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://majidnisar.com/sitemap.xml
+
+# Disallow admin/private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Allow all content to be indexed
+Allow: /

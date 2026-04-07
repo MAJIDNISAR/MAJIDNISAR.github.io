@@ -1,0 +1,66 @@
+---
+layout: base
+---
+
+<div class="poetry-page">
+
+  {% if page.cover-img %}
+  <div class="poetry-ambient" style="background-image: url('{{ page.cover-img | absolute_url }}')">
+    <div class="poetry-ambient-overlay"></div>
+  </div>
+  {% endif %}
+
+  <div class="poetry-wrapper">
+
+    <header class="poetry-header">
+      {% if page.content-type %}
+        <span class="kicker">Poetry</span>
+      {% endif %}
+      <h1 class="poetry-title">{{ page.title }}</h1>
+      {% if page.dedication %}
+        <p class="poetry-dedication">{{ page.dedication }}</p>
+      {% endif %}
+      {% if page.epigraph %}
+        <blockquote class="poetry-epigraph">{{ page.epigraph }}</blockquote>
+      {% endif %}
+      <div class="poetry-meta">
+        {% if page.date_written %}
+          <span class="poetry-date">{{ page.date_written }}</span>
+        {% else %}
+          <span class="poetry-date">{{ page.date | date: "%B %Y" }}</span>
+        {% endif %}
+        {% if page.tags.size > 0 %}
+          <span class="poetry-meta-sep">·</span>
+          {% for tag in page.tags %}
+            <a href="{{ '/tags' | absolute_url }}#{{ tag }}" class="poetry-tag">{{ tag }}</a>
+          {% endfor %}
+        {% endif %}
+      </div>
+    </header>
+
+    <div class="poetry-container">
+      {{ content }}
+    </div>
+
+    <footer class="poetry-footer">
+      <a href="{{ '/poetry' | absolute_url }}" class="poetry-back">← All poems</a>
+      {% if site.share-links-active %}
+        <div class="poetry-share">
+          {% if site.share-links-active.twitter %}
+            <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.url | absolute_url }}"
+               target="_blank" rel="noopener" aria-label="Share on Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+          {% endif %}
+          {% if site.share-links-active.linkedin %}
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url }}"
+               target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          {% endif %}
+        </div>
+      {% endif %}
+    </footer>
+
+  </div>
+</div>

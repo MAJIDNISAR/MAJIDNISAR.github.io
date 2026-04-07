@@ -1,4 +1,5 @@
 ---
+content-type: poetry
 layout: post
 title: Acquainted with the Night
 thumbnail-img: /assets/img/crop me.jpg

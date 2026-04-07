@@ -1,0 +1,84 @@
+# LinkedIn Content Sync Workflow
+# Automatically fetches and syncs content from LinkedIn
+
+name: LinkedIn Content Sync
+
+on:
+  schedule:
+    # Run daily at 6 AM UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch: # Allow manual triggers
+    inputs:
+      sync_type:
+        description: 'Type of content to sync'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - articles
+          - newsletters
+          - posts
+
+jobs:
+  sync-content:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Sync LinkedIn Content
+        env:
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_ID: ${{ secrets.LINKEDIN_PERSON_ID }}
+        run: |
+          node scripts/sync-linkedin.js --type=${{ github.event.inputs.sync_type || 'all' }}
+      
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add _posts/ _newsletter/
+          git diff --staged --quiet || git commit -m "Auto-sync LinkedIn content [skip ci]"
+          git push
+      
+      - name: Build Jekyll site
+        uses: helaili/jekyll-action@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+
+  notify:
+    needs: sync-content
+    runs-on: ubuntu-latest
+    if: always()
+    
+    steps:
+      - name: Send notification
+        if: needs.sync-content.result == 'success'
+        run: |
+          echo "✅ LinkedIn sync completed successfully"
+          # Add notification logic here (email, Slack, etc.)
+      
+      - name: Send failure notification
+        if: needs.sync-content.result == 'failure'
+        run: |
+          echo "❌ LinkedIn sync failed"
+          # Add failure notification logic here

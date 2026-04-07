@@ -243,6 +243,7 @@ client.query(q, ['3'], function(err, result) {});
 ```
 
 ------
+content-type: technical
 
 [sqlmap](http://sqlmap.org/) is an open source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws and taking over of database servers. Use this tool to test your applications for SQL injection vulnerabilities.
 

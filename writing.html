@@ -1,0 +1,139 @@
+---
+layout: page
+title: "Writing"
+subtitle: "Essays, technical notes, systems thinking, and the newsletter"
+permalink: /writing/
+full-width: false
+---
+
+<div class="writing-hub">
+  <section class="writing-intro reveal reveal-up">
+    <span class="writing-kicker">Topic Map</span>
+    <h2 class="writing-heading">Writing organized by the problems it helps people think through.</h2>
+    <p class="writing-lead">
+      This archive is not split only by format. It is organized around leadership, execution, engineering, technical depth, and reflection:
+      the themes that define the public layer of the work.
+    </p>
+    <div class="writing-topic-grid reveal-stagger">
+      <article class="writing-topic-card">
+        <strong>AI Leadership</strong>
+        <p>Applied AI, productization, service layers, and realistic implementation choices.</p>
+      </article>
+      <article class="writing-topic-card">
+        <strong>Execution Systems</strong>
+        <p>Trust, alignment, operating discipline, and the system beneath delivery quality.</p>
+      </article>
+      <article class="writing-topic-card">
+        <strong>Engineering Management</strong>
+        <p>Teams, execution culture, leadership design, and the mechanics of durable orgs.</p>
+      </article>
+      <article class="writing-topic-card">
+        <strong>Technical Essays</strong>
+        <p>Technical framing, implementation detail, architecture, and engineering trends.</p>
+      </article>
+      <article class="writing-topic-card">
+        <strong>Reflections</strong>
+        <p>Personal essays, slower observations, and the human layer around technical work.</p>
+      </article>
+    </div>
+  </section>
+
+  <div class="writing-filters" id="writing-filters">
+    <button class="wf-btn active" data-filter="all">All</button>
+    <button class="wf-btn" data-filter="ai-leadership">AI Leadership</button>
+    <button class="wf-btn" data-filter="execution-systems">Execution Systems</button>
+    <button class="wf-btn" data-filter="engineering-management">Engineering Management</button>
+    <button class="wf-btn" data-filter="technical-essays">Technical Essays</button>
+    <button class="wf-btn" data-filter="reflections">Reflections</button>
+  </div>
+
+  <div class="writing-list" id="writing-list">
+
+    {% assign newsletter_posts = site.newsletter | sort: 'date' | reverse %}
+    {% assign all_posts = site.posts | concat: newsletter_posts | sort: 'date' | reverse %}
+
+    {% for post in all_posts %}
+    {% assign ct = post.content-type | default: "essay" %}
+    {% assign tags_blob = post.tags | join: '|' | downcase %}
+    {% assign title_blob = post.title | downcase %}
+    {% assign topic = "execution-systems" %}
+    {% assign topic_label = "Execution Systems" %}
+
+    {% if post.collection == "newsletter" %}
+      {% assign topic = "execution-systems" %}
+      {% assign topic_label = "Execution Systems" %}
+    {% elsif ct == "technical" and tags_blob contains "ai" or ct == "technical" and tags_blob contains "artificial" or ct == "technical" and tags_blob contains "dataengineering" or ct == "technical" and tags_blob contains "innovation" %}
+      {% assign topic = "ai-leadership" %}
+      {% assign topic_label = "AI Leadership" %}
+    {% elsif ct == "technical" %}
+      {% assign topic = "technical-essays" %}
+      {% assign topic_label = "Technical Essays" %}
+    {% elsif ct == "reflection" or tags_blob contains "reflection" or tags_blob contains "poetry" or tags_blob contains "communication" %}
+      {% assign topic = "reflections" %}
+      {% assign topic_label = "Reflections" %}
+    {% elsif tags_blob contains "ai" or tags_blob contains "llm" or tags_blob contains "machine learning" or tags_blob contains "data engineering" %}
+      {% assign topic = "ai-leadership" %}
+      {% assign topic_label = "AI Leadership" %}
+    {% elsif tags_blob contains "team" or tags_blob contains "management" or tags_blob contains "leadership" or tags_blob contains "culture" or tags_blob contains "workplace" or tags_blob contains "hybrid-work" or tags_blob contains "education" or tags_blob contains "universities" or title_blob contains "building courses" %}
+      {% assign topic = "engineering-management" %}
+      {% assign topic_label = "Engineering Management" %}
+    {% elsif tags_blob contains "life" or tags_blob contains "progress" or tags_blob contains "beauty" or tags_blob contains "mindfullness" or tags_blob contains "silence" or title_blob contains "library" or title_blob contains "magnetic hill" %}
+      {% assign topic = "reflections" %}
+      {% assign topic_label = "Reflections" %}
+    {% endif %}
+
+    <article class="writing-item" data-topic="{{ topic }}">
+      <div class="writing-item-meta">
+        <span class="writing-topic-label">{{ topic_label }}</span>
+        <span class="content-type-badge badge-{{ ct }}">{{ ct | capitalize }}</span>
+        <span class="writing-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        {% assign words = post.content | number_of_words %}
+        {% assign minutes = words | divided_by: 200 | plus: 1 %}
+        <span class="reading-time">{{ minutes }} min read</span>
+      </div>
+      <h2 class="writing-item-title"><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
+      {% if post.subtitle %}
+        <p class="writing-item-subtitle">{{ post.subtitle }}</p>
+      {% endif %}
+      {% if post.excerpt %}
+        <p class="writing-item-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+      {% endif %}
+      {% if post.tags.size > 0 %}
+        <div class="writing-item-tags">
+          {% for tag in post.tags limit: 4 %}
+            <a href="{{ '/tags' | absolute_url }}#{{ tag }}" class="writing-tag">{{ tag }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </article>
+    {% endfor %}
+
+  </div>
+</div>
+
+<script>
+(function() {
+  var btns = document.querySelectorAll('.wf-btn');
+  var items = document.querySelectorAll('.writing-item');
+  btns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btns.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var filter = btn.getAttribute('data-filter');
+      items.forEach(function(item) {
+        if (filter === 'all' || item.getAttribute('data-topic') === filter) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+  // Handle URL hash filter
+  var hash = window.location.hash.replace('#', '');
+  if (hash) {
+    var target = document.querySelector('[data-filter="' + hash + '"]');
+    if (target) target.click();
+  }
+})();
+</script>

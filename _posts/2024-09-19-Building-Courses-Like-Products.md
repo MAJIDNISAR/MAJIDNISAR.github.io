@@ -1,4 +1,5 @@
 ---
+content-type: essay
 title: "Building Courses Like Products"
 subtitle: "How Modern Universities Can Leverage VPC and BMC for Educational Excellence"
 thumbnail-img: "https://media.licdn.com/dms/image/v2/D5612AQEw8HmJy4Irfw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1726736127415?e=1732147200&v=beta&t=41Uh2oJCvt_JX2hDO8eQhhgC6WrgnlpjA2-ZUqJRLks"

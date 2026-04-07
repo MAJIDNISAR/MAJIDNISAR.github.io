@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.linkedin.com)",
+      "Bash(bundle exec:*)",
+      "Bash(grep -rn \"fa-sun\\\\|fa-moon\\\\|theme-toggle\\\\|theme-icon\" /Users/majidnisar/Developer/myWebsite/MAJIDNISAR.github.io/ --include=*.html --include=*.js --include=*.css)"
+    ]
+  }
+}

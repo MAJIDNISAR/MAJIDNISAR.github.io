@@ -1,0 +1,32 @@
+# .clineignore - Protect sensitive files while allowing public content promotion
+
+# ============================================
+# PROTECT: Secrets and Credentials
+# ============================================
+.env
+.env.*
+*.env
+.env.local
+.env.production
+.env.staging
+
+# API Keys and Tokens
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+secrets.yml
+secrets.yaml
+credentials.yml
+credentials.yaml
+
+# GitHub/GitLab Secrets
+.github/secrets/
+.gitlab/secrets/
+
+# ============================================
+# PROTECT: Configuration with Sensitive Data
+# ============================================
+# Jekyll config might contain analytics IDs
+_config.yml

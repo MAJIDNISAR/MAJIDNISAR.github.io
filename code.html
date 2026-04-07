@@ -1,0 +1,43 @@
+---
+layout: page
+title: "Code"
+subtitle: "Selected work, samples, and open source contributions"
+permalink: /code/
+---
+
+<div class="code-showcase">
+
+  {% if site.code_samples.size > 0 %}
+    <div class="code-grid">
+      {% assign samples = site.code_samples | sort: 'date' | reverse %}
+      {% for sample in samples %}
+        <article class="code-card">
+          <div class="code-card-header">
+            <span class="lang-badge lang-{{ sample.language | downcase }}">{{ sample.language }}</span>
+            {% if sample.github_url %}
+              <a href="{{ sample.github_url }}" class="code-github-link" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            {% endif %}
+          </div>
+          <h2 class="code-card-title"><a href="{{ sample.url | absolute_url }}">{{ sample.title }}</a></h2>
+          <p class="code-card-desc">{{ sample.description }}</p>
+          {% if sample.tags.size > 0 %}
+            <div class="code-card-tags">
+              {% for tag in sample.tags limit: 4 %}
+                <span class="code-tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="collection-empty">Code samples coming soon.</p>
+  {% endif %}
+
+  <div class="github-cta">
+    <p>More work on <a href="https://github.com/MAJIDNISAR" target="_blank" rel="noopener">GitHub</a>.</p>
+  </div>
+
+</div>
