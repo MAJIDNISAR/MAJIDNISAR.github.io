@@ -1,306 +1,327 @@
-/* --- Navigation Theme - Consistent Submenu & Menu Styling --- */
-/* This CSS provides a unified, modern theme for the navigation bar and dropdowns */
+/* ============================================
+   Navbar Theme — Modern overrides for Beautiful Jekyll
+   Loaded after beautifuljekyll.css, so all rules here win.
+   ============================================ */
 
 /* ============================================
-   CSS Custom Properties for Navigation
+   CSS Custom Properties
    ============================================ */
 :root {
-  /* Navigation colors */
-  --nav-bg: rgba(250, 250, 248, 0.88);
-  --nav-bg-solid: rgba(250, 250, 248, 0.96);
-  --nav-border: rgba(28, 25, 23, 0.08);
+  --nav-bg: rgba(250, 250, 248, 0.90);
+  --nav-bg-solid: rgba(250, 250, 248, 0.98);
+  --nav-border: rgba(28, 25, 23, 0.07);
   --nav-text: #1C1917;
   --nav-text-muted: #78716C;
-  --nav-hover-bg: rgba(37, 99, 235, 0.08);
+  --nav-hover-bg: rgba(37, 99, 235, 0.07);
   --nav-hover-text: #2563EB;
-  --nav-active-bg: rgba(37, 99, 235, 0.12);
   --nav-active-text: #1D4ED8;
-  
-  /* Dropdown specific */
-  --dropdown-bg: rgba(255, 255, 255, 0.95);
-  --dropdown-border: rgba(28, 25, 23, 0.08);
-  --dropdown-shadow: 0 20px 40px rgba(17, 24, 39, 0.12);
-  --dropdown-item-hover-bg: rgba(37, 99, 235, 0.08);
-  --dropdown-item-hover-text: #2563EB;
-  --dropdown-min-width: 200px;
-  --dropdown-max-width: 280px;
-  --dropdown-item-padding: 0.625rem 1rem;
-  --dropdown-border-radius: 14px;
+  --dropdown-bg: rgba(255, 255, 255, 0.98);
+  --dropdown-border: rgba(22, 19, 17, 0.08);
+  --dropdown-shadow: 0 16px 40px rgba(17, 24, 39, 0.10);
+  --dropdown-radius: 14px;
   --dropdown-item-radius: 8px;
-  
-  /* CTA button */
-  --cta-bg: linear-gradient(135deg, #2563EB, #1D4ED8);
-  --cta-hover-bg: linear-gradient(135deg, #1D4ED8, #1E40AF);
-  --cta-shadow: 0 10px 24px rgba(37, 99, 235, 0.22);
+  --nav-height: 4.5rem;
 }
 
-/* Dark mode navigation colors */
 [data-theme="dark"] {
   --nav-bg: rgba(12, 10, 9, 0.92);
-  --nav-bg-solid: rgba(28, 25, 23, 0.96);
-  --nav-border: rgba(231, 229, 228, 0.1);
+  --nav-bg-solid: rgba(18, 16, 14, 0.98);
+  --nav-border: rgba(231, 229, 228, 0.08);
   --nav-text: #E7E5E4;
   --nav-text-muted: #A8A29E;
-  --nav-hover-bg: rgba(96, 165, 250, 0.12);
+  --nav-hover-bg: rgba(96, 165, 250, 0.10);
   --nav-hover-text: #60A5FA;
-  --nav-active-bg: rgba(96, 165, 250, 0.18);
   --nav-active-text: #93C5FD;
-  
-  --dropdown-bg: rgba(28, 25, 23, 0.96);
-  --dropdown-border: rgba(231, 229, 228, 0.1);
-  --dropdown-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-  --dropdown-item-hover-bg: rgba(96, 165, 250, 0.12);
-  --dropdown-item-hover-text: #60A5FA;
+  --dropdown-bg: rgba(24, 21, 19, 0.98);
+  --dropdown-border: rgba(231, 229, 228, 0.08);
+  --dropdown-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
 }
 
 /* ============================================
-   Navbar Container
+   Navbar Container — reset beautifuljekyll base
    ============================================ */
 .navbar-custom {
-  background: var(--nav-bg);
-  -webkit-backdrop-filter: blur(18px);
-  backdrop-filter: blur(18px);
-  border-bottom: 1px solid var(--nav-border);
-  box-shadow: 0 4px 16px rgba(17, 24, 39, 0.06);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background: var(--nav-bg) !important;
+  background-color: transparent !important;
+  border-bottom: 1px solid var(--nav-border) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  backdrop-filter: blur(20px) saturate(1.4);
+  box-shadow: 0 1px 24px rgba(17, 24, 39, 0.05);
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  min-height: var(--nav-height);
+  transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-.navbar-custom:hover {
-  box-shadow: 0 8px 24px rgba(17, 24, 39, 0.1);
+.navbar-custom.navbar-scrolled {
+  background: var(--nav-bg-solid) !important;
+  box-shadow: 0 2px 28px rgba(17, 24, 39, 0.08);
 }
 
+/* ============================================
+   Nav Shell — full-width inner container
+   ============================================ */
 .nav-shell {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  min-height: 4.75rem;
+  width: 100%;
+  min-height: var(--nav-height);
+  gap: 0.5rem;
 }
 
 /* ============================================
    Brand / Logo
    ============================================ */
-.navbar-custom .navbar-brand {
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-brand-logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: 0.05em;
+  gap: 0.65rem;
+  padding: 0.5rem 0 !important;
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.88rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--nav-text) !important;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  transition: opacity 0.2s ease;
+  text-decoration: none !important;
+  transition: opacity 0.18s ease;
+  line-height: 1 !important;
 }
 
-.navbar-custom .navbar-brand:hover {
-  opacity: 0.8;
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus {
+  color: var(--nav-text) !important;
+  opacity: 0.75;
+  text-decoration: none !important;
 }
 
-.navbar-custom .navbar-brand-logo img {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 14px;
+.navbar-custom .navbar-brand-logo img,
+.navbar-custom.top-nav-short .navbar-brand-logo img,
+.navbar-custom.top-nav-short-permanent .navbar-brand-logo img {
+  width: 2.4rem !important;
+  height: 2.4rem !important;
+  border-radius: 12px;
   object-fit: cover;
-  box-shadow: 0 4px 12px rgba(17, 24, 39, 0.1);
+  box-shadow: 0 2px 10px rgba(17, 24, 39, 0.10);
 }
 
 .navbar-brand-text {
   font-family: 'Inter', -apple-system, sans-serif;
   font-weight: 700;
-  font-size: 0.95rem;
-  letter-spacing: 0.08em;
+  font-size: 0.88rem;
+  letter-spacing: 0.06em;
 }
 
 /* ============================================
-   Navigation Links
+   Nav items — reset beautifuljekyll overrides
    ============================================ */
 .navbar-custom .navbar-nav .nav-item {
-  text-transform: none;
-  font-size: 0.875rem;
+  text-transform: none !important;
+  font-size: 0.875rem !important;
   letter-spacing: 0.01em;
 }
 
 .navbar-custom .navbar-nav .nav-link {
   font-family: 'Inter', -apple-system, sans-serif;
-  font-weight: 600;
-  font-size: 0.875rem;
-  letter-spacing: 0.01em;
+  font-weight: 500 !important;
+  font-size: 0.875rem !important;
   color: var(--nav-text) !important;
-  padding: 0.5rem 0.75rem !important;
-  border-radius: 999px;
+  padding: 0.5rem 0.7rem !important;
+  border-radius: 8px;
+  line-height: 1.2 !important;
   white-space: nowrap;
-  transition: all 0.2s ease;
-  margin: 0 0.15rem;
+  text-decoration: none !important;
+  transition: color 0.18s ease, background 0.18s ease;
+  margin: 0 0.1rem;
 }
 
 .navbar-custom .navbar-nav .nav-link:hover,
 .navbar-custom .navbar-nav .nav-link:focus {
   color: var(--nav-hover-text) !important;
   background: var(--nav-hover-bg);
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
+/* Active nav link — color only, no pill */
 .navbar-custom .navbar-nav .nav-link.active {
   color: var(--nav-active-text) !important;
-  background: var(--nav-active-bg);
+  background: transparent !important;
+  font-weight: 600 !important;
 }
 
 /* ============================================
-   Dropdown Toggle Arrow
+   Dropdown toggle
    ============================================ */
+.navbar-custom .navbar-nav .nav-link.dropdown-toggle {
+  padding-right: 1.4rem !important;
+}
+
 .dropdown-toggle::after {
-  border: none;
-  margin-left: 0.4em;
-  font-size: 0.65em;
+  border: none !important;
+  border-width: 0 !important;
+  content: '›' !important;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
   vertical-align: middle;
-  content: '▾';
+  margin-left: 0.25em;
+  position: absolute;
+  right: 0.55rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
   transition: transform 0.2s ease;
+  opacity: 0.55;
 }
 
-.nav-item.dropdown:hover .dropdown-toggle::after,
-.navbar-custom .nav-item.dropdown.show .dropdown-toggle::after {
-  transform: rotate(180deg);
+.nav-item.dropdown.show .dropdown-toggle::after,
+.nav-item.dropdown:hover .dropdown-toggle::after {
+  transform: translateY(-50%) rotate(270deg);
+  opacity: 0.8;
 }
 
 /* ============================================
-   Dropdown Menu - Main Container
+   Dropdown menu — reset all beautifuljekyll styles
    ============================================ */
+.navbar-custom .nav-item.dropdown {
+  position: relative;
+}
+
+/* Kill beautifuljekyll dropdown hover/show backgrounds */
+.navbar-custom .nav-item.dropdown:hover,
+.navbar-custom .nav-item.dropdown.show {
+  background: transparent !important;
+}
+
 .navbar-custom .nav-item.dropdown .dropdown-menu {
-  position: absolute;
-  min-width: var(--dropdown-min-width);
-  max-width: var(--dropdown-max-width);
-  margin-top: 0.5rem;
-  padding: 0.5rem;
-  background: var(--dropdown-bg);
-  border: 1px solid var(--dropdown-border);
-  border-radius: var(--dropdown-border-radius);
-  box-shadow: var(--dropdown-shadow);
-  -webkit-backdrop-filter: blur(14px);
-  backdrop-filter: blur(14px);
+  position: absolute !important;
+  top: calc(100% + 0.4rem) !important;
+  left: auto !important;
+  right: 0 !important;
+  transform: translateY(6px) !important;
+  min-width: 200px !important;
+  max-width: 280px !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0.45rem !important;
+  background: var(--dropdown-bg) !important;
+  background-color: var(--dropdown-bg) !important;
+  border: 1px solid var(--dropdown-border) !important;
+  border-radius: var(--dropdown-radius) !important;
+  box-shadow: var(--dropdown-shadow) !important;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(8px);
-  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
-  z-index: 1000;
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+  z-index: 1050 !important;
+  font-size: 0.875rem !important;
+  text-align: left !important;
+  white-space: normal;
 }
 
-/* Show dropdown on hover (desktop) */
+/* Show on hover — desktop */
 @media (min-width: 1200px) {
-  .navbar-custom .nav-item.dropdown:hover .dropdown-menu {
+  .navbar-custom .nav-item.dropdown:hover .dropdown-menu,
+  .navbar-custom .nav-item.dropdown:focus-within .dropdown-menu {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    pointer-events: auto;
+    transform: translateY(0) !important;
   }
 }
 
-/* Show dropdown when .show class is added (click/mobile) */
+/* Show when Bootstrap adds .show — mobile or click */
 .navbar-custom .nav-item.dropdown.show .dropdown-menu {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
-}
-
-/* Right-align dropdown menu */
-.navbar-custom .nav-item.dropdown .dropdown-menu-right {
-  right: 0;
-  left: auto;
+  pointer-events: auto;
+  transform: translateY(0) !important;
 }
 
 /* ============================================
-   Dropdown Items
+   Dropdown items — reset beautifuljekyll
    ============================================ */
 .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item {
   display: block;
   width: 100%;
-  padding: var(--dropdown-item-padding);
-  font-family: 'Inter', -apple-system, sans-serif;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--nav-text) !important;
-  background-color: transparent;
+  padding: 0.55rem 0.85rem !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-width: 0 !important;
   border-radius: var(--dropdown-item-radius);
-  white-space: normal;
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  color: var(--nav-text) !important;
   text-decoration: none !important;
-  transition: all 0.15s ease;
+  white-space: normal;
   line-height: 1.4;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
 .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item:hover,
 .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item:focus {
-  background: var(--dropdown-item-hover-bg);
-  color: var(--dropdown-item-hover-text) !important;
-  text-decoration: none;
+  background-color: var(--nav-hover-bg) !important;
+  color: var(--nav-hover-text) !important;
+  text-decoration: none !important;
 }
 
 .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item.active {
-  background: var(--nav-active-bg);
+  background-color: var(--nav-hover-bg) !important;
   color: var(--nav-active-text) !important;
-  font-weight: 600;
-}
-
-/* Remove border between dropdown items on desktop */
-@media (min-width: 1200px) {
-  .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item {
-    border: none;
-  }
+  font-weight: 600 !important;
 }
 
 /* ============================================
-   CTA Button (Work With Me)
+   CTA — Work With Me
    ============================================ */
 .navbar-custom .nav-item--cta .nav-link {
-  background: var(--cta-bg);
+  background: linear-gradient(135deg, #2563EB, #1D4ED8) !important;
   color: #fff !important;
-  box-shadow: var(--cta-shadow);
-  padding: 0.55rem 1.1rem !important;
-  font-weight: 600;
+  font-weight: 600 !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.22);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .navbar-custom .nav-item--cta .nav-link:hover,
-.navbar-custom .nav-item--cta .nav-link:focus,
-.navbar-custom .nav-item--cta .nav-link.active {
-  background: var(--cta-hover-bg);
+.navbar-custom .nav-item--cta .nav-link:focus {
+  background: linear-gradient(135deg, #1D4ED8, #1E40AF) !important;
   color: #fff !important;
   transform: translateY(-1px);
-  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.28);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.30);
 }
 
 /* ============================================
-   Leadership Highlight
+   Leadership highlight
    ============================================ */
 .navbar-custom .nav-item--highlight .nav-link {
   color: #2563EB !important;
-  font-weight: 700;
+  font-weight: 600 !important;
   position: relative;
 }
 
 .navbar-custom .nav-item--highlight .nav-link::after {
   content: '';
   position: absolute;
-  bottom: 2px;
+  bottom: 4px;
   left: 50%;
   transform: translateX(-50%);
-  width: 24px;
+  width: 18px;
   height: 2px;
   background: #2563EB;
   border-radius: 1px;
   transition: width 0.2s ease;
 }
 
-.navbar-custom .nav-item--highlight .nav-link:hover,
-.navbar-custom .nav-item--highlight .nav-link:focus,
-.navbar-custom .nav-item--highlight .nav-link.active {
-  color: #1D4ED8 !important;
-  background: rgba(37, 99, 235, 0.08);
+.navbar-custom .nav-item--highlight .nav-link:hover::after {
+  width: 28px;
 }
 
-.navbar-custom .nav-item--highlight .nav-link:hover::after,
-.navbar-custom .nav-item--highlight .nav-link.active::after {
-  width: 32px;
-}
-
-/* Mobile: remove underline for Leadership highlight */
 @media (max-width: 1199px) {
   .navbar-custom .nav-item--highlight .nav-link::after {
     display: none;
@@ -308,185 +329,149 @@
 }
 
 /* ============================================
-   Search Button
+   Search
    ============================================ */
 .navbar-custom .nav-item-search .nav-link {
   color: var(--nav-text-muted) !important;
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.35rem;
+  padding: 0.5rem 0.6rem !important;
 }
 
 .navbar-custom .nav-item-search .nav-link:hover {
   color: var(--nav-hover-text) !important;
 }
 
-#nav-search-icon {
-  font-size: 1rem;
-}
-
 #nav-search-text {
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
-/* Hide search text on smaller screens */
 @media (max-width: 767px) {
-  #nav-search-text {
-    display: none;
-  }
+  #nav-search-text { display: none; }
 }
 
 /* ============================================
-   Mobile Navigation
+   Mobile collapse
    ============================================ */
 @media (max-width: 1199px) {
-  .navbar-custom .navbar-toggler {
-    border-color: var(--nav-border);
-    padding: 0.5rem;
-    border-radius: 8px;
-    transition: background-color 0.2s ease;
+  .navbar-custom {
+    padding: 0 !important;
   }
-  
-  .navbar-custom .navbar-toggler:hover {
-    background: var(--nav-hover-bg);
+
+  .nav-shell {
+    flex-wrap: wrap;
+    padding: 0.65rem 1rem;
+    min-height: unset;
+    gap: 0;
   }
-  
-  .navbar-custom .navbar-toggler[aria-expanded="true"] {
-    background: var(--nav-active-bg);
-  }
-  
+
   .navbar-custom .navbar-collapse {
-    border-top: 1px solid var(--nav-border);
-    margin-top: 0.75rem;
-    padding: 0.75rem;
+    width: 100%;
+    border-top: 1px solid var(--nav-border) !important;
     background: var(--nav-bg-solid);
-    border-radius: 16px;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 0 0 16px 16px;
+    padding: 0.65rem 0.5rem;
+    margin: 0 !important;
     box-shadow: 0 12px 32px rgba(17, 24, 39, 0.08);
   }
-  
+
   .navbar-custom .navbar-nav {
-    padding: 0.5rem 0;
-    gap: 0.25rem;
+    padding: 0.25rem 0 !important;
+    gap: 0.15rem;
   }
-  
+
   .navbar-custom .navbar-nav .nav-link {
-    padding: 0.6rem 0.85rem !important;
+    padding: 0.65rem 0.85rem !important;
     border-radius: 10px;
+    margin: 0 !important;
   }
-  
-  /* Mobile dropdown */
+
+  /* Mobile dropdown — inline, no position absolute */
   .navbar-custom .nav-item.dropdown .dropdown-menu {
-    position: static;
-    box-shadow: none;
-    border: none;
-    background: transparent;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    padding: 0 0 0 1rem;
-    margin-top: 0;
-    min-width: auto;
-    max-width: none;
-    border-radius: 0;
-    transform: none;
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    opacity: 1 !important;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    pointer-events: none;
+    box-shadow: none !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 0 0 1rem !important;
+    border-radius: 0 !important;
+    transition: max-height 0.25s ease, visibility 0.25s;
   }
-  
+
+  .navbar-custom .nav-item.dropdown.show .dropdown-menu {
+    visibility: visible;
+    max-height: 400px;
+    pointer-events: auto;
+  }
+
   .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item {
-    padding: 0.5rem 1rem;
-    font-size: 0.82rem;
-    border-radius: 8px;
+    border-radius: 8px !important;
+    padding: 0.5rem 0.85rem !important;
+    font-size: 0.83rem !important;
   }
-  
-  .navbar-custom .nav-item.dropdown.show {
-    background: var(--nav-hover-bg);
-    border-radius: 10px;
+
+  .navbar-custom .nav-item--cta .nav-link {
+    display: inline-block;
+    margin-top: 0.35rem;
   }
 }
 
 /* ============================================
-   Active State Indicator
+   Hamburger toggler
    ============================================ */
-.navbar-custom .nav-item.is-active > .nav-link {
-  position: relative;
+.navbar-custom .navbar-toggler {
+  border: 1px solid var(--nav-border) !important;
+  border-radius: 8px;
+  padding: 0.4rem 0.55rem;
+  color: var(--nav-text);
+  background: transparent !important;
+  transition: background 0.18s ease;
 }
 
-.navbar-custom .nav-item.is-active > .nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 20px;
-  height: 2px;
-  background: var(--nav-hover-text);
-  border-radius: 1px;
+.navbar-custom .navbar-toggler:hover {
+  background: var(--nav-hover-bg) !important;
 }
 
-@media (max-width: 1199px) {
-  .navbar-custom .nav-item.is-active > .nav-link::after {
-    display: none;
-  }
+.navbar-custom .navbar-toggler:focus {
+  outline: 2px solid rgba(37, 99, 235, 0.4);
+  outline-offset: 2px;
+  box-shadow: none;
+  background: transparent !important;
 }
 
-/* ============================================
-   Animations
-   ============================================ */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(28,25,23,0.8)' stroke-width='2.2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  width: 1.3rem;
+  height: 1.3rem;
 }
 
-/* Dropdown menu fade-in animation */
-.navbar-custom .nav-item.dropdown.show .dropdown-menu {
-  animation: fadeInUp 0.2s ease forwards;
-}
-
-@media (min-width: 1200px) {
-  .navbar-custom .nav-item.dropdown:hover .dropdown-menu {
-    animation: fadeInUp 0.2s ease forwards;
-  }
+[data-theme="dark"] .navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(231,229,228,0.85)' stroke-width='2.2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 /* ============================================
-   Accessibility
+   Focus accessibility
    ============================================ */
 .navbar-custom .nav-link:focus-visible,
 .navbar-custom .dropdown-item:focus-visible {
-  outline: 2px solid var(--nav-hover-text);
+  outline: 2px solid #2563EB;
   outline-offset: 2px;
 }
 
 /* ============================================
-   Scroll Behavior
+   Scroll-triggered class (added via JS)
    ============================================ */
-.navbar-custom.navbar-scrolled {
-  background: var(--nav-bg-solid);
-  box-shadow: 0 4px 20px rgba(17, 24, 39, 0.1);
-}
-
-/* ============================================
-   Staggered Dropdown Item Animation
-   ============================================ */
-.navbar-custom .nav-item.dropdown.show .dropdown-menu .dropdown-item {
-  opacity: 0;
-  animation: fadeInUp 0.2s ease forwards;
-}
-
-@media (min-width: 1200px) {
-  .navbar-custom .nav-item.dropdown:hover .dropdown-menu .dropdown-item {
-    opacity: 0;
-    animation: fadeInUp 0.2s ease forwards;
-  }
-  
-  .navbar-custom .nav-item.dropdown:hover .dropdown-menu .dropdown-item:nth-child(1) { animation-delay: 0.05s; }
-  .navbar-custom .nav-item.dropdown:hover .dropdown-menu .dropdown-item:nth-child(2) { animation-delay: 0.1s; }
-  .navbar-custom .nav-item.dropdown:hover .dropdown-menu .dropdown-item:nth-child(3) { animation-delay: 0.15s; }
-  .navbar-custom .nav-item.dropdown:hover .dropdown-menu .dropdown-item:nth-child(4) { animation-delay: 0.2s; }
-  .navbar-custom .nav-item.dropdown:hover .dropdown-menu .dropdown-item:nth-child(5) { animation-delay: 0.25s; }
+.navbar-custom.scrolled {
+  background: var(--nav-bg-solid) !important;
+  box-shadow: 0 2px 28px rgba(17, 24, 39, 0.09);
 }
