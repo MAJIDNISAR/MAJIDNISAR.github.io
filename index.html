@@ -257,18 +257,23 @@ cover-img:
   </div>
 </section>
 
+<div class="testimonials-heading reveal reveal-up">
+  <span class="kicker kicker-animate">Colleagues</span>
+  <h2 class="section-heading">What colleagues say</h2>
+</div>
 <section class="testimonials-section reveal reveal-up">
-  <div class="section-header">
-    <span class="kicker kicker-animate">Colleagues</span>
-    <h2 class="section-heading">What colleagues say</h2>
-  </div>
   <div class="testimonials-stage">
-    <button type="button" class="testimonials-btn testimonials-btn--side" id="testimonials-prev" aria-label="Previous testimonials">&#8592;</button>
+    <button type="button" class="testimonials-btn--side" id="testimonials-prev" aria-label="Previous testimonials">&#8592;</button>
     <div class="testimonials-carousel" id="testimonials-carousel">
       <div class="testimonials-track" id="testimonials-track">
         {% assign all_testimonials = site.data.testimonials %}
         {% for t in all_testimonials %}
-        <article class="testimonial-card signature-card card-lift">
+        <article class="testimonial-card">
+          {% if t.qualities %}
+          <div class="testimonial-qualities">
+            {% for q in t.qualities %}<span class="testimonial-quality">{{ q }}</span>{% endfor %}
+          </div>
+          {% endif %}
           <blockquote class="testimonial-quote">{{ t.quote }}</blockquote>
           <footer class="testimonial-author">
             <span class="testimonial-avatar">{{ t.initials }}</span>
@@ -282,7 +287,7 @@ cover-img:
         {% endfor %}
       </div>
     </div>
-    <button type="button" class="testimonials-btn testimonials-btn--side" id="testimonials-next" aria-label="Next testimonials">&#8594;</button>
+    <button type="button" class="testimonials-btn--side" id="testimonials-next" aria-label="Next testimonials">&#8594;</button>
   </div>
   <div class="testimonials-dots-row">
     <div class="testimonials-dots" id="testimonials-dots"></div>

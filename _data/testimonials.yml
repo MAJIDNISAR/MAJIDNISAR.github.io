@@ -3,51 +3,87 @@
   role: "Co-Founder & CTO, FastBeetle"
   relation: "Managed Majid directly"
   initials: "AR"
+  qualities:
+    - "Team Clarity"
+    - "Calm Under Pressure"
+    - "Delivery Trust"
 
 - quote: "What truly stands out is his ability to take young, inexperienced professionals and transform them into a skilled, confident, high-performing team. An intellectual with a deep understanding of both technology and people, Majid combines sharp analytical thinking with strong communication skills. His calm, insightful leadership has driven innovation while creating an environment where learning and growth thrive."
   name: "Qaisar Jamal"
   role: "Strategic L&D Leader"
   relation: "Worked with Majid at iQuasar"
   initials: "QJ"
+  qualities:
+    - "Team Builder"
+    - "Mentorship"
+    - "Learning Culture"
 
 - quote: "Majid built a high-performing team from the ground up and successfully scaled it. He is a true polymath — bringing deep expertise across software, AI, cloud, project management, and systems thinking. Beyond technical and strategic strengths, he excels in mentoring teams, structuring delivery processes, and driving high-impact initiatives. A visionary leader whose influence continues to shape iQuasar's success."
   name: "Sajid Mir"
   role: "Director — Delivery & Execution, iQuasar"
   relation: "Same team"
   initials: "SM"
+  qualities:
+    - "Polymath"
+    - "AI & Cloud"
+    - "Systems Thinking"
 
 - quote: "Under Majid's guidance, our development team not only delivered complex projects ahead of schedule but also raised the overall bar for code quality, scalability, and innovation. What truly sets Majid apart is his leadership style — empowering engineers to take ownership, encouraging creative problem-solving, and maintaining a calm, solution-oriented mindset even under pressure."
   name: "Farrukh Shah"
   role: "Head of Cleared Talent Strategy, iQuasar"
   relation: "Worked together at iQuasar"
   initials: "FS"
+  qualities:
+    - "Code Quality"
+    - "Ownership Culture"
+    - "On-Time Delivery"
 
 - quote: "He built our entire software department from scratch, growing it from a small team to a well-structured, multi-skill function. Majid is a rare kind of manager who stands by his team, pushes you to grow without overburdening you, and leads with both depth of knowledge and empathy. Any organization led by him will not only deliver — it will evolve."
   name: "Basit Manzoor"
   role: "Software Engineer, iQuasar"
   relation: "Reported to Majid directly"
   initials: "BM"
+  qualities:
+    - "Built from Scratch"
+    - "Depth & Empathy"
+    - "Team Growth"
 
 - quote: "His command of Cloud and DevOps isn't just theoretical — he breathes technology and has an innate ability to architect elegant solutions for complex problems. Whenever a challenge arises, Majid is the person you turn to. His gift of analyzing the situation calmly, identifying the root cause, and delivering a robust solution is simply a rarity. He is the person who gets the job done, and does it excellently."
   name: "Ijtiba Younis"
   role: "GovCon Strategist, CF APMP®"
   relation: "Worked with Majid at iQuasar"
   initials: "IY"
+  qualities:
+    - "Cloud & DevOps"
+    - "Root Cause Thinking"
+    - "Elegant Architecture"
 
 - quote: "Majid's mentorship went beyond tasks and deadlines — he helped us understand what it means to learn and grow with purpose. He brings balance between strategic thinking and team spirit, and his learning mindset inspires everyone around him. He doesn't just teach; he empowers. I will always be grateful for the sense of confidence and curiosity he instilled in me."
   name: "Iqra Nazir"
   role: "Founder & CEO, Dawat Book"
   relation: "Reported to Majid directly"
   initials: "IN"
+  qualities:
+    - "Purposeful Mentorship"
+    - "Learning Mindset"
+    - "Empowerment"
 
 - quote: "Majid led critical initiatives across software, cloud, and AI, turning a fragmented function into a cohesive, high-performing tech team. Just as impressive was his focus on people and process — introducing scalable team structures, automation, and a culture of continuous improvement. Calm, visionary, and deeply knowledgeable, Majid is the kind of leader who elevates everyone around him."
   name: "Shuaib Mir"
   role: "Customer Success & Business Growth, iQuasar EMEA"
   relation: "Worked with Majid at iQuasar"
   initials: "SHM"
+  qualities:
+    - "AI & Cloud Leadership"
+    - "Process Design"
+    - "Continuous Improvement"
 
 - quote: "Majid combines strong technical expertise in building custom applications with a strategic mindset and natural leadership. His guidance and team-oriented approach added real value to the project. Anyone would be fortunate to have him on their team or leading a project."
   name: "Idrees Hafeez"
   role: "Senior Director, Federal Proposal Management"
   relation: "Worked with Majid at iQuasar"
   initials: "IH"
+  qualities:
+    - "Technical Depth"
+    - "Strategic Mindset"
+    - "Natural Leadership"
