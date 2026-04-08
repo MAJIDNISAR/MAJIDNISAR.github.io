@@ -301,21 +301,7 @@ body {
   color: #d6d3d1;
 }
 
-.footer-content-nav {
-  background: rgba(255,255,255,0.55);
-  border-radius: 22px;
-  padding: 1.75rem;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-}
-
-[data-theme="dark"] .footer-content-nav {
-  background: rgba(28,25,23,0.72);
-}
-
-.beautiful-jekyll-footer {
-  padding-bottom: 2rem;
-}
+/* Footer styles now in _includes/footer.html inline <style> */
 
 .post-preview {
   padding: 1.55rem 1.6rem 1.4rem;

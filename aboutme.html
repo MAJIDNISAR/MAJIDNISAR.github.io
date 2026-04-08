@@ -115,3 +115,45 @@ cover-img:
     </aside>
   </div>
 </section>
+
+<!-- What Colleagues Say — same carousel as homepage -->
+<div class="testimonials-heading section-shell section-shell--narrow">
+  <span class="kicker">Colleagues</span>
+  <h2 class="section-heading">What colleagues say</h2>
+</div>
+<section class="testimonials-section section-shell section-shell--narrow reveal reveal-up">
+  <div class="testimonials-stage">
+    <button type="button" class="testimonials-btn--side" id="testimonials-prev" aria-label="Previous testimonials">&#8592;</button>
+    <div class="testimonials-carousel" id="testimonials-carousel">
+      <div class="testimonials-track" id="testimonials-track">
+        {% assign all_testimonials = site.data.testimonials %}
+        {% for t in all_testimonials %}
+        <article class="testimonial-card">
+          {% if t.qualities %}
+          <div class="testimonial-qualities">
+            {% for q in t.qualities %}<span class="testimonial-quality">{{ q }}</span>{% endfor %}
+          </div>
+          {% endif %}
+          <blockquote class="testimonial-quote">{{ t.quote }}</blockquote>
+          <footer class="testimonial-author">
+            {% if t.linkedin %}
+            <a href="{{ t.linkedin }}" target="_blank" rel="noopener" class="testimonial-avatar testimonial-avatar--link" aria-label="{{ t.name }} on LinkedIn">{{ t.initials }}</a>
+            {% else %}
+            <span class="testimonial-avatar">{{ t.initials }}</span>
+            {% endif %}
+            <div class="testimonial-meta">
+              <strong class="testimonial-name">{{ t.name }}</strong>
+              <span class="testimonial-role">{{ t.role }}</span>
+              {% if t.relation %}<span class="testimonial-relation">{{ t.relation }}</span>{% endif %}
+            </div>
+          </footer>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+    <button type="button" class="testimonials-btn--side" id="testimonials-next" aria-label="Next testimonials">&#8594;</button>
+  </div>
+  <div class="testimonials-dots-row">
+    <div class="testimonials-dots" id="testimonials-dots"></div>
+  </div>
+</section>
