@@ -1,15 +1,15 @@
-<nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom {% if page.nav-short %}top-nav-short-permanent{% else %}top-nav-regular{% endif %}">
+<nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom {% if page.nav-short %}top-nav-short-permanent{% else %}top-nav-regular{% endif %}" role="navigation" aria-label="Main navigation">
   <div class="nav-shell container-xl">
     {%- if site.title-img -%}
-      <a class="navbar-brand navbar-brand-logo" href="{{ '' | absolute_url }}" aria-label="{{ site.title }}">
-        <img alt="{{ site.title }} Logo" src="{{ site.title-img | relative_url }}" />
+      <a class="navbar-brand navbar-brand-logo" href="{{ '' | absolute_url }}" aria-label="Majid Nisar - Home">
+        <img alt="Majid Nisar portrait" src="{{ site.title-img | relative_url }}" />
         <span class="navbar-brand-text">Majid Nisar</span>
       </a>
     {%- elsif site.title -%}
       <a class="navbar-brand" href="{{ '' | absolute_url }}">{{ site.title }}</a>
     {%- endif -%}
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation menu" aria-expanded="false">
       <span class="navbar-toggler-icon"></span>
     </button>
 

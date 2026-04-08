@@ -2,12 +2,18 @@
   font-family: arial;
 }
 
+/* Base link styling - no underline by default, underline on hover for content links */
 a {
-  text-decoration: underline;
   color: #404040;
-}
-.navbar a, a.btn, .pagination a, .footnote-ref {
   text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* Content area links - underline on hover for better UX */
+.post-content a:hover,
+.post a:not(.btn):not(.pagination):hover,
+article a:not(.btn):not(.pagination):hover {
+  text-decoration: underline;
 }
 .beautiful-jekyll-footer .copyright a {
   text-decoration: none;

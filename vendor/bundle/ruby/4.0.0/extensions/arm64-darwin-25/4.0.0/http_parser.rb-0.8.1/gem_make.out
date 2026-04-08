@@ -1,0 +1,23 @@
+current directory: /Users/majidnisar/Developer/myWebsite/MAJIDNISAR.github.io/vendor/bundle/ruby/4.0.0/gems/http_parser.rb-0.8.1/ext/ruby_http_parser
+/opt/homebrew/opt/ruby/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/majidnisar/Developer/myWebsite/MAJIDNISAR.github.io/vendor/bundle/ruby/4.0.0/gems/http_parser.rb-0.8.1/ext/ruby_http_parser
+make -j13 DESTDIR\= sitearchdir\=./.gem.20260331-75960-tg1bly sitelibdir\=./.gem.20260331-75960-tg1bly clean
+
+current directory: /Users/majidnisar/Developer/myWebsite/MAJIDNISAR.github.io/vendor/bundle/ruby/4.0.0/gems/http_parser.rb-0.8.1/ext/ruby_http_parser
+make -j13 DESTDIR\= sitearchdir\=./.gem.20260331-75960-tg1bly sitelibdir\=./.gem.20260331-75960-tg1bly
+compiling ruby_http_parser.c
+compiling ryah_http_parser.c
+ruby_http_parser.c:373:17: warning: comparison of integers of different signs: 'size_t' (aka 'unsigned long') and 'long' [-Wsign-compare]
+  373 |     if (nparsed < len)
+      |         ~~~~~~~ ^ ~~~
+1 warning generated.
+linking shared-object ruby_http_parser.bundle
+
+current directory: /Users/majidnisar/Developer/myWebsite/MAJIDNISAR.github.io/vendor/bundle/ruby/4.0.0/gems/http_parser.rb-0.8.1/ext/ruby_http_parser
+make -j13 DESTDIR\= sitearchdir\=./.gem.20260331-75960-tg1bly sitelibdir\=./.gem.20260331-75960-tg1bly install
+/usr/bin/install -c -m 0755 ruby_http_parser.bundle ./.gem.20260331-75960-tg1bly
+
+current directory: /Users/majidnisar/Developer/myWebsite/MAJIDNISAR.github.io/vendor/bundle/ruby/4.0.0/gems/http_parser.rb-0.8.1/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20260331-75960-tg1bly sitelibdir\=./.gem.20260331-75960-tg1bly clean
