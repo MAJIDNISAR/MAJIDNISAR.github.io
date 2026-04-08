@@ -6,7 +6,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <link rel="preconnect" href="https://stackpath.bootstrapcdn.com">
   <link rel="dns-prefetch" href="https://code.jquery.com">
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
@@ -61,6 +60,20 @@
     {% for profile in site.person.same_as %}
   <link rel="me" href="{{ profile }}">
     {% endfor %}
+  {% endif %}
+
+  {% if page.cover-img %}
+    {% assign first_img = page.cover-img %}
+    {% if page.cover-img.first %}
+      {% assign first_img_entry = page.cover-img[0] %}
+      {% for pair in first_img_entry %}
+        {% if forloop.first %}
+  <link rel="preload" as="image" href="{{ pair[0] | default: pair | relative_url }}">
+        {% endif %}
+      {% endfor %}
+    {% else %}
+  <link rel="preload" as="image" href="{{ page.cover-img | relative_url }}">
+    {% endif %}
   {% endif %}
 
   {% include gtag.html %}
