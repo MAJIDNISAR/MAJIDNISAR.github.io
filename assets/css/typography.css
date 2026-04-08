@@ -1,4 +1,9 @@
-/* Typography System — majidnisar.com */
+/* Typography System — majidnisar.com
+   ─────────────────────────────────────
+   This file overrides the legacy Beautiful Jekyll fonts (Lora / Open Sans)
+   with the premium editorial font system used on the homepage.
+   Loaded AFTER beautifuljekyll.css so these rules take precedence.
+*/
 
 :root {
   --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
@@ -31,6 +36,85 @@
   --letter-spacing-wider: 0.1em;
   --letter-spacing-widest: 0.2em;
 }
+
+/* ============================================
+   Global base overrides
+   Replace legacy Beautiful Jekyll fonts:
+     Lora          → Source Serif Pro  (--font-body)
+     Open Sans     → Playfair Display  (--font-display) for headings
+                   → Inter             (--font-ui)      for UI chrome
+   ============================================ */
+
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+/* Navbar */
+.navbar-custom {
+  font-family: var(--font-ui);
+}
+
+/* Footer */
+footer .copyright,
+footer .footer-custom-content {
+  font-family: var(--font-ui);
+}
+
+/* Blog post previews & titles */
+.post-preview a,
+.post-preview .post-title,
+.post-preview .post-subtitle {
+  font-family: var(--font-ui);
+}
+
+/* Post header meta (date, author) */
+.post-heading .post-meta {
+  font-family: var(--font-body);
+}
+
+/* Post/page subheadings in intro headers */
+.intro-header .page-heading .page-subheading,
+.intro-header .post-heading .post-subheading {
+  font-family: var(--font-ui);
+}
+
+/* Big-image description overlay */
+.intro-header.big-img .big-img-transition .img-desc {
+  font-family: var(--font-ui);
+}
+
+/* Blog tags */
+.blog-tags,
+.blog-tags a {
+  font-family: var(--font-ui);
+}
+
+/* Tags list page */
+#full-tags-list,
+#full-tags-list .tag-btn {
+  font-family: var(--font-ui);
+}
+
+/* Pagination */
+.pagination .page-item .page-link {
+  font-family: var(--font-ui);
+}
+
+/* Code elements */
+code, pre, kbd, samp {
+  font-family: var(--font-mono);
+}
+
+/* ============================================
+   Utility classes
+   ============================================ */
 
 /* Display headings — Playfair Display for page-level hero titles */
 .display-heading {

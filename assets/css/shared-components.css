@@ -1,0 +1,983 @@
+/* ============================================
+   Shared Design System — majidnisar.com
+   ─────────────────────────────────────────────
+   Single source of truth for visual components.
+   Extracted from the homepage premium editorial
+   system (index.css) as the canonical standard.
+
+   Loaded globally via base.html.
+   Page-specific CSS overrides only LAYOUT, not
+   card appearance, shadows, radius, or gradients.
+   ============================================ */
+
+
+/* ============================================
+   § 1  SECTION SHELL — page-level container
+   ============================================ */
+
+.section-shell {
+  position: relative;
+  width: min(100%, 1320px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.section-shell--narrow {
+  max-width: 1100px;
+}
+
+.section-shell--padded {
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+}
+
+/* Decorative ambient blobs — opt-in */
+.section-shell--ambient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(37, 99, 235, 0.08), transparent 24rem),
+    radial-gradient(circle at 100% 15%, rgba(180, 83, 9, 0.08), transparent 18rem);
+  opacity: 0.9;
+}
+
+
+/* ============================================
+   § 2  SECTION HEADER — kicker + heading
+   ============================================ */
+
+.section-header {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 1.8rem;
+}
+
+.section-heading {
+  margin: 0;
+  font-family: var(--font-display, 'Playfair Display', Georgia, serif);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+}
+
+.section-heading--lg {
+  font-size: clamp(2.1rem, 4.2vw, 3.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+}
+
+.section-kicker {
+  display: inline-block;
+  margin-bottom: 0.9rem;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-color, #2563EB);
+}
+
+.section-lead {
+  max-width: 46rem;
+  margin: 0;
+  padding-left: 1.2rem;
+  border-left: 3px solid rgba(180, 83, 9, 0.45);
+  font-size: 1.08rem;
+  line-height: 1.82;
+  color: rgba(22, 19, 17, 0.84);
+}
+
+
+/* ============================================
+   § 3  GRID SYSTEM
+   ============================================ */
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+}
+
+/* Column spans — for use inside .grid-12 */
+.col-span-3  { grid-column: span 3; }
+.col-span-4  { grid-column: span 4; }
+.col-span-5  { grid-column: span 5; }
+.col-span-6  { grid-column: span 6; }
+.col-span-7  { grid-column: span 7; }
+.col-span-8  { grid-column: span 8; }
+.col-span-9  { grid-column: span 9; }
+.col-span-12 { grid-column: span 12; }
+
+
+/* ============================================
+   § 4  CARD SURFACE — the canonical card
+   ============================================ */
+
+.card-surface {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+  padding: 1.7rem 1.7rem 1.55rem;
+  border: 1px solid rgba(22, 19, 17, 0.08);
+  border-radius: 26px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.88), rgba(255,255,255,0.76));
+  box-shadow: 0 14px 34px rgba(22, 19, 17, 0.06);
+  color: var(--text-color, #1C1917);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+/* Decorative radial-gradient blob (bottom-left) */
+.card-surface::before {
+  content: "";
+  position: absolute;
+  inset: auto auto -4rem -3rem;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37,99,235,0.09), transparent 68%);
+  opacity: 0.88;
+  pointer-events: none;
+}
+
+.card-surface:hover {
+  transform: translateY(-4px);
+  border-color: rgba(37,99,235,0.18);
+  box-shadow: 0 20px 40px rgba(22, 19, 17, 0.08);
+}
+
+/* ---- Card variants ---- */
+
+/* Hero / intro — larger radius & padding */
+.card-surface--hero {
+  padding: 2.4rem 2.4rem 2.2rem;
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.8));
+  box-shadow: 0 18px 42px rgba(22, 19, 17, 0.08);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+
+/* Compact — sidebar panels, smaller cards */
+.card-surface--compact {
+  padding: 1.35rem 1.35rem 1.2rem;
+  border-radius: 24px;
+  box-shadow: 0 14px 30px rgba(22, 19, 17, 0.06);
+}
+
+/* Flat — no hover lift (for static content) */
+.card-surface--flat {
+  transition: none;
+}
+.card-surface--flat:hover {
+  transform: none;
+  box-shadow: 0 14px 34px rgba(22, 19, 17, 0.06);
+}
+
+/* Dark inverted card — dark bg, light text */
+.card-surface--dark {
+  background: linear-gradient(135deg, rgba(22,19,17,0.96), rgba(38,33,52,0.92));
+  border-color: rgba(22,19,17,0.08);
+  color: #f7f4ef;
+}
+.card-surface--dark .section-kicker,
+.card-surface--dark .section-heading,
+.card-surface--dark p {
+  color: #f7f4ef !important;
+}
+.card-surface--dark p {
+  opacity: 0.84;
+}
+
+/* No blob — opt out of the decorative pseudo-element */
+.card-surface--no-blob::before {
+  display: none;
+}
+
+/* Warm blob variant (amber instead of blue) */
+.card-surface--warm-blob::before {
+  background: radial-gradient(circle, rgba(180,83,9,0.12), transparent 68%);
+}
+
+
+/* ============================================
+   § 5  CARD TYPOGRAPHY (shared)
+   ============================================ */
+
+.card-label {
+  display: inline-block;
+  margin-bottom: 0.9rem;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.68rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--accent-color, #2563EB);
+}
+
+.card-title {
+  display: block;
+  margin: 0 0 0.6rem;
+  font-family: var(--font-display, 'Playfair Display', Georgia, serif);
+  font-size: 1.45rem;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+}
+
+.card-title--sm {
+  font-family: var(--font-ui, 'Inter', sans-serif);
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+
+.card-body-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.72;
+  color: rgba(22, 19, 17, 0.82);
+}
+
+.card-link {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.8rem;
+  color: var(--accent-color, #2563EB);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+.card-link:hover {
+  text-decoration: underline;
+}
+
+
+/* ============================================
+   § 6  METRIC DISPLAY — proof / authority cards
+   ============================================ */
+
+.metric-value {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-family: var(--font-display, 'Playfair Display', Georgia, serif);
+  font-size: 2.15rem;
+  line-height: 0.96;
+  color: var(--accent-warm, #B45309);
+}
+
+.metric-value--lg {
+  font-size: 2.6rem;
+  color: var(--accent-code, #059669);
+}
+
+.metric-label {
+  display: block;
+  font-size: 0.88rem;
+  line-height: 1.58;
+  color: var(--text-muted, #78716C);
+}
+
+/* Metric in a narrow authority strip */
+.metric-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+
+/* ============================================
+   § 7  TAG PILLS
+   ============================================ */
+
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.42rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(22, 19, 17, 0.04);
+  border: 1px solid rgba(22, 19, 17, 0.06);
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted, #78716C);
+}
+
+.tag-pill--accent {
+  background: rgba(37, 99, 235, 0.05);
+  border-color: rgba(37, 99, 235, 0.16);
+  color: var(--accent-color, #2563EB);
+}
+
+
+/* ============================================
+   § 8  BUTTONS
+   ============================================ */
+
+.btn-primary-surface {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.85rem 1.65rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  color: #fff !important;
+  font-family: var(--font-ui, 'Inter', sans-serif);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.btn-primary-surface:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(29, 78, 216, 0.28);
+}
+
+.btn-secondary-surface {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.7rem 1.35rem;
+  border-radius: 999px;
+  border: 1px solid rgba(22,19,17,0.12);
+  background: rgba(255,255,255,0.72);
+  color: var(--text-color, #1C1917);
+  font-family: var(--font-ui, 'Inter', sans-serif);
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+.btn-secondary-surface:hover {
+  background: rgba(37,99,235,0.06);
+  border-color: rgba(37,99,235,0.2);
+  transform: translateY(-1px);
+}
+
+
+/* ============================================
+   § 9  NEWSLETTER CTA BANNER
+   ============================================ */
+
+.newsletter-cta-inner {
+  background: linear-gradient(135deg, rgba(180,83,9,0.1) 0%, rgba(255,255,255,0.72) 55%, rgba(37,99,235,0.06) 100%);
+  border: 1px solid rgba(180,83,9,0.16);
+  border-radius: 28px;
+  padding: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+
+/* ============================================
+   § 10  PRINCIPLE / LIST CARDS
+   ============================================ */
+
+.principle-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.principle-label {
+  width: 2.15rem;
+  height: 2.15rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(37,99,235,0.08);
+  color: var(--accent-color, #2563EB);
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.78rem;
+  flex-shrink: 0;
+}
+
+
+/* ============================================
+   § 11  TESTIMONIALS (reusable carousel)
+   ============================================ */
+
+.testimonials-section {
+  margin-top: 0;
+  margin-bottom: 2.75rem;
+}
+
+.testimonials-heading {
+  margin-bottom: 1.25rem;
+  margin-top: 2.75rem;
+}
+
+.testimonials-stage {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.testimonials-carousel {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.testimonials-track {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+  transition: opacity 0.25s ease;
+  align-items: stretch;
+}
+
+.testimonials-track.is-animating {
+  opacity: 0;
+}
+
+.testimonial-card {
+  display: none;
+  position: relative;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 1.4rem 1.3rem 1.2rem;
+  border: 1px solid rgba(22, 19, 17, 0.08);
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.80));
+  box-shadow: 0 8px 22px rgba(22, 19, 17, 0.06);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 280px;
+}
+
+.testimonial-card.is-visible {
+  display: flex;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(22, 19, 17, 0.09);
+}
+
+.testimonial-card::before {
+  content: "\201C";
+  position: absolute;
+  top: 0.3rem;
+  right: 0.85rem;
+  font-family: var(--font-display, 'Playfair Display', Georgia, serif);
+  font-size: 4rem;
+  line-height: 1;
+  color: rgba(37, 99, 235, 0.06);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.testimonial-qualities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 0.65rem;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-quality {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(37, 99, 235, 0.16);
+  background: rgba(37, 99, 235, 0.05);
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.64rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-color, #2563EB);
+  white-space: nowrap;
+}
+
+.testimonial-quote {
+  flex: 1;
+  margin: 0 0 0.75rem;
+  padding: 0;
+  border: none;
+  font-family: var(--font-body, 'Source Serif Pro', Georgia, serif);
+  font-size: 0.82rem;
+  line-height: 1.68;
+  color: rgba(22, 19, 17, 0.82);
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: auto;
+  padding-top: 0.6rem;
+  border-top: 1px solid rgba(22, 19, 17, 0.07);
+}
+
+.testimonial-avatar {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(37,99,235,0.12), rgba(180,83,9,0.10));
+  border: 1px solid rgba(37,99,235,0.12);
+  font-family: var(--font-ui, 'Inter', sans-serif);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--accent-color, #2563EB);
+  text-decoration: none;
+}
+
+.testimonial-avatar--link {
+  transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+  cursor: pointer;
+}
+
+.testimonial-avatar--link:hover {
+  background: linear-gradient(135deg, rgba(37,99,235,0.22), rgba(180,83,9,0.16));
+  border-color: rgba(37,99,235,0.3);
+  transform: scale(1.1);
+  color: var(--accent-color, #2563EB);
+}
+
+.testimonial-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+  min-width: 0;
+}
+
+.testimonial-name {
+  font-family: var(--font-ui, 'Inter', sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-color, #1C1917);
+}
+
+.testimonial-role {
+  font-family: var(--font-ui, 'Inter', sans-serif);
+  font-size: 0.72rem;
+  color: var(--text-muted, #78716C);
+}
+
+.testimonial-relation {
+  font-family: var(--font-ui, 'Inter', sans-serif);
+  font-size: 0.68rem;
+  color: rgba(22, 19, 17, 0.38);
+  font-style: italic;
+}
+
+/* Arrow buttons */
+.testimonials-btn--side {
+  flex-shrink: 0;
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid rgba(22, 19, 17, 0.12);
+  background: rgba(255,255,255,0.92);
+  color: var(--text-color, #1C1917);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(22, 19, 17, 0.08);
+}
+
+.testimonials-btn--side:hover {
+  background: var(--accent-color, #2563EB);
+  color: #fff;
+  border-color: transparent;
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37,99,235,0.28);
+}
+
+.testimonials-btn--side:disabled {
+  opacity: 0.28;
+  cursor: default;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Dots navigation */
+.testimonials-dots-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.1rem;
+}
+
+.testimonials-dots {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.testimonials-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(22, 19, 17, 0.18);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.testimonials-dot.is-active {
+  width: 20px;
+  border-radius: 3px;
+  background: var(--accent-color, #2563EB);
+}
+
+
+/* ============================================
+   § 12  BLOG POST CONTENT CARD
+   ============================================ */
+
+.post-content-surface {
+  padding: 2.4rem;
+  border: 1px solid rgba(22, 19, 17, 0.08);
+  border-radius: 26px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.80));
+  box-shadow: 0 14px 34px rgba(22, 19, 17, 0.06);
+}
+
+
+/* ============================================
+   § 13  SPACING UTILITIES
+   ============================================ */
+
+.mb-section    { margin-bottom: 3.25rem; }
+.mb-section-lg { margin-bottom: 3.6rem; }
+.mb-section-sm { margin-bottom: 2rem; }
+.mt-section    { margin-top: 3.25rem; }
+.gap-sm        { gap: 0.6rem 0.8rem; }
+.z-1           { position: relative; z-index: 1; }
+
+
+/* ============================================
+   § 14  REVEAL ANIMATIONS (opt-in)
+   ============================================ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-up {
+  transform: translateY(18px);
+}
+
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.reveal-stagger.is-visible > *:nth-child(1) { transition-delay: 0s; }
+.reveal-stagger.is-visible > *:nth-child(2) { transition-delay: 0.08s; }
+.reveal-stagger.is-visible > *:nth-child(3) { transition-delay: 0.16s; }
+.reveal-stagger.is-visible > *:nth-child(4) { transition-delay: 0.24s; }
+.reveal-stagger.is-visible > *:nth-child(5) { transition-delay: 0.32s; }
+.reveal-stagger.is-visible > *:nth-child(6) { transition-delay: 0.40s; }
+
+.reveal-stagger.is-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ============================================
+   § 15  DARK MODE — shared overrides
+   ============================================ */
+
+[data-theme="dark"] .card-surface,
+[data-theme="dark"] .card-surface--hero,
+[data-theme="dark"] .card-surface--compact,
+[data-theme="dark"] .post-content-surface {
+  background: rgba(28, 25, 23, 0.92);
+  border-color: rgba(231, 229, 228, 0.08);
+}
+
+[data-theme="dark"] .card-surface--dark {
+  background: rgba(28, 25, 23, 0.96);
+}
+
+[data-theme="dark"] .card-body-text,
+[data-theme="dark"] .section-lead {
+  color: rgba(231, 229, 228, 0.84);
+}
+
+[data-theme="dark"] .card-title,
+[data-theme="dark"] .card-title--sm {
+  color: var(--dark-text, #E7E5E4);
+}
+
+[data-theme="dark"] .metric-label,
+[data-theme="dark"] .tag-pill {
+  color: #a8a29e;
+}
+
+[data-theme="dark"] .section-lead {
+  border-left-color: rgba(245, 158, 11, 0.45);
+}
+
+/* Testimonials dark mode */
+[data-theme="dark"] .testimonial-card {
+  background: linear-gradient(180deg, rgba(28,25,23,0.92), rgba(28,25,23,0.82));
+  border-color: rgba(231, 229, 228, 0.08);
+}
+
+[data-theme="dark"] .testimonial-quality {
+  background: rgba(96, 165, 250, 0.08);
+  border-color: rgba(96, 165, 250, 0.18);
+  color: var(--dark-accent, #60A5FA);
+}
+
+[data-theme="dark"] .testimonial-quote {
+  color: rgba(231, 229, 228, 0.82);
+}
+
+[data-theme="dark"] .testimonial-author {
+  border-top-color: rgba(231, 229, 228, 0.08);
+}
+
+[data-theme="dark"] .testimonial-name {
+  color: #E7E5E4;
+}
+
+[data-theme="dark"] .testimonial-relation {
+  color: rgba(231, 229, 228, 0.28);
+}
+
+[data-theme="dark"] .testimonials-btn--side {
+  background: rgba(28, 25, 23, 0.88);
+  border-color: rgba(231, 229, 228, 0.12);
+  color: #E7E5E4;
+}
+
+[data-theme="dark"] .testimonials-dot {
+  background: rgba(231, 229, 228, 0.2);
+}
+
+/* Buttons dark mode */
+[data-theme="dark"] .btn-secondary-surface {
+  background: rgba(231, 229, 228, 0.08);
+  border-color: rgba(231, 229, 228, 0.12);
+  color: var(--dark-text, #E7E5E4);
+}
+
+/* Newsletter CTA dark mode */
+[data-theme="dark"] .newsletter-cta-inner {
+  background: rgba(180,83,9,0.08);
+  border-color: rgba(180,83,9,0.25);
+}
+
+/* Tag pills dark mode */
+[data-theme="dark"] .tag-pill--accent {
+  background: rgba(96, 165, 250, 0.08);
+  border-color: rgba(96, 165, 250, 0.18);
+  color: var(--dark-accent, #60A5FA);
+}
+
+
+/* ============================================
+   § 16  RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+@media (max-width: 1100px) {
+  .grid-12 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .col-span-3,
+  .col-span-4 {
+    grid-column: span 3;
+  }
+
+  .col-span-8,
+  .col-span-12 {
+    grid-column: span 6;
+  }
+
+  .metric-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-track {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .grid-12 {
+    grid-template-columns: 1fr;
+  }
+
+  .col-span-3,
+  .col-span-4,
+  .col-span-5,
+  .col-span-6,
+  .col-span-7,
+  .col-span-8,
+  .col-span-9,
+  .col-span-12 {
+    grid-column: span 1;
+  }
+
+  .metric-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-cta-inner {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .card-surface--hero {
+    padding: 1.45rem 1.25rem;
+    border-radius: 22px;
+  }
+
+  .card-surface {
+    padding: 1.45rem 1.25rem;
+    border-radius: 22px;
+  }
+
+  .card-surface--compact {
+    padding: 1.2rem;
+    border-radius: 18px;
+  }
+
+  .section-lead {
+    padding-left: 0.95rem;
+    font-size: 1rem;
+  }
+
+  .principle-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+  .testimonials-stage {
+    gap: 0.5rem;
+  }
+
+  .testimonials-btn--side {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.85rem;
+  }
+
+  .testimonials-track {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-shell {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .newsletter-cta-inner {
+    padding: 1.25rem;
+  }
+}
+
+
+/* ============================================
+   § 17  REDUCED MOTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .card-surface,
+  .card-surface--hero,
+  .card-surface--compact,
+  .testimonial-card,
+  .btn-primary-surface,
+  .btn-secondary-surface,
+  .testimonials-btn--side,
+  .testimonial-avatar--link {
+    transition: none;
+  }
+
+  .card-surface:hover,
+  .card-surface--hero:hover,
+  .card-surface--compact:hover,
+  .testimonial-card:hover {
+    transform: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .reveal-stagger > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

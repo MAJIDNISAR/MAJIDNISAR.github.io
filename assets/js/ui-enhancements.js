@@ -672,6 +672,11 @@
         return;
       }
 
+      // Skip if a testimonials section already exists in the HTML (e.g. index.html)
+      if (document.querySelector('.testimonials-section, .testimonials-carousel')) {
+        return;
+      }
+
       const main = document.querySelector('main, [role="main"]');
       if (!main) return;
 
