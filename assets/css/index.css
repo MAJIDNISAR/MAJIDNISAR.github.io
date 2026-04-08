@@ -9,6 +9,7 @@
 .cross-type-section,
 .newsletter-cta-section,
 .engagement-section,
+.testimonials-heading,
 .testimonials-section,
 .human-layer {
   width: min(100%, 1320px);
@@ -778,13 +779,14 @@
    ============================================ */
 
 .testimonials-section {
-  margin-top: 2.75rem;
+  margin-top: 0;
   margin-bottom: 2.75rem;
 }
 
-/* Heading lives completely outside the section/carousel */
+/* Heading — completely outside the animated section, never overlaps carousel */
 .testimonials-heading {
   margin-bottom: 1.25rem;
+  margin-top: 2.75rem;
 }
 
 /* Stage: ← [carousel] → in one row */
