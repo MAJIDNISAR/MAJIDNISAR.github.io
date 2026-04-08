@@ -9,7 +9,6 @@
 .cross-type-section,
 .newsletter-cta-section,
 .engagement-section,
-.testimonials-heading,
 .testimonials-section,
 .human-layer {
   width: min(100%, 1320px);
@@ -35,6 +34,7 @@
   border-radius: 32px;
   background: linear-gradient(180deg, rgba(255,255,255,0.94), rgba(255,255,255,0.82));
   box-shadow: 0 20px 52px rgba(22, 19, 17, 0.08);
+  -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
 }
 
@@ -917,6 +917,19 @@
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.04em;
+  color: var(--accent-color, #2563EB);
+  text-decoration: none;
+}
+
+.testimonial-avatar--link {
+  transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+  cursor: pointer;
+}
+
+.testimonial-avatar--link:hover {
+  background: linear-gradient(135deg, rgba(37,99,235,0.22), rgba(180,83,9,0.16));
+  border-color: rgba(37,99,235,0.3);
+  transform: scale(1.1);
   color: var(--accent-color, #2563EB);
 }
 
