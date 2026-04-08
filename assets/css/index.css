@@ -820,7 +820,7 @@
   position: relative;
   flex-direction: column;
   overflow: hidden;
-  padding: 1.1rem 1.15rem 1rem;
+  padding: 1.4rem 1.3rem 1.2rem;
   border: 1px solid rgba(22, 19, 17, 0.08);
   border-radius: 20px;
   background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.80));
@@ -828,6 +828,7 @@
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 280px;
 }
 
 .testimonial-card.is-visible {
@@ -883,15 +884,15 @@
   padding: 0;
   border: none;
   font-family: var(--font-body, 'Source Serif Pro', Georgia, serif);
-  font-size: 0.8rem;
-  line-height: 1.65;
+  font-size: 0.82rem;
+  line-height: 1.68;
   color: rgba(22, 19, 17, 0.82);
   font-style: italic;
   position: relative;
   z-index: 1;
-  /* clamp to 5 lines so all cards stay equal height */
+  /* clamp to 8 lines so longer testimonials have room */
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 8;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
