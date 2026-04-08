@@ -76,8 +76,6 @@ body {
 .writing-intro,
 .creative-intro,
 .post-preview,
-.cv-entry-card,
-.cv-section,
 .photo-item,
 .poem-card,
 .newsletter-cta-inner,
@@ -85,6 +83,7 @@ body {
   background: var(--premium-surface);
   border-color: var(--premium-border);
   box-shadow: var(--premium-shadow-soft);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
 }
 
@@ -104,7 +103,6 @@ body {
 .photo-gallery-page,
 .poetry-index,
 .projects-page,
-.cv-page,
 .code-showcase {
   max-width: 1180px;
   margin: 0 auto;
@@ -113,11 +111,11 @@ body {
 .writing-intro,
 .creative-intro,
 .projects-page,
-.cv-page,
 .photo-gallery-page,
 .poetry-index {
   border: 1px solid var(--premium-border);
   border-radius: 30px;
+  -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
 }
 
@@ -156,7 +154,6 @@ body {
 }
 
 .projects-page,
-.cv-page,
 .photo-gallery-page,
 .poetry-index {
   padding: 1.5rem;
@@ -176,8 +173,6 @@ body {
 
 .photo-item,
 .poem-card,
-.cv-entry-card,
-.cv-section,
 .project-card,
 .flagship-card,
 .writing-topic-card,
@@ -275,8 +270,6 @@ body {
 [data-theme="dark"] .writing-intro,
 [data-theme="dark"] .creative-intro,
 [data-theme="dark"] .post-preview,
-[data-theme="dark"] .cv-entry-card,
-[data-theme="dark"] .cv-section,
 [data-theme="dark"] .photo-item,
 [data-theme="dark"] .poem-card,
 [data-theme="dark"] .newsletter-cta-inner,
@@ -364,7 +357,6 @@ body {
   .writing-intro,
   .creative-intro,
   .projects-page,
-  .cv-page,
   .photo-gallery-page,
   .poetry-index {
     padding: 1.35rem;
@@ -379,7 +371,6 @@ body {
   }
 
   .projects-page,
-  .cv-page,
   .photo-gallery-page,
   .poetry-index {
     padding: 1rem 0.9rem;
