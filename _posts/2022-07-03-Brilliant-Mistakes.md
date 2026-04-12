@@ -1,5 +1,6 @@
 ---
 content-type: essay
+layer: systems
 layout: post
 title: Brilliant Mistakes
 thumbnail-image: /assets/img/methinking.jpg

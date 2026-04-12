@@ -1,5 +1,6 @@
 ---
 layout: page
+layer: both
 title: "Tutorials"
 subtitle: "Technical guides and practical walkthroughs on software, AI, and engineering."
 permalink: /tutorials/

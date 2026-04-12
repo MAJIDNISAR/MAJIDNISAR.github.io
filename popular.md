@@ -1,5 +1,6 @@
 ---
 layout: page
+layer: both
 title: "Popular Posts"
 subtitle: "Writing worth starting with — essays, leadership thinking, and technology insight."
 permalink: /popular/

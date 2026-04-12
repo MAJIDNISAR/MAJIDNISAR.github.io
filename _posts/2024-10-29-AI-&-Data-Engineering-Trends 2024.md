@@ -1,5 +1,6 @@
 ---
 content-type: technical
+layer: systems
 title: "AI & Data Engineering Trends 2024"
 subtitle: "Opportunities, Challenges, and a Roadmap for Success"
 thumbnail-img: "/assets/img/AI.png"

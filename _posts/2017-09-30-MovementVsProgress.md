@@ -1,5 +1,6 @@
 ---
 content-type: reflection
+layer: human
 layout: post
 title: Note to Self
 image: /assets/img/methinking.jpg

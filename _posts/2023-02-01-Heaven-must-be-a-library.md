@@ -1,5 +1,6 @@
 ---
 content-type: essay
+layer: systems
 title: "Heaven must be a Library!"
 subtitle: "Heaven: A place of books and lore"
 thumbnail-img: "/assets/img/blog/heaven-must-be-a-library/heaven-library1.png"

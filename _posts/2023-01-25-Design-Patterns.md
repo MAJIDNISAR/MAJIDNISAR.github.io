@@ -1,5 +1,6 @@
 ---
 content-type: technical
+layer: systems
 title: "NodeJS Backend!"
 subtitle: "Focus on Design Patterns"
 thumbnail-img: "/assets/img/blog/nodejs/nodejs1.png"

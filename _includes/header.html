@@ -1,6 +1,7 @@
-<!-- TODO this file has become a mess, refactor it -->
+<!-- Page Header — Layer-Aware -->
 
 {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
+{% assign current_layer = page.layer | default: "both" %}
 
 {% if page.cover-img or page.title %}
 
@@ -57,10 +58,21 @@
 </div>
 {% endif %}
 <div class="intro-header no-img">
+  <!-- Decorative background elements -->
+  <div class="header-decor" aria-hidden="true">
+    <div class="header-decor__shape header-decor__shape--1"></div>
+    <div class="header-decor__shape header-decor__shape--2"></div>
+    <div class="header-decor__shape header-decor__shape--3"></div>
+  </div>
   <div class="container-md">
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
         <div class="{{ include.type }}-heading">
+          {% if current_layer == "systems" or current_layer == "human" %}
+          <span class="layer-indicator layer-indicator--{{ current_layer }}">
+            {% if current_layer == "systems" %}The Systems Layer{% else %}The Human Layer{% endif %}
+          </span>
+          {% endif %}
           <h1>{% if page.title %}{{ page.title | strip_html }}{% else %}<br/>{% endif %}</h1>
           {% if page.subtitle %}
             {% if include.type == "page" %}

@@ -1,5 +1,6 @@
 ---
 content-type: essay
+layer: systems
 title: "Cat Named Cat"
 subtitle: "Humour at workplace: There is an Aha behind the Ha Ha..."
 thumbnail-img: "/assets/img/blog/cat-named-cat/cat-named-cat.jpg"

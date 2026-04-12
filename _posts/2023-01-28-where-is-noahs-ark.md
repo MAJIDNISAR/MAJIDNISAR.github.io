@@ -1,5 +1,6 @@
 ---
 content-type: essay
+layer: systems
 title: "Noah's Ark in Kashmir!"
 subtitle: "Where is Noah's Ark in Kashmir"
 thumbnail-img: "/assets/img/blog/life/life4.png"

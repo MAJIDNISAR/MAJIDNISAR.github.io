@@ -1,5 +1,6 @@
 ---
 content-type: essay
+layer: systems
 title: "The Magnetic Hill of Civilization"
 subtitle: "The Deceptive path of progress"
 thumbnail-img: "/assets/img/blog/the-magnetic-Hill-of-Civilization/deception.webp"

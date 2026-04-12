@@ -1,5 +1,6 @@
 ---
 content-type: essay
+layer: systems
 title: "Building Courses Like Products"
 subtitle: "How Modern Universities Can Leverage VPC and BMC for Educational Excellence"
 thumbnail-img: "/assets/img/AI.png"

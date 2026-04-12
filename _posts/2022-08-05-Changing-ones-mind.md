@@ -1,5 +1,6 @@
 ---
 content-type: essay
+layer: systems
 title: "Changing One's Mind"
 subtitle: "Changing One's Mind: A new approach"
 thumbnail-img: "/assets/img/blog/changing-ones-mind/usethis.webp"

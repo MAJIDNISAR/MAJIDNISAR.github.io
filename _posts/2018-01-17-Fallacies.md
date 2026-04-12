@@ -1,5 +1,6 @@
 ---
 content-type: essay
+layer: systems
 layout: post
 title: Fallacies of I, Me, Myself, My World and Educated Mind
 image: /assets/img/methinking.jpg
