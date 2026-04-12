@@ -141,9 +141,9 @@
    Must use !important to win specificity.
    ============================================ */
 
-/* --- Systems: cool slate-white, faint blue tint --- */
+/* --- Systems: precision engineering canvas --- */
 [data-layer="systems"] {
-  background-color: #F1F5F9 !important;
+  background-color: #F0F4F8 !important;
 }
 
 [data-layer="systems"] .intro-header,
@@ -151,20 +151,67 @@
   position: relative;
 }
 
-/* Subtle cool-toned grid dot pattern */
+/* Circuit-board grid — precision dot matrix with cross-hairs */
 [data-layer="systems"]::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: -1;
-  opacity: 0.35;
-  background-image: radial-gradient(circle, #94A3B8 0.5px, transparent 0.5px);
-  background-size: 24px 24px;
+  opacity: 0.22;
+  background-image:
+    radial-gradient(circle, #64748B 0.6px, transparent 0.6px),
+    linear-gradient(to right, rgba(100, 116, 139, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(100, 116, 139, 0.04) 1px, transparent 1px);
+  background-size: 20px 20px, 80px 80px, 80px 80px;
+  background-position: 0 0, 0 0, 0 0;
 }
 
-/* Faint blue gradient wash at top */
+/* Precision gradient — cool blue light from top-left (like a monitor glow) */
 [data-layer="systems"]::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60vh;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse at 10% 0%, rgba(37, 99, 235, 0.06), transparent 50%),
+    radial-gradient(ellipse at 90% 20%, rgba(96, 165, 250, 0.03), transparent 40%),
+    linear-gradient(180deg, rgba(241, 245, 249, 0.5) 0%, transparent 100%);
+}
+
+/* Systems page header — frosted glass on slate */
+[data-layer="systems"] .intro-header.no-img {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* --- Human: warm paper, handmade feel --- */
+[data-layer="human"] {
+  background-color: #FAF8F3 !important;
+}
+
+/* Paper texture — organic noise-like layered gradients */
+[data-layer="human"]::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse at 10% 15%, rgba(180, 83, 9, 0.05), transparent 35%),
+    radial-gradient(ellipse at 90% 85%, rgba(217, 119, 6, 0.04), transparent 35%),
+    radial-gradient(ellipse at 50% 50%, rgba(254, 243, 199, 0.18), transparent 55%),
+    radial-gradient(ellipse at 30% 70%, rgba(251, 191, 36, 0.03), transparent 30%),
+    radial-gradient(ellipse at 70% 20%, rgba(245, 158, 11, 0.02), transparent 30%);
+}
+
+/* Warm light from above — like sunlight through a window */
+[data-layer="human"]::after {
   content: "";
   position: fixed;
   top: 0;
@@ -173,43 +220,10 @@
   height: 50vh;
   pointer-events: none;
   z-index: -1;
-  background: linear-gradient(180deg, rgba(37, 99, 235, 0.03) 0%, transparent 100%);
-}
-
-/* Systems page header sits on white against the slate bg */
-[data-layer="systems"] .intro-header.no-img {
-  background: rgba(255, 255, 255, 0.7);
-}
-
-/* --- Human: warm cream, amber glow --- */
-[data-layer="human"] {
-  background-color: #FBF9F4 !important;
-}
-
-/* Warm paper texture — layered amber gradients */
-[data-layer="human"]::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
   background:
-    radial-gradient(ellipse at 15% 10%, rgba(180, 83, 9, 0.04), transparent 45%),
-    radial-gradient(ellipse at 85% 80%, rgba(217, 119, 6, 0.03), transparent 40%),
-    radial-gradient(ellipse at 50% 50%, rgba(254, 243, 199, 0.15), transparent 60%);
-}
-
-/* Subtle warm noise/grain feel via top gradient */
-[data-layer="human"]::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 40vh;
-  pointer-events: none;
-  z-index: -1;
-  background: linear-gradient(180deg, rgba(254, 243, 199, 0.2) 0%, transparent 100%);
+    radial-gradient(ellipse at 40% 0%, rgba(254, 243, 199, 0.35), transparent 50%),
+    radial-gradient(ellipse at 70% 10%, rgba(251, 191, 36, 0.08), transparent 40%),
+    linear-gradient(180deg, rgba(253, 248, 240, 0.6) 0%, transparent 100%);
 }
 
 /* --- Gateway / Both: neutral warm-white --- */
@@ -1748,6 +1762,209 @@
 [data-layer="human"] .badge-poetry {
   border-top-color: #B45309;
 }
+
+/* ============================================
+   § 19  ONE-OF-A-KIND — Unique Layer Identity
+   ============================================
+   Details that make each layer feel like an
+   entirely different site, not just a color swap.
+   ============================================ */
+
+/* --- Selection color per layer --- */
+[data-layer="systems"] ::selection {
+  background: rgba(37, 99, 235, 0.18);
+  color: #0F172A;
+}
+
+[data-layer="human"] ::selection {
+  background: rgba(180, 83, 9, 0.15);
+  color: #1C1917;
+}
+
+/* --- Horizontal rules — Systems: precise line. Human: ornamental. --- */
+[data-layer="systems"] hr,
+[data-layer="systems"] hr.small {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #CBD5E1 20%, #94A3B8 50%, #CBD5E1 80%, transparent);
+  margin: 2rem 0;
+}
+
+[data-layer="human"] hr,
+[data-layer="human"] hr.small {
+  border: none;
+  height: auto;
+  background: none;
+  text-align: center;
+  margin: 2.5rem 0;
+}
+
+[data-layer="human"] hr::after,
+[data-layer="human"] hr.small::after {
+  content: "◆ ◇ ◆";
+  display: block;
+  font-size: 0.5rem;
+  letter-spacing: 0.5em;
+  color: rgba(180, 83, 9, 0.3);
+}
+
+/* --- Scrollbar per layer (webkit) --- */
+[data-layer="systems"]::-webkit-scrollbar {
+  width: 6px;
+}
+[data-layer="systems"]::-webkit-scrollbar-track {
+  background: #E2E8F0;
+}
+[data-layer="systems"]::-webkit-scrollbar-thumb {
+  background: #94A3B8;
+  border-radius: 3px;
+}
+[data-layer="systems"]::-webkit-scrollbar-thumb:hover {
+  background: #2563EB;
+}
+
+[data-layer="human"]::-webkit-scrollbar {
+  width: 8px;
+}
+[data-layer="human"]::-webkit-scrollbar-track {
+  background: #F5F0E8;
+}
+[data-layer="human"]::-webkit-scrollbar-thumb {
+  background: #D6D3D1;
+  border-radius: 999px;
+}
+[data-layer="human"]::-webkit-scrollbar-thumb:hover {
+  background: #B45309;
+}
+
+/* --- Systems: terminal-style code blocks --- */
+[data-layer="systems"] pre {
+  position: relative;
+  background: #0F172A !important;
+  border: 1px solid rgba(96, 165, 250, 0.15);
+  color: #E2E8F0;
+}
+
+[data-layer="systems"] pre::before {
+  content: "●  ●  ●";
+  display: block;
+  font-size: 0.45rem;
+  letter-spacing: 0.2em;
+  color: rgba(148, 163, 184, 0.4);
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+  margin-bottom: 0.75rem;
+}
+
+/* --- Human: literary blockquote ornaments --- */
+[data-layer="human"] blockquote::before {
+  content: "\201C";
+  position: absolute;
+  top: -0.3rem;
+  left: -0.5rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 4rem;
+  line-height: 1;
+  color: rgba(180, 83, 9, 0.12);
+  pointer-events: none;
+}
+
+[data-layer="human"] blockquote {
+  position: relative;
+  padding-left: 2rem;
+}
+
+/* --- Systems: accent line on left of content cards (data visualization feel) --- */
+[data-layer="systems"] .exec-hero,
+[data-layer="systems"] .exec-card,
+[data-layer="systems"] .exec-section {
+  border-left: 3px solid rgba(37, 99, 235, 0.12);
+  padding-left: 1.5rem;
+}
+
+/* --- Human: soft float animation for decorative elements --- */
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.float-gentle {
+  animation: float-gentle 6s ease-in-out infinite;
+}
+
+/* --- Systems: subtle scan-line animation on cards (tech dashboard feel) --- */
+[data-layer="systems"] .card-surface::after,
+[data-layer="systems"] .exec-hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.15), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+[data-layer="systems"] .card-surface:hover::after,
+[data-layer="systems"] .exec-hero:hover::after {
+  opacity: 1;
+}
+
+/* --- Human: warm glow on card hover (candlelight feel) --- */
+[data-layer="human"] .card-surface:hover,
+[data-layer="human"] .exec-hero:hover,
+[data-layer="human"] .poem-card:hover {
+  box-shadow:
+    0 12px 32px rgba(28, 25, 23, 0.07),
+    0 0 60px rgba(180, 83, 9, 0.04) !important;
+}
+
+/* --- Reading progress bar per layer --- */
+[data-layer="systems"] .reading-progress-bar {
+  background: linear-gradient(90deg, #2563EB, #60A5FA) !important;
+}
+
+[data-layer="human"] .reading-progress-bar {
+  background: linear-gradient(90deg, #B45309, #F59E0B) !important;
+}
+
+/* --- Systems: data visualization accent on metrics --- */
+[data-layer="systems"] .authority-card {
+  border-left: 3px solid rgba(37, 99, 235, 0.15);
+}
+
+[data-layer="systems"] .authority-metric {
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Human: generous first-letter treatment on prose --- */
+[data-layer="human"] .blog-post > p:first-of-type::first-letter,
+[data-layer="human"] .creative-lead::first-letter,
+[data-layer="human"] .exec-lead::first-letter {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 3.2em;
+  float: left;
+  line-height: 0.8;
+  margin-right: 0.1em;
+  margin-top: 0.08em;
+  color: var(--layer-accent);
+  font-weight: 600;
+}
+
+/* --- Systems: chevron list markers --- */
+[data-layer="systems"] .exec-card li::marker,
+[data-layer="systems"] .case-study-points li::marker {
+  content: "› ";
+  color: #2563EB;
+}
+
+/* --- Human: em-dash list markers --- */
+[data-layer="human"] .blog-post li::marker {
+  content: "— ";
+  color: #B45309;
+}
+
 
 /* --- Dark mode for global overrides --- */
 [data-theme="dark"][data-layer="systems"] .card-surface,
