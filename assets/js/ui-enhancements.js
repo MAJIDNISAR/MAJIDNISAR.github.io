@@ -661,7 +661,9 @@
     ],
 
     init() {
-      this.addTestimonialSection();
+      // Testimonial section is now rendered in HTML (index.html, aboutme.html).
+      // JS injection disabled to prevent duplicates.
+      // this.addTestimonialSection();
     },
 
     addTestimonialSection() {

@@ -1,8 +1,9 @@
+/* About page — adapts to the Human Layer theme */
+
 .about-shell {
   width: min(100%, 1280px);
-  margin: 2rem 0 3rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 2rem auto 3rem;
+  padding: 0 1.5rem;
 }
 
 .about-grid {
@@ -18,31 +19,64 @@
   gap: 1.5rem;
 }
 
+/* Cards inherit layer styling */
 .about-lead,
 .about-card,
 .about-panel {
-  background: rgba(255, 255, 255, 0.94);
-  border: 1px solid rgba(26, 26, 46, 0.08);
-  border-radius: 24px;
-  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  background: var(--layer-card-bg, rgba(255, 253, 248, 0.85));
+  border: 1px solid var(--layer-card-border, rgba(214, 211, 209, 0.4));
+  border-radius: var(--layer-card-radius, 20px);
+  box-shadow: var(--layer-card-shadow, 0 2px 10px rgba(28, 25, 23, 0.04));
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.about-card:hover,
+.about-panel:hover {
+  box-shadow: var(--layer-card-shadow-hover, 0 12px 32px rgba(28, 25, 23, 0.07));
+  transform: translateY(-2px);
 }
 
 .about-lead {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  padding: 1.5rem 1.75rem;
+  font-family: var(--layer-body-font, 'Source Serif Pro', Georgia, serif);
+  font-size: 1.15rem;
+  line-height: 1.85;
+  font-style: italic;
+  padding: 1.75rem 2rem;
   margin: 0;
+  color: var(--text-secondary, #44403C);
+  border-left: 3px solid var(--layer-accent, #B45309);
 }
 
 .about-card,
 .about-panel {
-  padding: 1.5rem 1.75rem;
+  padding: 1.75rem 2rem;
 }
 
-.about-card h2,
+.about-card h2 {
+  font-family: var(--layer-heading-font, 'Cormorant Garamond', Georgia, serif);
+  font-weight: 600;
+  font-size: 1.6rem;
+  letter-spacing: -0.015em;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--text-color, #1C1917);
+}
+
 .about-panel h3 {
+  font-family: var(--layer-heading-font, 'Cormorant Garamond', Georgia, serif);
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
   margin-top: 0;
   margin-bottom: 0.9rem;
+  color: var(--layer-accent, #B45309);
+}
+
+.about-card p {
+  font-family: var(--layer-body-font, 'Source Serif Pro', Georgia, serif);
+  font-size: 1rem;
+  line-height: 1.82;
+  color: var(--text-secondary, #44403C);
 }
 
 .about-card p:last-child,
@@ -60,17 +94,40 @@
 
 .profile-facts li,
 .about-list li {
-  line-height: 1.6;
+  font-family: var(--layer-body-font, 'Source Serif Pro', Georgia, serif);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-secondary, #44403C);
 }
 
+.profile-facts li::marker,
+.about-list li::marker {
+  color: var(--layer-accent, #B45309);
+}
+
+/* Sidebar panels — subtle accent border */
+.about-panel {
+  border-top: 2px solid var(--layer-accent, #B45309);
+}
+
+/* Dark mode */
 [data-theme="dark"] .about-lead,
 [data-theme="dark"] .about-card,
 [data-theme="dark"] .about-panel {
-  background: rgba(22, 27, 34, 0.94);
-  border-color: rgba(201, 209, 217, 0.1);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28);
+  background: var(--layer-card-bg, rgba(35, 31, 28, 0.95));
+  border-color: var(--layer-card-border, rgba(168, 162, 158, 0.1));
+  box-shadow: var(--layer-card-shadow, 0 2px 8px rgba(0, 0, 0, 0.25));
 }
 
+[data-theme="dark"] .about-lead {
+  border-left-color: var(--layer-accent, #F59E0B);
+}
+
+[data-theme="dark"] .about-panel {
+  border-top-color: var(--layer-accent, #F59E0B);
+}
+
+/* Responsive */
 @media (max-width: 991px) {
   .about-grid {
     grid-template-columns: 1fr;
@@ -80,12 +137,17 @@
 @media (max-width: 767px) {
   .about-shell {
     margin-top: 1rem;
+    padding: 0 1rem;
   }
 
   .about-lead,
   .about-card,
   .about-panel {
-    padding: 1.25rem;
-    border-radius: 18px;
+    padding: 1.25rem 1.5rem;
+    border-radius: 16px;
+  }
+
+  .about-lead {
+    font-size: 1.05rem;
   }
 }

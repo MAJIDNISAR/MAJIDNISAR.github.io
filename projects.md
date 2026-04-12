@@ -2,6 +2,7 @@
 layout: page
 title: "Projects"
 subtitle: "Production systems, frontier builds, and public intellectual projects."
+layer: systems
 permalink: /projects/
 full-width: false
 css:

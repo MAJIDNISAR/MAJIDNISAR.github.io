@@ -2,6 +2,7 @@
 layout: page
 title: "Now"
 subtitle: "What I'm focused on right now"
+layer: human
 permalink: /now/
 ---
 

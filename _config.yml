@@ -36,21 +36,19 @@ description: "Technology leadership for software, AI products, and systems of ex
 # - Contact: Get in touch
 
 navbar-links:
-  Home: "/"
-  About:
-    - About Me: "aboutme"
-    - CV / Resume: "cv"
-    - Media Kit: "media-kit"
-  Leadership: "leadership"
-  Case Studies:
+  Systems:
+    - Leadership: "leadership"
     - Case Studies: "case-studies"
     - Projects: "projects"
-  Speaking: "speaking"
-  Writing:
-    - Writing: "writing"
     - Newsletter: "writing/newsletter"
-    - Tutorials: "tutorials"
-  Photography: "photography"
+    - Speaking: "speaking"
+    - CV / Resume: "cv"
+  Human:
+    - Poetry: "poetry"
+    - Photography: "photography"
+    - Writing: "writing"
+    - About Me: "aboutme"
+    - Now: "now"
   Work With Me: "work-with-me"
   Contact: "contact"
 
@@ -340,13 +338,33 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      comments: true  # add comments to all blog posts
-      social-share: true # add social media sharing buttons to all blog posts
+      comments: true
+      social-share: true
+      layer: "systems"
   -
     scope:
-      path: "" # any file that's not a post will be a "page" layout by default
+      path: ""
     values:
       layout: "page"
+      layer: "both"
+  -
+    scope:
+      path: "_poetry"
+      type: "poetry"
+    values:
+      layer: "human"
+  -
+    scope:
+      path: "_photos"
+      type: "photos"
+    values:
+      layer: "human"
+  -
+    scope:
+      path: "_newsletter"
+      type: "newsletter"
+    values:
+      layer: "systems"
 
 # Exclude these files from production site
 exclude:
@@ -372,4 +390,7 @@ collections:
   newsletter:
     output: true
     permalink: /newsletter/:title/
+  poetry:
+    output: true
+    permalink: /poetry/:title/
 

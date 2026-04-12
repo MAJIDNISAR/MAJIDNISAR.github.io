@@ -16,6 +16,7 @@ common-css:
   - "/assets/css/premium-theme.css"
   - "/assets/css/navbar-theme.css"
   - "/assets/css/ui-enhancements.css"
+  - "/assets/css/layers.css"
 common-ext-css:
   - "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap"
 common-ext-js:
@@ -36,7 +37,7 @@ common-js:
 <!-- Beautiful Jekyll 5.0.0 | Copyright Dean Attali 2020 -->
 {% include head.html %}
 
-<body>
+<body data-layer="{{ page.layer | default: 'both' }}">
 
   {% include gtm_body.html %}
   {% include reading-progress.html %}
