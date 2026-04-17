@@ -2,6 +2,7 @@
 layout: page
 title: "Projects"
 subtitle: "Production systems, frontier builds, and public intellectual projects."
+share-description: "Projects by Majid Nisar: KUN (intent-to-binary compiler), Astra (programming language), Sahal ERP, and production systems."
 layer: systems
 permalink: /projects/
 full-width: false

@@ -50,6 +50,10 @@
   <meta name="theme-color" content="{{ site.mobile-theme-col }}">
   {% endif %}
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="{{ '/assets/img/avatar.jpg' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/img/avatar.jpg' | relative_url }}">
+
   {% if site.keywords %}
   <meta name="keywords" content="{{ site.keywords }}">
   {% endif %}
@@ -213,6 +217,7 @@
         "name": {{ title | strip | jsonify }},
         "description": {{ description | strip | jsonify }},
         "url": {% if page.id %}{{ page.url | absolute_url | jsonify }}{% else %}{{ page.url | absolute_url | strip_index | jsonify }}{% endif %},
+        "inLanguage": {{ site.language | default: "en" | jsonify }},
         "isPartOf": {
           "@type": "WebSite",
           "name": {{ site.title | jsonify }},
@@ -220,9 +225,11 @@
         }{% if img != "" %},
         "image": {{ img | absolute_url | jsonify }}{% endif %}{% if page.id %},
         "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+        {% if page.last-updated %}"dateModified": {{ page.last-updated | date_to_xmlschema | jsonify }},{% endif %}
         "author": {
           "@type": "Person",
-          "name": {{ site.person.name | default: site.author | jsonify }}
+          "name": {{ site.person.name | default: site.author | jsonify }},
+          "url": {{ site.url | jsonify }}
         },
         "publisher": {
           "@type": "Organization",
@@ -231,8 +238,26 @@
             "@type": "ImageObject",
             "url": {{ site.organization.logo | absolute_url | jsonify }}
           }
-        }{% endif %}
-      }
+        }{% if page.tags %},
+        "keywords": {{ page.tags | join: ", " | jsonify }}{% endif %}{% endif %}
+      }{% assign path_segments = page.url | split: "/" | compact %}{% if path_segments.size > 1 %},
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": {{ site.url | jsonify }}
+          }{% for segment in path_segments %}{% if segment != "" %},
+          {
+            "@type": "ListItem",
+            "position": {{ forloop.index | plus: 1 }},
+            "name": {% if forloop.last %}{{ title | strip | jsonify }}{% else %}{{ segment | replace: "-", " " | capitalize | jsonify }}{% endif %}{% unless forloop.last %},
+            "item": {{ site.url | append: "/" | append: segment | append: "/" | jsonify }}{% endunless %}
+          }{% endif %}{% endfor %}
+        ]
+      }{% endif %}
     ]
   }
   </script>
