@@ -3,27 +3,33 @@ layout: page
 title: "THE SYSTEM LAYER"
 subtitle: "A lens for thinking clearly about products, software, and leadership"
 permalink: /writing/newsletter/
+layer: systems
 ---
 
-<div class="writing-hub" style="max-width:800px; margin:0 auto;">
+<div class="writing-hub layer-archive">
 
-  <div class="newsletter-masthead reveal reveal-up">
-    <span class="kicker" style="color:var(--accent-warm);">Weekly Newsletter</span>
-    <h2 style="font-family:var(--font-display,'Playfair Display',Georgia,serif); font-size:clamp(1.75rem,4vw,2.75rem); letter-spacing:-0.025em; margin:0.25rem 0 0.75rem; color:var(--accent-warm);">THE SYSTEM LAYER</h2>
-    <p style="font-style:italic; font-family:var(--font-body,'Source Serif Pro',Georgia,serif); font-size:1.05rem; color:var(--text-muted); margin:0 0 1.25rem;">
+  <section class="newsletter-masthead layer-archive__hero reveal reveal-up">
+    <span class="kicker" style="color:var(--accent-color,#2563eb);">Weekly Newsletter</span>
+    <h2 style="font-family:var(--font-display,'Playfair Display',Georgia,serif); font-size:clamp(2rem,4vw,3.4rem); letter-spacing:-0.03em; margin:0.25rem 0 0.75rem; color:var(--accent-color,#2563eb);">THE SYSTEM LAYER</h2>
+    <p style="font-style:italic; font-family:var(--font-body,'Source Serif Pro',Georgia,serif); font-size:1.08rem; color:var(--text-muted); margin:0 0 1.25rem; max-width:46rem;">
       "A lens for thinking clearly about products, software, and leadership — by focusing on the systems beneath them."
     </p>
+    <div class="layer-archive__meta">
+      <span class="layer-archive__chip">Published weekly</span>
+      <span class="layer-archive__chip">Systems essays</span>
+      <span class="layer-archive__chip">Operating models</span>
+    </div>
     <a href="https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/" target="_blank" rel="noopener"
-       class="newsletter-cta-subscribe" style="display:inline-flex; align-items:center; padding:0.65rem 1.4rem; background:var(--accent-warm,#B45309); color:#fff; border-radius:999px; text-decoration:none; font-weight:600; font-size:0.9rem; font-family:var(--font-ui,'Inter',sans-serif);">
+       class="newsletter-cta-subscribe" style="display:inline-flex; align-items:center; margin-top:1.25rem; padding:0.75rem 1.45rem; background:var(--accent-color,#2563eb); color:#fff; border-radius:999px; text-decoration:none; font-weight:600; font-size:0.9rem; font-family:var(--font-ui,'Inter',sans-serif);">
       Subscribe on LinkedIn →
     </a>
-  </div>
+  </section>
 
-  <div class="writing-list reveal-stagger" style="margin-top:3rem;">
+  <div class="layer-archive__list reveal-stagger">
     {% assign issues = site.newsletter | sort: 'date' | reverse %}
     {% for issue in issues %}
-    <article class="writing-item">
-      <div class="writing-item-meta">
+    <article class="layer-archive__card layer-archive__card--systems">
+      <div class="layer-archive__card-meta">
         <span class="content-type-badge badge-newsletter">Issue #{{ issue.issue_number }}</span>
         <span class="writing-date">{{ issue.date | date: "%b %-d, %Y" }}</span>
       </div>
@@ -37,6 +43,7 @@ permalink: /writing/newsletter/
           {% endfor %}
         </div>
       {% endif %}
+      <a class="layer-archive__link layer-archive__link--systems" href="{{ issue.url | absolute_url }}">Read issue on site →</a>
     </article>
     {% endfor %}
   </div>

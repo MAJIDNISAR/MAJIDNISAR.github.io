@@ -1,22 +1,261 @@
 ---
-layout: default
-layer: both
-title: 404 - Page not found
+layout: page
+title: "Page Not Found"
+subtitle: "The link you followed may be outdated, mistyped, or the content may have moved."
 permalink: /404.html
+layer: both
 ---
 
-<div class="text-center">
-  <h1>Whoops, this page doesn't exist.</h1>
-  <h1>Move along. (404 error)</h1>
-  <br/>
+<div class="error-page" id="errorPage">
+  <canvas class="error-game-canvas" id="gameCanvas" aria-hidden="true"></canvas>
 
-  <img src="{{ 'assets/img/404-southpark.jpg' | relative_url }}" alt="Not found" />
+  <div class="error-page__content">
+    <span class="error-page__code">404</span>
+    <h1 class="error-page__title">Between the layers, this page doesn't exist.</h1>
+    <p class="error-page__subtitle">Move your cursor to reconnect the layers. Or navigate back to familiar ground.</p>
+
+    <div class="error-game__score" id="gameScore" aria-hidden="true">
+      <span id="connectionCount">0</span> connections
+    </div>
+
+    <div class="error-page__layers">
+      <a href="/writing/newsletter/" class="error-page__layer-card error-page__layer-card--systems">
+        <span class="error-page__layer-dot error-page__layer-dot--systems"></span>
+        <span class="error-page__layer-name">The Systems Layer</span>
+        <span class="error-page__layer-desc">Leadership, case studies, newsletter</span>
+      </a>
+      <a href="/writing/human-layer/" class="error-page__layer-card error-page__layer-card--human">
+        <span class="error-page__layer-dot error-page__layer-dot--human"></span>
+        <span class="error-page__layer-name">The Human Layer</span>
+        <span class="error-page__layer-desc">Poetry, photography, reflections</span>
+      </a>
+    </div>
+
+    <nav class="error-page__nav" aria-label="Quick navigation">
+      <a href="/">Home</a>
+      <span class="error-page__nav-sep">/</span>
+      <a href="/writing/">Writing</a>
+      <span class="error-page__nav-sep">/</span>
+      <a href="/aboutme/">About</a>
+      <span class="error-page__nav-sep">/</span>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
 </div>
+
 <script>
-  // on 2016-02-01 GitHub Pages upgraded to Jekyll3, which broke all blog posts with trailing slashes
-  // and there are tons of links out there on the web to posts with a trailing slash, so can't ignore it
-  var url = location.href;
-  if(url.substr(url.length - 1) === '/') {
-    window.location = url.substr(0, url.length - 1);
+(function() {
+  'use strict';
+
+  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reducedMotion) return;
+
+  var canvas = document.getElementById('gameCanvas');
+  var container = document.getElementById('errorPage');
+  var scoreEl = document.getElementById('connectionCount');
+  if (!canvas || !container) return;
+
+  var ctx = canvas.getContext('2d');
+  var particles = [];
+  var mouse = { x: -9999, y: -9999 };
+  var connections = 0;
+  var PARTICLE_COUNT = 70;
+  var ATTRACT_RADIUS = 130;
+  var BOND_DISTANCE = 28;
+  var dpr = window.devicePixelRatio || 1;
+
+  function isDark() {
+    return document.documentElement.getAttribute('data-theme') === 'dark';
   }
+
+  function colors() {
+    var dark = isDark();
+    return {
+      systems: dark ? '#60A5FA' : '#2563eb',
+      human: dark ? '#F59E0B' : '#b45309',
+      alpha: dark ? 0.45 : 0.6,
+      bond: dark ? 'rgba(167, 139, 250, 0.2)' : 'rgba(124, 58, 237, 0.12)'
+    };
+  }
+
+  function resize() {
+    var rect = container.getBoundingClientRect();
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+    canvas.style.width = rect.width + 'px';
+    canvas.style.height = rect.height + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  function createParticle(i) {
+    var rect = container.getBoundingClientRect();
+    var isSystem = i < PARTICLE_COUNT / 2;
+    return {
+      x: Math.random() * rect.width,
+      y: Math.random() * rect.height,
+      vx: (Math.random() - 0.5) * 0.4,
+      vy: (Math.random() - 0.5) * 0.4,
+      r: 2.5 + Math.random() * 2.5,
+      type: isSystem ? 'systems' : 'human',
+      bonded: false,
+      bondPartner: null,
+      pulse: 0
+    };
+  }
+
+  function init() {
+    resize();
+    particles = [];
+    for (var i = 0; i < PARTICLE_COUNT; i++) {
+      particles.push(createParticle(i));
+    }
+  }
+
+  function update() {
+    var rect = container.getBoundingClientRect();
+    var w = rect.width;
+    var h = rect.height;
+    var cx = w / 2;
+    var cy = h / 2;
+    connections = 0;
+
+    for (var i = 0; i < particles.length; i++) {
+      var p = particles[i];
+
+      // Entropy: drift slightly away from center
+      var dx = p.x - cx;
+      var dy = p.y - cy;
+      var dist = Math.sqrt(dx * dx + dy * dy) || 1;
+      p.vx += (dx / dist) * 0.008;
+      p.vy += (dy / dist) * 0.008;
+
+      // Mouse attraction
+      var mx = mouse.x - p.x;
+      var my = mouse.y - p.y;
+      var md = Math.sqrt(mx * mx + my * my);
+      if (md < ATTRACT_RADIUS && md > 1) {
+        var force = (1 - md / ATTRACT_RADIUS) * 0.35;
+        p.vx += (mx / md) * force;
+        p.vy += (my / md) * force;
+      }
+
+      // Damping
+      p.vx *= 0.97;
+      p.vy *= 0.97;
+
+      p.x += p.vx;
+      p.y += p.vy;
+
+      // Bounds
+      if (p.x < 0) { p.x = 0; p.vx *= -0.5; }
+      if (p.x > w) { p.x = w; p.vx *= -0.5; }
+      if (p.y < 0) { p.y = 0; p.vy *= -0.5; }
+      if (p.y > h) { p.y = h; p.vy *= -0.5; }
+
+      p.bonded = false;
+      p.bondPartner = null;
+    }
+
+    // Check bonds between different types
+    for (var a = 0; a < particles.length; a++) {
+      for (var b = a + 1; b < particles.length; b++) {
+        if (particles[a].type === particles[b].type) continue;
+        var bx = particles[b].x - particles[a].x;
+        var by = particles[b].y - particles[a].y;
+        var bd = Math.sqrt(bx * bx + by * by);
+        if (bd < BOND_DISTANCE) {
+          particles[a].bonded = true;
+          particles[b].bonded = true;
+          particles[a].bondPartner = b;
+          particles[b].bondPartner = a;
+          connections++;
+        }
+      }
+    }
+
+    if (scoreEl) scoreEl.textContent = connections;
+  }
+
+  function draw() {
+    var rect = container.getBoundingClientRect();
+    ctx.clearRect(0, 0, rect.width, rect.height);
+    var c = colors();
+
+    // Draw bond lines
+    for (var i = 0; i < particles.length; i++) {
+      var p = particles[i];
+      if (p.bonded && p.bondPartner !== null && p.bondPartner > i) {
+        var q = particles[p.bondPartner];
+        ctx.beginPath();
+        ctx.moveTo(p.x, p.y);
+        ctx.lineTo(q.x, q.y);
+        ctx.strokeStyle = c.bond;
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+      }
+    }
+
+    // Draw particles
+    for (var j = 0; j < particles.length; j++) {
+      var pt = particles[j];
+      var col = pt.type === 'systems' ? c.systems : c.human;
+      var alpha = pt.bonded ? Math.min(c.alpha + 0.3, 1) : c.alpha;
+
+      ctx.beginPath();
+      ctx.arc(pt.x, pt.y, pt.r, 0, Math.PI * 2);
+      ctx.fillStyle = col;
+      ctx.globalAlpha = alpha;
+      ctx.fill();
+
+      // Glow on bonded particles
+      if (pt.bonded) {
+        ctx.beginPath();
+        ctx.arc(pt.x, pt.y, pt.r + 6, 0, Math.PI * 2);
+        ctx.fillStyle = col;
+        ctx.globalAlpha = 0.1;
+        ctx.fill();
+      }
+
+      ctx.globalAlpha = 1;
+    }
+
+    // Mouse ripple
+    if (mouse.x > 0 && mouse.y > 0) {
+      ctx.beginPath();
+      ctx.arc(mouse.x, mouse.y, ATTRACT_RADIUS, 0, Math.PI * 2);
+      ctx.strokeStyle = isDark() ? 'rgba(167, 139, 250, 0.06)' : 'rgba(124, 58, 237, 0.04)';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+  }
+
+  function loop() {
+    update();
+    draw();
+    requestAnimationFrame(loop);
+  }
+
+  container.addEventListener('mousemove', function(e) {
+    var rect = container.getBoundingClientRect();
+    mouse.x = e.clientX - rect.left;
+    mouse.y = e.clientY - rect.top;
+  });
+
+  container.addEventListener('touchmove', function(e) {
+    var rect = container.getBoundingClientRect();
+    var touch = e.touches[0];
+    mouse.x = touch.clientX - rect.left;
+    mouse.y = touch.clientY - rect.top;
+  }, { passive: true });
+
+  container.addEventListener('mouseleave', function() {
+    mouse.x = -9999;
+    mouse.y = -9999;
+  });
+
+  window.addEventListener('resize', resize);
+
+  init();
+  loop();
+})();
 </script>

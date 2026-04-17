@@ -4,7 +4,12 @@ subtitle: "The distance between what leadership says and what the team does"
 date: 2026-02-23
 issue_number: 9
 newsletter_name: "THE SYSTEM LAYER"
-linkedin_url: "https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/"
+permalink: /newsletter/issue-09-coherence-gap/
+linkedin_url: "https://www.linkedin.com/pulse/issue-9-coherence-gap-why-strategy-breaks-between-layers-majid-nisar-azxcc"
+header-logo: "/assets/img/newsletters/system-layer/logo.png"
+cover-img: "/assets/img/newsletters/system-layer/issue-09.jpg"
+thumbnail-img: "/assets/img/newsletters/system-layer/issue-09.jpg"
+share-img: "/assets/img/newsletters/system-layer/issue-09.jpg"
 tags: [strategy, systems, leadership, coherence]
 content-type: newsletter
 ---

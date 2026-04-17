@@ -1,0 +1,1683 @@
+/* ================================================================
+   RENAISSANCE PAGES — Individual Page Revamp
+   Layer-specific animations, patterns, gradients for every page
+   ================================================================ */
+
+/* ============================================
+   GLOBAL: Eliminate dead space on ALL pages
+   ============================================ */
+
+/* Page shell — tighter, more immersive */
+.page-shell {
+  padding-bottom: 0 !important;
+}
+
+.page-shell--wide .container-fluid,
+.page-shell--standard .container-md {
+  padding-top: 0 !important;
+}
+
+/* Standard content pages — widen and breathe */
+.page-shell--standard .container-md {
+  max-width: 960px !important;
+  padding-left: clamp(1rem, 3vw, 2rem) !important;
+  padding-right: clamp(1rem, 3vw, 2rem) !important;
+}
+
+/* Kill narrow bootstrap columns site-wide */
+.page-shell--standard .col-xl-8.offset-xl-2,
+.page-shell--standard .col-lg-10.offset-lg-1 {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Full-width pages — zero side gaps */
+.page-shell--wide {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* ============================================
+   CURSOR — Layer-aware custom cursor
+   ============================================ */
+body {
+  cursor: default;
+}
+
+body a,
+body button,
+body [role="button"],
+body .card-lift,
+body .gateway-panel__link,
+body .project-link {
+  cursor: pointer;
+}
+
+@keyframes pageShellFloat {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(0, -14px, 0) scale(1.03); }
+}
+
+@keyframes pageShellPulse {
+  0%, 100% { opacity: 0.42; }
+  50% { opacity: 0.82; }
+}
+
+@keyframes pageMeshShift {
+  0% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(1.5%, -1.5%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+/* ============================================
+   § ABOUT ME PAGE
+   ============================================ */
+
+/* Shell */
+.about-shell {
+  width: min(100%, 1400px) !important;
+  margin: 1rem auto 2rem !important;
+  padding: 0 clamp(1rem, 3vw, 2rem) !important;
+}
+
+.about-grid {
+  gap: 1.25rem !important;
+}
+
+/* About cards — warm human aesthetic */
+.about-lead {
+  position: relative !important;
+  background: linear-gradient(135deg, #fffbf5 0%, #fef7ed 100%) !important;
+  border: 1px solid rgba(180, 83, 9, 0.08) !important;
+  border-radius: 24px !important;
+  overflow: hidden !important;
+  font-size: 1.1rem !important;
+}
+
+.about-lead::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background-image: radial-gradient(circle, rgba(180, 83, 9, 0.03) 1px, transparent 1px) !important;
+  background-size: 24px 24px !important;
+  pointer-events: none !important;
+  opacity: 0.5 !important;
+}
+
+.about-lead::after {
+  content: '' !important;
+  position: absolute !important;
+  top: -40px !important;
+  right: -40px !important;
+  width: 180px !important;
+  height: 180px !important;
+  border-radius: 50% !important;
+  background: radial-gradient(circle, rgba(180, 83, 9, 0.06), transparent 70%) !important;
+  pointer-events: none !important;
+  animation: floatGlow 10s ease-in-out infinite alternate !important;
+}
+
+.about-card,
+.about-panel {
+  background: white !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+.about-card:hover,
+.about-panel:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Warm accent stripe on about cards */
+.about-card::after,
+.about-panel::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 3px !important;
+  background: linear-gradient(135deg, #92400e 0%, #b45309 50%, #d97706 100%) !important;
+  opacity: 0 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.about-card:hover::after,
+.about-panel:hover::after {
+  opacity: 1 !important;
+}
+
+.about-card h2,
+.about-panel h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  color: #1c1917 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* About sidebar panels */
+.about-side .about-panel {
+  background: linear-gradient(180deg, #fffdf8 0%, #fefce8 100%) !important;
+}
+
+/* Skills section */
+.skills-section {
+  width: min(100%, 1400px) !important;
+  margin: 0 auto !important;
+  padding: 0 clamp(1rem, 3vw, 2rem) !important;
+}
+
+/* ============================================
+   § CONTACT PAGE
+   ============================================ */
+
+/* Executive card system — used by contact, work-with-me */
+.exec-section {
+  margin-bottom: 2.5rem !important;
+}
+
+.exec-section-title {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: clamp(1.4rem, 3vw, 2rem) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.03em !important;
+  margin-bottom: 1.25rem !important;
+  color: #0f172a !important;
+}
+
+.exec-grid {
+  display: grid !important;
+  gap: 1rem !important;
+}
+
+.exec-grid--4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important; }
+.exec-grid--3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important; }
+.exec-grid--2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important; }
+
+.exec-card {
+  position: relative !important;
+  background: white !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  border-radius: 20px !important;
+  padding: 1.5rem !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  overflow: hidden !important;
+}
+
+.exec-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08) !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Gradient accent line */
+.exec-card::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 3px !important;
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #b45309 100%) !important;
+  opacity: 0 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.exec-card:hover::before {
+  opacity: 1 !important;
+}
+
+.exec-card h3 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.5rem !important;
+  color: #0f172a !important;
+}
+
+.exec-card p {
+  font-size: 0.9rem !important;
+  line-height: 1.65 !important;
+  color: #475569 !important;
+}
+
+/* Contact links */
+.exec-card a {
+  color: #2563eb !important;
+  font-weight: 600 !important;
+  transition: color 0.15s ease !important;
+}
+
+.exec-card a:hover {
+  color: #1d4ed8 !important;
+}
+
+/* ============================================
+   § LEADERSHIP PAGE — Systems Layer
+   ============================================ */
+.leadership-shell {
+  width: min(100%, 1200px) !important;
+  margin: 1rem auto 2rem !important;
+  padding: 0 clamp(1rem, 3vw, 2rem) !important;
+}
+
+.leadership-intro {
+  position: relative !important;
+  background: linear-gradient(135deg, #f0f4f8 0%, #dbeafe 100%) !important;
+  border: 1px solid rgba(37, 99, 235, 0.08) !important;
+  border-radius: 24px !important;
+  padding: 2rem 2.25rem !important;
+  margin-bottom: 2rem !important;
+  overflow: hidden !important;
+}
+
+/* Systems pattern — circuit grid */
+.leadership-intro::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background-image:
+    linear-gradient(90deg, rgba(37, 99, 235, 0.04) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(37, 99, 235, 0.04) 1px, transparent 1px) !important;
+  background-size: 40px 40px !important;
+  mask-image: linear-gradient(135deg, black 30%, transparent 70%) !important;
+  -webkit-mask-image: linear-gradient(135deg, black 30%, transparent 70%) !important;
+  pointer-events: none !important;
+}
+
+.leadership-intro::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: -50px !important;
+  right: -50px !important;
+  width: 200px !important;
+  height: 200px !important;
+  border-radius: 50% !important;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.1), transparent 70%) !important;
+  pointer-events: none !important;
+  animation: floatGlow 8s ease-in-out infinite alternate !important;
+}
+
+/* Pillar cards */
+.pillar-card {
+  position: relative !important;
+  background: white !important;
+  border: 1px solid rgba(37, 99, 235, 0.06) !important;
+  border-radius: 20px !important;
+  padding: 1.75rem !important;
+  box-shadow: 0 2px 12px rgba(30, 58, 95, 0.04) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  overflow: hidden !important;
+}
+
+.pillar-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 16px 40px rgba(30, 58, 95, 0.1) !important;
+  border-color: rgba(37, 99, 235, 0.15) !important;
+}
+
+.pillar-card::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 3px !important;
+  background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%) !important;
+  opacity: 0 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.pillar-card:hover::after {
+  opacity: 1 !important;
+}
+
+.pillar-number {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.65rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.12em !important;
+  color: #2563eb !important;
+  text-transform: uppercase !important;
+}
+
+.pillar-title {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* ============================================
+   § SPEAKING PAGE — Systems Layer
+   ============================================ */
+.speaking-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  gap: 1.25rem !important;
+}
+
+.speaking-card {
+  position: relative !important;
+  background: white !important;
+  border: 1px solid rgba(37, 99, 235, 0.06) !important;
+  border-radius: 20px !important;
+  padding: 1.75rem !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  overflow: hidden !important;
+}
+
+.speaking-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 16px 40px rgba(30, 58, 95, 0.1) !important;
+}
+
+.speaking-card::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 3px !important;
+  background: linear-gradient(135deg, #1e3a5f, #3b82f6) !important;
+}
+
+.speaking-card h3 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  color: #0f172a !important;
+}
+
+/* ============================================
+   § CASE STUDIES PAGE — Systems Layer
+   ============================================ */
+.case-study-shell {
+  width: min(100%, 1200px) !important;
+  margin: 1rem auto !important;
+  padding: 0 clamp(1rem, 3vw, 2rem) !important;
+}
+
+.case-study-full {
+  position: relative !important;
+  background: white !important;
+  border: 1px solid rgba(37, 99, 235, 0.06) !important;
+  border-radius: 24px !important;
+  padding: 2.5rem !important;
+  margin-bottom: 2rem !important;
+  box-shadow: 0 4px 20px rgba(30, 58, 95, 0.06) !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+}
+
+.case-study-full:hover {
+  box-shadow: 0 12px 40px rgba(30, 58, 95, 0.1) !important;
+}
+
+/* Systems pattern overlay on case study */
+.case-study-full::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background-image: radial-gradient(circle, rgba(37, 99, 235, 0.03) 1px, transparent 1px) !important;
+  background-size: 28px 28px !important;
+  pointer-events: none !important;
+  opacity: 0.4 !important;
+}
+
+.case-study-full::after {
+  content: '' !important;
+  position: absolute !important;
+  top: -60px !important;
+  right: -60px !important;
+  width: 200px !important;
+  height: 200px !important;
+  border-radius: 50% !important;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.06), transparent 70%) !important;
+  pointer-events: none !important;
+}
+
+.case-study-full h2 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.03em !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Metric highlight */
+.metric-highlight {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0.35rem 0.85rem !important;
+  border-radius: 9999px !important;
+  background: rgba(37, 99, 235, 0.08) !important;
+  color: #2563eb !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em !important;
+}
+
+/* ============================================
+   § CV PAGE — Systems Layer
+   ============================================ */
+.cv-page {
+  width: min(100%, 1100px) !important;
+  margin: 0 auto !important;
+  padding: 0 clamp(1rem, 3vw, 2rem) !important;
+}
+
+.cv-header {
+  text-align: center !important;
+  margin-bottom: 2rem !important;
+  position: relative !important;
+}
+
+.cv-name {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: clamp(2rem, 5vw, 3rem) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.04em !important;
+  background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 50%, #3b82f6 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.cv-headline {
+  font-family: 'Source Serif Pro', Georgia, serif !important;
+  font-style: italic !important;
+  color: #64748b !important;
+}
+
+.cv-contacts {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 0.75rem !important;
+  margin-top: 1rem !important;
+}
+
+.cv-contact-item {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.4rem !important;
+  padding: 0.4rem 0.9rem !important;
+  border-radius: 9999px !important;
+  background: rgba(37, 99, 235, 0.06) !important;
+  border: 1px solid rgba(37, 99, 235, 0.1) !important;
+  color: #2563eb !important;
+  font-size: 0.78rem !important;
+  font-family: 'Inter', sans-serif !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.cv-contact-item:hover {
+  background: rgba(37, 99, 235, 0.12) !important;
+  transform: translateY(-1px) !important;
+  color: #1d4ed8 !important;
+}
+
+.cv-download-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  padding: 0.6rem 1.3rem !important;
+  background: #2563eb !important;
+  color: white !important;
+  border-radius: 9999px !important;
+  font-weight: 600 !important;
+  font-size: 0.85rem !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3) !important;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.cv-download-btn:hover {
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4) !important;
+  color: white !important;
+}
+
+/* CV sections */
+.cv-section {
+  position: relative !important;
+  background: white !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  border-radius: 20px !important;
+  padding: 2rem !important;
+  margin-bottom: 1.25rem !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03) !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+}
+
+.cv-section:hover {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06) !important;
+}
+
+.cv-section::after {
+  content: '' !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  width: 3px !important;
+  background: linear-gradient(180deg, #2563eb, #3b82f6) !important;
+  opacity: 0 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.cv-section:hover::after {
+  opacity: 1 !important;
+}
+
+.cv-section-title {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: #2563eb !important;
+  margin-bottom: 1.25rem !important;
+}
+
+/* CV role */
+.cv-role {
+  padding-bottom: 1.25rem !important;
+  margin-bottom: 1.25rem !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04) !important;
+}
+
+.cv-role:last-child {
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.cv-role-title {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 700 !important;
+  font-size: 1.15rem !important;
+  color: #0f172a !important;
+}
+
+.cv-role-org {
+  color: #2563eb !important;
+  font-weight: 600 !important;
+}
+
+.cv-role-meta {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.7rem !important;
+  color: #94a3b8 !important;
+  letter-spacing: 0.04em !important;
+}
+
+/* CV skill tags */
+.cv-skill-tag,
+.cv-tech-tag {
+  display: inline-flex !important;
+  padding: 0.25rem 0.65rem !important;
+  border-radius: 9999px !important;
+  background: rgba(37, 99, 235, 0.06) !important;
+  color: #2563eb !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.68rem !important;
+  font-weight: 500 !important;
+  border: 1px solid rgba(37, 99, 235, 0.1) !important;
+  transition: all 0.2s ease !important;
+}
+
+.cv-skill-tag:hover,
+.cv-tech-tag:hover {
+  background: rgba(37, 99, 235, 0.12) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* ============================================
+   § WRITING PAGE — Both Layers
+   ============================================ */
+.writing-hub {
+  width: min(100%, 1200px) !important;
+  margin: 1rem auto !important;
+  padding: 0 clamp(1rem, 3vw, 2rem) !important;
+}
+
+.writing-featured,
+.writing-card {
+  position: relative !important;
+  background: white !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  border-radius: 20px !important;
+  padding: 1.75rem !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  overflow: hidden !important;
+}
+
+.writing-featured:hover,
+.writing-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Layer-colored top stripe */
+.writing-card[data-layer="systems"]::before,
+.writing-featured[data-layer="systems"]::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important; left: 0 !important; right: 0 !important;
+  height: 3px !important;
+  background: linear-gradient(135deg, #1e3a5f, #3b82f6) !important;
+}
+
+.writing-card[data-layer="human"]::before,
+.writing-featured[data-layer="human"]::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important; left: 0 !important; right: 0 !important;
+  height: 3px !important;
+  background: linear-gradient(135deg, #92400e, #d97706) !important;
+}
+
+/* ============================================
+   § PHOTOGRAPHY PAGE — Human Layer
+   ============================================ */
+.photo-gallery {
+  width: min(100%, 1400px) !important;
+  margin: 0 auto !important;
+  padding: 0 clamp(0.75rem, 2vw, 1.5rem) !important;
+}
+
+.photo-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+  gap: 1rem !important;
+}
+
+.photo-card {
+  position: relative !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 16px rgba(180, 83, 9, 0.06) !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  aspect-ratio: 4/3 !important;
+}
+
+.photo-card:hover {
+  transform: translateY(-6px) scale(1.02) !important;
+  box-shadow: 0 20px 50px rgba(180, 83, 9, 0.15) !important;
+}
+
+.photo-card img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.photo-card:hover img {
+  transform: scale(1.08) !important;
+}
+
+.photo-card .photo-caption {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  padding: 1.5rem 1.25rem 1rem !important;
+  background: linear-gradient(transparent, rgba(28, 25, 23, 0.7)) !important;
+  color: white !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 1rem !important;
+  opacity: 0 !important;
+  transform: translateY(10px) !important;
+  transition: all 0.3s ease !important;
+}
+
+.photo-card:hover .photo-caption {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* ============================================
+   § POETRY PAGE — Human Layer
+   ============================================ */
+.poetry-collection {
+  width: min(100%, 900px) !important;
+  margin: 0 auto !important;
+  padding: 0 clamp(1rem, 3vw, 2rem) !important;
+}
+
+.poem-card {
+  position: relative !important;
+  background: linear-gradient(180deg, #fffdf8 0%, #fefce8 100%) !important;
+  border: 1px solid rgba(180, 83, 9, 0.06) !important;
+  border-radius: 24px !important;
+  padding: 2.5rem !important;
+  margin-bottom: 1.5rem !important;
+  overflow: hidden !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.poem-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 20px 50px rgba(180, 83, 9, 0.08) !important;
+}
+
+/* Warm organic dot pattern */
+.poem-card::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background-image: radial-gradient(circle, rgba(180, 83, 9, 0.03) 1.5px, transparent 1.5px) !important;
+  background-size: 22px 22px !important;
+  pointer-events: none !important;
+  opacity: 0.5 !important;
+}
+
+.poem-card::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: -30px !important;
+  left: -30px !important;
+  width: 150px !important;
+  height: 150px !important;
+  border-radius: 50% !important;
+  background: radial-gradient(circle, rgba(180, 83, 9, 0.06), transparent 70%) !important;
+  pointer-events: none !important;
+  animation: floatGlow 12s ease-in-out infinite alternate !important;
+}
+
+.poem-card h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 1.8rem !important;
+  font-weight: 600 !important;
+  color: #92400e !important;
+  letter-spacing: -0.02em !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.poem-card .poem-body {
+  font-family: 'Source Serif Pro', Georgia, serif !important;
+  font-size: 1.05rem !important;
+  line-height: 2 !important;
+  color: #44403c !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* ============================================
+   § WORK WITH ME PAGE
+   ============================================ */
+.work-with-me-shell {
+  width: min(100%, 1200px) !important;
+  margin: 1rem auto !important;
+  padding: 0 clamp(1rem, 3vw, 2rem) !important;
+}
+
+.engagement-tier {
+  position: relative !important;
+  background: white !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  border-radius: 24px !important;
+  padding: 2rem !important;
+  margin-bottom: 1.5rem !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+}
+
+.engagement-tier:hover {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08) !important;
+}
+
+.engagement-tier::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  width: 4px !important;
+  background: linear-gradient(180deg, #2563eb 0%, #7c3aed 50%, #b45309 100%) !important;
+}
+
+.engagement-tier h3 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* Pricing badge */
+.tier-badge {
+  display: inline-flex !important;
+  padding: 0.3rem 0.85rem !important;
+  border-radius: 9999px !important;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(124, 58, 237, 0.08)) !important;
+  color: #7c3aed !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.7rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.06em !important;
+}
+
+/* ============================================
+   § PROJECTS PAGE
+   ============================================ */
+.project-card,
+.flagship-project-card {
+  position: relative !important;
+  background: white !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  border-radius: 20px !important;
+  padding: 1.75rem !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  overflow: hidden !important;
+}
+
+.project-card:hover,
+.flagship-project-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08) !important;
+}
+
+.project-card::after,
+.flagship-project-card::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 3px !important;
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%) !important;
+  opacity: 0 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.project-card:hover::after,
+.flagship-project-card:hover::after {
+  opacity: 1 !important;
+}
+
+/* ============================================
+   § CODE PAGE
+   ============================================ */
+.code-showcase {
+  width: min(100%, 1200px) !important;
+  margin: 0 auto !important;
+  padding: 0 clamp(1rem, 3vw, 2rem) !important;
+}
+
+.code-card {
+  position: relative !important;
+  background: linear-gradient(180deg, #f8fafc 0%, white 100%) !important;
+  border: 1px solid rgba(37, 99, 235, 0.06) !important;
+  border-radius: 16px !important;
+  padding: 1.5rem !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+}
+
+.code-card:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 12px 32px rgba(30, 58, 95, 0.08) !important;
+}
+
+/* Terminal-like header stripe */
+.code-card::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important; left: 0 !important; right: 0 !important;
+  height: 3px !important;
+  background: linear-gradient(90deg, #059669, #2563eb, #7c3aed) !important;
+}
+
+.lang-badge {
+  display: inline-flex !important;
+  padding: 0.2rem 0.6rem !important;
+  border-radius: 6px !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.65rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em !important;
+  background: rgba(5, 150, 105, 0.08) !important;
+  color: #059669 !important;
+  border: 1px solid rgba(5, 150, 105, 0.12) !important;
+}
+
+/* ============================================
+   § MEDIA KIT PAGE
+   ============================================ */
+.media-kit-shell {
+  width: min(100%, 1100px) !important;
+  margin: 0 auto !important;
+  padding: 0 clamp(1rem, 3vw, 2rem) !important;
+}
+
+/* ============================================
+   § BLOG POSTS — Premium editorial
+   ============================================ */
+.post-preview {
+  position: relative !important;
+  background: white !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  border-radius: 20px !important;
+  padding: 1.75rem 2rem !important;
+  margin-bottom: 1.25rem !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  overflow: hidden !important;
+}
+
+.post-preview:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08) !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.post-preview::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 3px !important;
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #b45309 100%) !important;
+  opacity: 0 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.post-preview:hover::after {
+  opacity: 1 !important;
+}
+
+.post-preview .post-title {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.25 !important;
+}
+
+.post-preview .post-title a {
+  color: #0f172a !important;
+  text-decoration: none !important;
+  transition: color 0.15s ease !important;
+}
+
+.post-preview .post-title a:hover {
+  color: #2563eb !important;
+}
+
+.post-preview .post-subtitle {
+  font-family: 'Source Serif Pro', Georgia, serif !important;
+  font-style: italic !important;
+  color: #64748b !important;
+  line-height: 1.6 !important;
+}
+
+.post-preview .post-meta {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.7rem !important;
+  color: #94a3b8 !important;
+  letter-spacing: 0.04em !important;
+}
+
+.post-preview .post-read-more {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 0.82rem !important;
+  color: #2563eb !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  transition: gap 0.2s ease !important;
+}
+
+.post-preview .post-read-more:hover {
+  gap: 8px !important;
+}
+
+/* ============================================
+   § SINGLE POST CONTENT
+   ============================================ */
+article.post-content,
+.post-entry {
+  font-family: 'Source Serif Pro', Georgia, serif !important;
+  font-size: 1.08rem !important;
+  line-height: 1.85 !important;
+  color: #1c1917 !important;
+}
+
+article.post-content h2,
+article.post-content h3 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 1rem !important;
+}
+
+article.post-content blockquote {
+  position: relative !important;
+  border-left: 3px solid #2563eb !important;
+  padding: 1rem 1.5rem !important;
+  margin: 2rem 0 !important;
+  background: rgba(37, 99, 235, 0.03) !important;
+  border-radius: 0 12px 12px 0 !important;
+  font-style: italic !important;
+}
+
+body[data-layer="human"] article.post-content blockquote {
+  border-left-color: #b45309 !important;
+  background: rgba(180, 83, 9, 0.03) !important;
+}
+
+article.post-content code {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.88em !important;
+  padding: 0.15em 0.4em !important;
+  border-radius: 4px !important;
+  background: rgba(37, 99, 235, 0.06) !important;
+  color: #1e40af !important;
+}
+
+article.post-content pre {
+  border-radius: 12px !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* ============================================
+   § 404 PAGE
+   ============================================ */
+.error-page,
+.page-404 {
+  text-align: center !important;
+  padding: 4rem 2rem !important;
+}
+
+.error-page h1 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 6rem !important;
+  font-weight: 900 !important;
+  background: linear-gradient(135deg, #2563eb, #7c3aed, #b45309) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  line-height: 1 !important;
+}
+
+/* ============================================
+   § NOW PAGE — Human Layer
+   ============================================ */
+body[data-layer="human"] .page-shell--standard .container-md {
+  max-width: 800px !important;
+}
+
+body[data-layer="human"] article.post-content,
+body[data-layer="human"] .page-content {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 1.15rem !important;
+  line-height: 1.9 !important;
+}
+
+/* ============================================
+   § GLOBAL ANIMATION KEYFRAMES
+   ============================================ */
+@keyframes floatGlow {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+  50% { transform: translate(10px, -10px) scale(1.1); opacity: 0.8; }
+  100% { transform: translate(-5px, 5px) scale(0.95); opacity: 0.6; }
+}
+
+/* ============================================
+   § UNIVERSAL CARD MICRO-ANIMATIONS
+   ============================================ */
+
+/* All cards get a subtle entrance animation when scrolled into view */
+.reveal .exec-card,
+.reveal .pillar-card,
+.reveal .speaking-card,
+.reveal .about-card,
+.reveal .about-panel,
+.reveal .poem-card,
+.reveal .photo-card,
+.reveal .writing-card,
+.reveal .engagement-tier,
+.reveal .project-card,
+.reveal .code-card,
+.reveal .cv-section {
+  animation: cardEntrance 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger animation for card grids */
+.reveal .exec-grid > *:nth-child(1),
+.reveal .speaking-grid > *:nth-child(1) { animation-delay: 0.05s; }
+.reveal .exec-grid > *:nth-child(2),
+.reveal .speaking-grid > *:nth-child(2) { animation-delay: 0.1s; }
+.reveal .exec-grid > *:nth-child(3),
+.reveal .speaking-grid > *:nth-child(3) { animation-delay: 0.15s; }
+.reveal .exec-grid > *:nth-child(4),
+.reveal .speaking-grid > *:nth-child(4) { animation-delay: 0.2s; }
+
+/* ============================================
+   § RESPONSIVE — ALL PAGES
+   ============================================ */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .cv-contacts {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .cv-section,
+  .case-study-full,
+  .engagement-tier {
+    padding: 1.5rem !important;
+  }
+
+  .poem-card {
+    padding: 1.75rem !important;
+  }
+
+  .speaking-grid,
+  .exec-grid--3,
+  .exec-grid--4 {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .exec-card,
+  .pillar-card,
+  .speaking-card,
+  .writing-card {
+    padding: 1.25rem !important;
+  }
+
+  .cv-name {
+    font-size: 2rem !important;
+  }
+
+  .poem-card {
+    padding: 1.5rem !important;
+  }
+
+  .post-preview {
+    padding: 1.25rem 1.5rem !important;
+  }
+}
+
+/* ============================================
+   § REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  .exec-card,
+  .pillar-card,
+  .speaking-card,
+  .about-card,
+  .about-panel,
+  .poem-card,
+  .photo-card,
+  .writing-card,
+  .project-card,
+  .code-card,
+  .cv-section,
+  .engagement-tier,
+  .post-preview {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .photo-card img {
+    transition: none !important;
+  }
+}
+
+/* ============================================
+   SHARED PAGE SHELL — Wide, Layer-Aware, Less Dead Space
+   ============================================ */
+.page-shell {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  padding: 0 0 4rem !important;
+}
+
+.page-shell__content {
+  position: relative;
+  z-index: 1;
+}
+
+.page-shell__atmosphere {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page-shell__glow,
+.page-shell__mesh,
+.page-shell__grain {
+  position: absolute;
+  inset: 0;
+}
+
+.page-shell__glow--primary {
+  inset: 6rem auto auto -8rem;
+  width: min(40vw, 34rem);
+  height: min(40vw, 34rem);
+  border-radius: 50%;
+  filter: blur(20px);
+  opacity: 0.7;
+  animation: pageShellFloat 14s ease-in-out infinite;
+}
+
+.page-shell__glow--secondary {
+  inset: 18rem -10rem auto auto;
+  width: min(36vw, 28rem);
+  height: min(36vw, 28rem);
+  border-radius: 50%;
+  filter: blur(24px);
+  opacity: 0.45;
+  animation: pageShellFloat 18s ease-in-out infinite reverse;
+}
+
+.page-shell__mesh {
+  inset: 0;
+  opacity: 0.5;
+  animation: pageMeshShift 18s ease-in-out infinite;
+}
+
+.page-shell__grain {
+  opacity: 0.08;
+  mix-blend-mode: soft-light;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.16) 0 1px, transparent 1px),
+    radial-gradient(circle at 80% 60%, rgba(255,255,255,0.1) 0 1px, transparent 1px);
+  background-size: 24px 24px, 31px 31px;
+}
+
+body[data-layer="systems"] .page-shell__glow--primary {
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.22), transparent 68%);
+}
+
+body[data-layer="systems"] .page-shell__glow--secondary {
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.16), transparent 70%);
+}
+
+body[data-layer="systems"] .page-shell__mesh {
+  background-image:
+    radial-gradient(circle at center, rgba(56, 189, 248, 0.08) 0 1px, transparent 1px),
+    linear-gradient(120deg, rgba(37, 99, 235, 0.07), transparent 58%);
+  background-size: 24px 24px, 100% 100%;
+}
+
+body[data-layer="human"] .page-shell__glow--primary {
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.16), transparent 70%);
+}
+
+body[data-layer="human"] .page-shell__glow--secondary {
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.14), transparent 72%);
+}
+
+body[data-layer="human"] .page-shell__mesh {
+  background-image:
+    radial-gradient(circle at center, rgba(245, 158, 11, 0.08) 0 1px, transparent 1px),
+    linear-gradient(135deg, rgba(146, 64, 14, 0.1), transparent 60%);
+  background-size: 28px 28px, 100% 100%;
+}
+
+body[data-layer="both"] .page-shell__glow--primary,
+body[data-layer="gateway"] .page-shell__glow--primary {
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.14), transparent 70%);
+}
+
+body[data-layer="both"] .page-shell__glow--secondary,
+body[data-layer="gateway"] .page-shell__glow--secondary {
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.14), transparent 70%);
+}
+
+body[data-layer="both"] .page-shell__mesh,
+body[data-layer="gateway"] .page-shell__mesh {
+  background-image:
+    radial-gradient(circle at center, rgba(124, 58, 237, 0.06) 0 1px, transparent 1px),
+    linear-gradient(135deg, rgba(37, 99, 235, 0.06), rgba(180, 83, 9, 0.05));
+  background-size: 26px 26px, 100% 100%;
+}
+
+.page-shell--standard .container-md {
+  max-width: 1240px !important;
+  padding-left: clamp(1.15rem, 3vw, 2.75rem) !important;
+  padding-right: clamp(1.15rem, 3vw, 2.75rem) !important;
+}
+
+.page-shell--standard .col-xl-8.offset-xl-2,
+.page-shell--standard .col-lg-10.offset-lg-1,
+.page-shell--standard .col-xl-8,
+.page-shell--standard .col-lg-10 {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+}
+
+.page-shell--wide .container-fluid {
+  max-width: min(100%, 1440px) !important;
+  padding-left: clamp(1rem, 2.8vw, 2.5rem) !important;
+  padding-right: clamp(1rem, 2.8vw, 2.5rem) !important;
+}
+
+.page-shell .before-content,
+.page-shell .after-content {
+  position: relative;
+  z-index: 1;
+}
+
+.executive-page,
+.writing-hub,
+.photo-gallery-page,
+.about-shell,
+.leadership-shell {
+  width: min(100%, 1280px) !important;
+}
+
+.executive-page,
+.writing-hub,
+.photo-gallery-page {
+  margin-inline: auto !important;
+}
+
+/* ============================================
+   PAGE SURFACES
+   ============================================ */
+.executive-page,
+.writing-hub,
+.photo-gallery-page,
+.about-shell,
+.skills-section,
+.testimonials-section,
+.testimonials-heading {
+  position: relative;
+  z-index: 1;
+}
+
+.executive-page > section,
+.writing-hub > section,
+.writing-hub > div,
+.photo-gallery-page > section,
+.photo-gallery-page > div:not(.lightbox) {
+  position: relative;
+}
+
+.executive-page > section::before,
+.writing-hub > section::before,
+.photo-gallery-page > section::before {
+  content: "";
+  position: absolute;
+  inset: -0.75rem;
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.58), rgba(255,255,255,0.22));
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.06);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: -1;
+}
+
+.executive-page > section:hover::before,
+.writing-hub > section:hover::before,
+.photo-gallery-page > section:hover::before {
+  opacity: 1;
+}
+
+body[data-theme="dark"] .executive-page > section::before,
+body[data-theme="dark"] .writing-hub > section::before,
+body[data-theme="dark"] .photo-gallery-page > section::before {
+  background: linear-gradient(180deg, rgba(28,25,23,0.68), rgba(28,25,23,0.28));
+  border-color: rgba(231, 229, 228, 0.08);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================
+   LAYER CURSOR
+   ============================================ */
+.layer-cursor,
+.layer-cursor-core {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9997;
+  opacity: 0;
+  transition: opacity 0.22s ease, transform 0.18s ease, border-color 0.22s ease, background 0.22s ease;
+}
+
+.layer-cursor {
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(37, 99, 235, 0.35);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(6px);
+}
+
+.layer-cursor-core {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: #2563eb;
+}
+
+body.cursor-enhanced .layer-cursor,
+body.cursor-enhanced .layer-cursor-core {
+  opacity: 1;
+}
+
+body.cursor-hovering .layer-cursor {
+  transform: translate(-50%, -50%) scale(1.55);
+}
+
+body[data-layer="systems"] .layer-cursor {
+  border-color: rgba(103, 232, 249, 0.45);
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.1), transparent 72%);
+}
+
+body[data-layer="systems"] .layer-cursor-core {
+  background: #67e8f9;
+  box-shadow: 0 0 16px rgba(103, 232, 249, 0.55);
+}
+
+body[data-layer="human"] .layer-cursor {
+  border-color: rgba(251, 191, 36, 0.45);
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.12), transparent 72%);
+}
+
+body[data-layer="human"] .layer-cursor-core {
+  background: #f59e0b;
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.55);
+}
+
+/* ============================================
+   NEWSLETTER ARCHIVES
+   ============================================ */
+.layer-archive {
+  width: min(100%, 1240px) !important;
+  margin: 0 auto !important;
+}
+
+.layer-archive__hero {
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.layer-archive__hero::before {
+  opacity: 1 !important;
+}
+
+.layer-archive__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.layer-archive__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid rgba(28, 25, 23, 0.08);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.layer-archive__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.15rem;
+  margin-top: 2rem;
+}
+
+.layer-archive__card {
+  position: relative;
+  padding: 1.4rem;
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(28, 25, 23, 0.08);
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.05);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.layer-archive__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.08);
+}
+
+.layer-archive__card::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 3px;
+}
+
+.layer-archive__card--systems::after {
+  background: linear-gradient(90deg, #38bdf8, #2563eb);
+}
+
+.layer-archive__card--human::after {
+  background: linear-gradient(90deg, #f59e0b, #f97316);
+}
+
+.layer-archive__card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  align-items: center;
+  margin-bottom: 0.9rem;
+}
+
+.layer-archive__card h2 {
+  font-size: clamp(1.18rem, 2vw, 1.45rem);
+  margin-bottom: 0.7rem;
+}
+
+.layer-archive__card p {
+  color: var(--text-muted, #57534e);
+  margin-bottom: 1rem;
+}
+
+.layer-archive__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-ui, 'Inter', sans-serif);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.layer-archive__link--systems {
+  color: #2563eb !important;
+}
+
+.layer-archive__link--human {
+  color: #d97706 !important;
+}
+
+body[data-theme="dark"] .layer-archive__chip,
+body[data-theme="dark"] .layer-archive__card {
+  background: rgba(28, 25, 23, 0.78);
+  border-color: rgba(231, 229, 228, 0.08);
+}
+
+body[data-theme="dark"] .layer-archive__card p {
+  color: rgba(231, 229, 228, 0.76);
+}
+
+@media (max-width: 991px) {
+  .page-shell--standard .container-md,
+  .page-shell--wide .container-fluid {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .page-shell__glow--primary {
+    inset: 8rem auto auto -7rem;
+    width: 18rem;
+    height: 18rem;
+  }
+
+  .page-shell__glow--secondary {
+    inset: 24rem -6rem auto auto;
+    width: 16rem;
+    height: 16rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce), (pointer: coarse) {
+  .layer-cursor,
+  .layer-cursor-core {
+    display: none !important;
+  }
+
+  .page-shell__glow,
+  .page-shell__mesh {
+    animation: none !important;
+  }
+}

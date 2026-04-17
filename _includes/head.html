@@ -42,7 +42,9 @@
   {% endif %}
 
   <meta name="description" content="{{ description }}">
-  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="googlebot" content="index,follow">
+  <meta name="format-detection" content="telephone=no">
 
   {% if site.mobile-theme-col %}
   <meta name="theme-color" content="{{ site.mobile-theme-col }}">

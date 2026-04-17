@@ -40,14 +40,15 @@ navbar-links:
     - Leadership: "leadership"
     - Case Studies: "case-studies"
     - Projects: "projects"
-    - Newsletter: "writing/newsletter"
+    - The System Layer: "writing/newsletter"
     - Speaking: "speaking"
     - CV / Resume: "cv"
   Human:
+    - About Me: "aboutme"
+    - Writing: "writing"
+    - "Newsletter: The Human Layer": "writing/human-layer"
     - Poetry: "poetry"
     - Photography: "photography"
-    - Writing: "writing"
-    - About Me: "aboutme"
     - Now: "now"
   Work With Me: "work-with-me"
   Contact: "contact"
@@ -322,6 +323,7 @@ date_format: "%B %-d, %Y"
 
 # Output options (more information on Jekyll's site)
 timezone: "America/Toronto"
+future: true
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
@@ -393,4 +395,3 @@ collections:
   poetry:
     output: true
     permalink: /poetry/:title/
-

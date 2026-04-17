@@ -57,12 +57,17 @@ full-width: false
     {% assign ct = post.content-type | default: "essay" %}
     {% assign tags_blob = post.tags | join: '|' | downcase %}
     {% assign title_blob = post.title | downcase %}
+    {% assign series_blob = post.series | default: "" | downcase %}
+    {% assign newsletter_blob = post.newsletter_name | default: "" | downcase %}
     {% assign topic = "execution-systems" %}
     {% assign topic_label = "Execution Systems" %}
 
     {% if post.collection == "newsletter" %}
       {% assign topic = "execution-systems" %}
       {% assign topic_label = "Execution Systems" %}
+    {% elsif series_blob == "the-human-layer" or newsletter_blob contains "human layer" %}
+      {% assign topic = "reflections" %}
+      {% assign topic_label = "Reflections" %}
     {% elsif ct == "technical" and tags_blob contains "ai" or ct == "technical" and tags_blob contains "artificial" or ct == "technical" and tags_blob contains "dataengineering" or ct == "technical" and tags_blob contains "innovation" %}
       {% assign topic = "ai-leadership" %}
       {% assign topic_label = "AI Leadership" %}

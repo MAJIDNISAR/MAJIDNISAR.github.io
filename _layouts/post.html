@@ -61,6 +61,14 @@ layout: base
         </div>
       {% endif %}
 
+      {% if page.newsletter_name == "THE SYSTEM LAYER" or page.collection == "newsletter" %}
+        {% include newsletter-cta.html %}
+      {% endif %}
+
+      {% if page.newsletter_name == "THE HUMAN LAYER" or page.series == "the-human-layer" %}
+        {% include human-layer-newsletter-cta.html %}
+      {% endif %}
+
       {% if page.social-share %}
         {% include social-share.html %}
       {% endif %}

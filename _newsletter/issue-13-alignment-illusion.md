@@ -4,7 +4,12 @@ subtitle: "When consensus becomes a substitute for clarity"
 date: 2026-03-27
 issue_number: 13
 newsletter_name: "THE SYSTEM LAYER"
-linkedin_url: "https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/"
+permalink: /newsletter/issue-13-alignment-illusion/
+linkedin_url: "https://www.linkedin.com/pulse/issue-13-alignment-illusion-why-everyone-agrees-nothing-majid-nisar-z0ycc"
+header-logo: "/assets/img/newsletters/system-layer/logo.png"
+cover-img: "/assets/img/newsletters/system-layer/issue-13.jpg"
+thumbnail-img: "/assets/img/newsletters/system-layer/issue-13.jpg"
+share-img: "/assets/img/newsletters/system-layer/issue-13.jpg"
 tags: [alignment, leadership, systems, governance]
 content-type: newsletter
 ---

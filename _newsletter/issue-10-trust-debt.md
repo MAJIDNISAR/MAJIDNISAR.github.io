@@ -4,7 +4,12 @@ subtitle: "Trust compounds slower than code. But it breaks faster."
 date: 2026-03-06
 issue_number: 10
 newsletter_name: "THE SYSTEM LAYER"
-linkedin_url: "https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/"
+permalink: /newsletter/issue-10-trust-debt/
+linkedin_url: "https://www.linkedin.com/pulse/system-layer-issue-10-trust-debt-accumulation-model-majid-nisar-2gntc"
+header-logo: "/assets/img/newsletters/system-layer/logo.png"
+cover-img: "/assets/img/newsletters/system-layer/issue-10.jpg"
+thumbnail-img: "/assets/img/newsletters/system-layer/issue-10.jpg"
+share-img: "/assets/img/newsletters/system-layer/issue-10.jpg"
 tags: [trust, leadership, systems, organizational-debt]
 content-type: newsletter
 ---

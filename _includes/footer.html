@@ -1,359 +1,121 @@
 <footer class="site-footer">
+
+  <!-- Outermost: System Layer card -->
+  <a href="/writing/newsletter/" class="footer-layer-card footer-layer-card--systems">
+    <div class="footer-layer-card__text">
+      <span class="footer-layer-card__dot"></span>
+      <span class="footer-layer-card__name">The System Layer</span>
+      <span class="footer-layer-card__tagline">Software. AI. Execution. Systems that scale.</span>
+      <span class="footer-layer-card__cta">Read the newsletter &rarr;</span>
+    </div>
+    <img src="/assets/img/newsletters/system-layer/logo.png" alt="The System Layer" class="footer-layer-card__img" loading="lazy" />
+  </a>
+
+  <!-- Middle: Human Layer card -->
+  <a href="/writing/human-layer/" class="footer-layer-card footer-layer-card--human">
+    <div class="footer-layer-card__text">
+      <span class="footer-layer-card__dot"></span>
+      <span class="footer-layer-card__name">The Human Layer</span>
+      <span class="footer-layer-card__tagline">Poetry. Photography. A life shaped by Kashmir.</span>
+      <span class="footer-layer-card__cta">Read the newsletter &rarr;</span>
+    </div>
+    <img src="/assets/img/newsletters/human-layer/logo.png" alt="The Human Layer" class="footer-layer-card__img" loading="lazy" />
+  </a>
+
+  <!-- Innermost: Core footer content -->
   <div class="footer-shell">
 
-    <!-- Brand signature + Newsletter CTA -->
+    <!-- Brand + Social -->
     <div class="footer-top">
       <div class="footer-brand">
         <span class="footer-brand-name">Majid Nisar</span>
-        <p class="footer-brand-tagline">Technology leadership for software, AI products, and systems of execution.</p>
+        <p class="footer-brand-tagline">Technology leadership grounded in the human layer — observation, writing, and place.</p>
       </div>
-      <div class="footer-newsletter">
-        <span class="footer-newsletter-label">Newsletter</span>
-        <span class="footer-newsletter-name">THE SYSTEM LAYER</span>
-        <a href="https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/" target="_blank" rel="noopener" class="footer-newsletter-btn">Subscribe on LinkedIn →</a>
+      <div class="footer-social">
+        {%- if site.social-network-links.linkedin -%}
+        <a href="https://linkedin.com/in/{{ site.social-network-links.linkedin }}" title="LinkedIn" target="_blank" rel="noopener" class="footer-social__link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        {%- endif -%}
+        {%- if site.social-network-links.github -%}
+        <a href="https://github.com/{{ site.social-network-links.github }}" title="GitHub" target="_blank" rel="noopener" class="footer-social__link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+        {%- endif -%}
+        {%- if site.social-network-links.twitter -%}
+        <a href="https://twitter.com/{{ site.social-network-links.twitter }}" title="X / Twitter" target="_blank" rel="noopener" class="footer-social__link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        {%- endif -%}
+        {%- if site.social-network-links.email -%}
+        <a href="mailto:{{ site.social-network-links.email }}" title="Email" class="footer-social__link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+        {%- endif -%}
+        {%- if site.social-network-links.instagram -%}
+        <a href="https://www.instagram.com/{{ site.social-network-links.instagram }}" title="Instagram" target="_blank" rel="noopener" class="footer-social__link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+        </a>
+        {%- endif -%}
+        {%- if site.social-network-links.facebook -%}
+        <a href="https://www.facebook.com/{{ site.social-network-links.facebook }}" title="Facebook" target="_blank" rel="noopener" class="footer-social__link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        {%- endif -%}
       </div>
     </div>
 
-    <!-- Navigation grid — organized by layer -->
+    <!-- Navigation grid -->
     <nav class="footer-nav" aria-label="Footer navigation">
       <div class="footer-nav-group">
-        <span class="footer-nav-label footer-nav-label--systems">The Systems Layer</span>
-        <a href="/leadership/">Leadership Model</a>
+        <span class="footer-nav-heading footer-nav-heading--systems">Systems</span>
+        <a href="/leadership/">Leadership</a>
         <a href="/case-studies/">Case Studies</a>
         <a href="/projects/">Projects</a>
+        <a href="/writing/newsletter/">Newsletter</a>
         <a href="/speaking/">Speaking</a>
-        <a href="/cv/">Executive CV</a>
-        <a href="/work-with-me/">Work With Me</a>
+        <a href="/cv/">CV</a>
       </div>
       <div class="footer-nav-group">
-        <span class="footer-nav-label footer-nav-label--human">The Human Layer</span>
+        <span class="footer-nav-heading footer-nav-heading--human">Human</span>
+        <a href="/writing/human-layer/">Newsletter</a>
+        <a href="/writing/">Writing</a>
         <a href="/poetry/">Poetry</a>
         <a href="/photography/">Photography</a>
-        <a href="/aboutme/">About Me</a>
         <a href="/now/">Now</a>
       </div>
       <div class="footer-nav-group">
-        <span class="footer-nav-label">Writing</span>
-        <a href="/writing/">All Writing</a>
-        <a href="/writing/newsletter/">Newsletter</a>
-        <a href="/code/">Code Samples</a>
-      </div>
-      <div class="footer-nav-group">
-        <span class="footer-nav-label">Connect</span>
+        <span class="footer-nav-heading">Connect</span>
+        <a href="/aboutme/">About</a>
         <a href="/contact/">Contact</a>
-        <a href="/media-kit/">Media Kit</a>
-        <a href="https://linkedin.com/in/majidnisar" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/MAJIDNISAR" target="_blank" rel="noopener">GitHub</a>
+        <a href="/work-with-me/">Work With Me</a>
+        {%- if site.social-network-links.rss and site.rss-description -%}
+        <a href="{{ '/feed.xml' | relative_url }}">RSS Feed</a>
+        {%- endif -%}
       </div>
     </nav>
 
-    <!-- Social + Copyright -->
+    <!-- Copyright -->
     <div class="footer-bottom">
-      {% include social-networks-links.html %}
-
-      {% if page.footer-extra %}
-        <div class="footer-custom-content">
-          {% for file in page.footer-extra %}
-            {% include {{ file }} %}
-          {% endfor %}
-        </div>
-      {% endif %}
-
       <p class="footer-copyright">
+        &copy; {{ site.time | date: '%Y' }}
         {% if site.author %}{{ site.author.name }}{% endif %}
-        &nbsp;·&nbsp;{{ site.time | date: '%Y' }}
-        {% if site.url-pretty %}
-          &nbsp;·&nbsp;
-          <a href="{% if site.url-canonical %}{{ site.url-canonical }}{% else %}{{ '' | absolute_url }}{% endif %}">{{ site.url-pretty }}</a>
-        {% endif %}
+        {%- if site.url-pretty -%}
+        &nbsp;&middot;&nbsp;
+        <a href="{% if site.url-canonical %}{{ site.url-canonical }}{% else %}{{ '' | absolute_url }}{% endif %}">{{ site.url-pretty }}</a>
+        {%- endif -%}
       </p>
+      <p class="footer-layer-sig">Systems &middot; Human &middot; Both layers, one person</p>
     </div>
 
+    {% if page.footer-extra %}
+      <div class="footer-custom-content">
+        {% for file in page.footer-extra %}
+          {% include {{ file }} %}
+        {% endfor %}
+      </div>
+    {% endif %}
+
   </div>
+
 </footer>
-
-<style>
-/* ============================================
-   REDESIGNED FOOTER — premium editorial
-   ============================================ */
-.site-footer {
-  margin-top: 3rem;
-  padding: 0 1.5rem 2rem;
-  background-color: transparent !important;
-  background-image: none !important;
-  border-top: none;
-}
-
-.footer-shell {
-  max-width: 1100px;
-  margin: 0 auto;
-  border: 1px solid rgba(22, 19, 17, 0.08);
-  border-radius: 30px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.88), rgba(255,255,255,0.72));
-  box-shadow: 0 18px 42px rgba(22, 19, 17, 0.06);
-  -webkit-backdrop-filter: blur(14px);
-  backdrop-filter: blur(14px);
-  padding: 2.5rem 2.5rem 2rem;
-  overflow: hidden;
-}
-
-/* ---- Top: Brand + Newsletter ---- */
-.footer-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(22, 19, 17, 0.07);
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-}
-
-.footer-brand-name {
-  display: block;
-  font-family: var(--font-display, 'Playfair Display', Georgia, serif);
-  font-size: 1.6rem;
-  font-weight: 900;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
-  color: var(--text-color, #1C1917);
-  margin-bottom: 0.4rem;
-}
-
-.footer-brand-tagline {
-  margin: 0;
-  font-family: var(--font-body, 'Source Serif Pro', Georgia, serif);
-  font-size: 0.88rem;
-  line-height: 1.55;
-  color: var(--text-muted, #78716C);
-  max-width: 26rem;
-  font-style: italic;
-}
-
-.footer-newsletter {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  align-items: flex-end;
-  text-align: right;
-}
-
-.footer-newsletter-label {
-  font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: 0.62rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--text-muted, #78716C);
-}
-
-.footer-newsletter-name {
-  font-family: var(--font-display, 'Playfair Display', Georgia, serif);
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--accent-warm, #B45309);
-  letter-spacing: -0.02em;
-}
-
-.footer-newsletter-btn {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.5rem 1.1rem;
-  border-radius: 999px;
-  border: 1px solid rgba(180, 83, 9, 0.2);
-  background: rgba(180, 83, 9, 0.06);
-  color: var(--accent-warm, #B45309) !important;
-  font-family: var(--font-ui, 'Inter', sans-serif);
-  font-size: 0.76rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
-}
-
-.footer-newsletter-btn:hover {
-  background: rgba(180, 83, 9, 0.12);
-  border-color: rgba(180, 83, 9, 0.35);
-  transform: translateY(-1px);
-}
-
-/* ---- Nav grid ---- */
-.footer-nav {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(22, 19, 17, 0.07);
-  margin-bottom: 1.5rem;
-}
-
-.footer-nav-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.45rem;
-}
-
-.footer-nav-label {
-  font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: 0.65rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent-color, #2563EB);
-  margin-bottom: 0.3rem;
-  font-weight: 500;
-}
-
-.footer-nav-group a {
-  font-family: var(--font-ui, 'Inter', sans-serif);
-  font-size: 0.84rem;
-  color: var(--text-color, #1C1917) !important;
-  text-decoration: none;
-  opacity: 0.72;
-  transition: opacity 0.15s, color 0.15s;
-  line-height: 1.4;
-}
-
-.footer-nav-group a:hover {
-  opacity: 1;
-  color: var(--accent-color, #2563EB) !important;
-}
-
-/* ---- Bottom: Social + Copyright ---- */
-.footer-bottom {
-  text-align: center;
-}
-
-.footer-bottom .list-inline {
-  margin-bottom: 1rem;
-}
-
-.footer-bottom .list-inline-item a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 50%;
-  border: 1px solid rgba(22, 19, 17, 0.08);
-  background: rgba(255,255,255,0.6);
-  color: var(--text-color, #1C1917) !important;
-  font-size: 0.9rem;
-  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.18s ease;
-}
-
-.footer-bottom .list-inline-item a:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.15);
-  background: rgba(37, 99, 235, 0.08);
-  border-color: rgba(37, 99, 235, 0.2);
-  color: var(--accent-color, #2563EB) !important;
-}
-
-.footer-copyright {
-  font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: 0.7rem;
-  letter-spacing: 0.04em;
-  color: var(--text-muted, #78716C) !important;
-  margin: 0;
-}
-
-.footer-copyright a {
-  color: var(--text-muted, #78716C) !important;
-  text-decoration: none;
-}
-
-.footer-copyright a:hover {
-  color: var(--accent-color, #2563EB) !important;
-}
-
-/* ---- Dark mode ---- */
-[data-theme="dark"] .footer-shell {
-  background: linear-gradient(180deg, rgba(28,25,23,0.92), rgba(28,25,23,0.82));
-  border-color: rgba(231, 229, 228, 0.08);
-  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.32);
-}
-
-[data-theme="dark"] .footer-top,
-[data-theme="dark"] .footer-nav {
-  border-bottom-color: rgba(231, 229, 228, 0.08);
-}
-
-[data-theme="dark"] .footer-brand-name {
-  color: var(--dark-text, #E7E5E4);
-}
-
-[data-theme="dark"] .footer-brand-tagline {
-  color: #a8a29e;
-}
-
-[data-theme="dark"] .footer-nav-group a {
-  color: var(--dark-text, #E7E5E4) !important;
-}
-
-[data-theme="dark"] .footer-newsletter-btn {
-  background: rgba(245, 158, 11, 0.08);
-  border-color: rgba(245, 158, 11, 0.2);
-  color: #F59E0B !important;
-}
-
-[data-theme="dark"] .footer-bottom .list-inline-item a {
-  background: rgba(231, 229, 228, 0.06);
-  border-color: rgba(231, 229, 228, 0.1);
-  color: var(--dark-text, #E7E5E4) !important;
-}
-
-[data-theme="dark"] .footer-bottom .list-inline-item a:hover {
-  background: rgba(96, 165, 250, 0.12);
-  border-color: rgba(96, 165, 250, 0.25);
-  color: var(--dark-accent, #60A5FA) !important;
-}
-
-/* ---- Responsive ---- */
-@media (max-width: 900px) {
-  .footer-nav {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .site-footer {
-    padding: 0 1rem 1.5rem;
-  }
-
-  .footer-shell {
-    padding: 1.75rem 1.5rem 1.5rem;
-    border-radius: 24px;
-  }
-
-  .footer-top {
-    flex-direction: column;
-    gap: 1.25rem;
-  }
-
-  .footer-newsletter {
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .footer-nav {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.25rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer-nav {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-shell {
-    padding: 1.5rem 1.25rem 1.25rem;
-    border-radius: 20px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .footer-newsletter-btn,
-  .footer-bottom .list-inline-item a {
-    transition: none;
-  }
-}
-</style>
