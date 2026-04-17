@@ -1837,6 +1837,123 @@ body[data-layer="human"] .exec-principle::before {
 
 
 /* ============================================
+   P5: DARK MODE FIXES — thin pages
+   ============================================ */
+
+/* Newsletter/writing archive cards dark */
+[data-theme="dark"] .layer-archive__card {
+  background: rgba(28, 25, 23, 0.88);
+  border-color: rgba(231, 229, 228, 0.08);
+}
+
+[data-theme="dark"] .layer-archive__card--systems {
+  border-left-color: rgba(96, 165, 250, 0.3);
+}
+
+[data-theme="dark"] .layer-archive__card--human {
+  border-left-color: rgba(245, 158, 11, 0.3);
+}
+
+[data-theme="dark"] .writing-item-title a {
+  color: #E7E5E4 !important;
+}
+
+[data-theme="dark"] .writing-item-subtitle,
+[data-theme="dark"] .writing-item-excerpt {
+  color: #A8A29E !important;
+}
+
+[data-theme="dark"] .layer-archive__chip {
+  background: rgba(231, 229, 228, 0.06);
+  border-color: rgba(231, 229, 228, 0.1);
+  color: #A8A29E;
+}
+
+[data-theme="dark"] .layer-archive__about p {
+  color: #A8A29E !important;
+}
+
+/* Newsletter CTA sections dark (cross-page) */
+[data-theme="dark"] .human-layer-cta-inner {
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.06) 0%, rgba(28, 25, 23, 0.9) 100%);
+  border-color: rgba(245, 158, 11, 0.15);
+}
+
+/* Now page markdown dark */
+[data-theme="dark"] .page-shell--standard h2,
+[data-theme="dark"] .page-shell--standard h3 {
+  color: #E7E5E4;
+}
+
+/* Writing tag pills dark */
+[data-theme="dark"] .writing-tag {
+  background: rgba(231, 229, 228, 0.06);
+  border-color: rgba(231, 229, 228, 0.1);
+  color: #A8A29E;
+}
+
+[data-theme="dark"] .writing-tag:hover {
+  background: rgba(96, 165, 250, 0.1);
+  color: #93C5FD;
+}
+
+/* Content type badges dark */
+[data-theme="dark"] .content-type-badge {
+  background: rgba(231, 229, 228, 0.06);
+  color: #A8A29E;
+}
+
+[data-theme="dark"] .badge-newsletter {
+  background: rgba(96, 165, 250, 0.1);
+  color: #93C5FD;
+}
+
+[data-theme="dark"] .badge-reflection {
+  background: rgba(245, 158, 11, 0.1);
+  color: #FBBF24;
+}
+
+
+/* ============================================
+   LAYER ACCENT BAR — top of every page shell
+   ============================================ */
+
+.page-shell::before {
+  content: '';
+  display: block;
+  height: 3px;
+  margin: 0 0 0;
+  border-radius: 0 0 2px 2px;
+}
+
+[data-layer="systems"] .page-shell::before {
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+}
+
+[data-layer="human"] .page-shell::before {
+  background: linear-gradient(90deg, #d97706, #b45309);
+}
+
+[data-layer="both"] .page-shell::before,
+[data-layer="gateway"] .page-shell::before {
+  background: linear-gradient(90deg, #2563eb 0%, #3b82f6 45%, #d97706 55%, #b45309 100%);
+}
+
+[data-theme="dark"][data-layer="systems"] .page-shell::before {
+  background: linear-gradient(90deg, #60A5FA, #3B82F6);
+}
+
+[data-theme="dark"][data-layer="human"] .page-shell::before {
+  background: linear-gradient(90deg, #FBBF24, #F59E0B);
+}
+
+[data-theme="dark"][data-layer="both"] .page-shell::before,
+[data-theme="dark"][data-layer="gateway"] .page-shell::before {
+  background: linear-gradient(90deg, #60A5FA 0%, #3B82F6 45%, #FBBF24 55%, #F59E0B 100%);
+}
+
+
+/* ============================================
    MARGIN CANVAS — Layer Flow ambient particles
    ============================================ */
 

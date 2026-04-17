@@ -4,7 +4,7 @@ title: "Majid Nisar"
 subtitle: "Technology leadership for software, AI products, and systems of execution."
 full-width: true
 use-site-title: true
-layer: systems
+layer: gateway
 css: "/assets/css/index.css"
 share-img: /assets/img/me.jpg
 share-title: "Majid Nisar — Technology leadership, AI products, and systems of execution"
@@ -20,28 +20,62 @@ cover-img:
 ---
 
 <!-- ============================================
-     EXECUTIVE HERO
+     GATEWAY HERO — Two doors into one person
      ============================================ -->
-<section class="exec-hero reveal reveal-up">
-  <div class="exec-hero__inner">
-    <span class="exec-hero__kicker">Technology Leadership &middot; AI Products &middot; Execution Systems</span>
-    <h2 class="exec-hero__headline">Building software organizations, AI-enabled products, and systems of execution.</h2>
-    <p class="exec-hero__desc">
-      I lead technology work across engineering delivery, platform design, AI productization, and operating discipline.
-      This site is the executive layer of that work: case studies, leadership thinking, flagship writing, and selected long-horizon projects.
-    </p>
-    <div class="exec-hero__actions">
-      <a href="/case-studies/" class="exec-hero__btn exec-hero__btn--primary">View Case Studies</a>
-      <a href="/leadership/" class="exec-hero__btn exec-hero__btn--secondary">Leadership Model</a>
-      <a href="/work-with-me/" class="exec-hero__btn exec-hero__btn--secondary">Work With Me</a>
-      <a href="/cv/" class="exec-hero__btn exec-hero__btn--outline">Download CV</a>
+<section class="gateway-hero">
+  <div class="gateway-panels reveal-stagger">
+
+    <!-- THE SYSTEMS LAYER -->
+    <div class="gateway-panel gateway-panel--systems reveal reveal-left">
+      <div>
+        <span class="gateway-panel__kicker">The Systems Layer</span>
+        <h2 class="gateway-panel__title">Building software organizations, AI products, and systems of execution.</h2>
+        <p class="gateway-panel__desc">
+          I lead technology work across engineering delivery, platform design, AI productization, and operating discipline.
+          This site is the executive layer of that work.
+        </p>
+      </div>
+      <div>
+        <div class="gateway-panel__links">
+          <a class="gateway-panel__link gateway-panel__link--primary" href="/case-studies/">Case Studies</a>
+          <a class="gateway-panel__link gateway-panel__link--secondary" href="/leadership/">Leadership Model</a>
+          <a class="gateway-panel__link gateway-panel__link--secondary" href="/writing/newsletter/">Newsletter</a>
+          <a class="gateway-panel__link gateway-panel__link--secondary" href="/cv/">CV</a>
+        </div>
+        <div class="gateway-panel__meta">
+          <span class="gateway-panel__meta-tag">Head of Technology at iQuasar</span>
+          <span class="gateway-panel__meta-tag">18+ years</span>
+          <span class="gateway-panel__meta-tag">AI &middot; Architecture &middot; Delivery</span>
+        </div>
+      </div>
     </div>
-    <div class="exec-hero__meta">
-      <span class="exec-hero__badge">Head of Technology, Software, Web &amp; AI at iQuasar</span>
-      <span class="exec-hero__badge">18+ years across architecture, delivery, and leadership</span>
-      <span class="exec-hero__badge">Open to advisory, speaking, and leadership conversations</span>
+
+    <!-- THE HUMAN LAYER -->
+    <div class="gateway-panel gateway-panel--human reveal reveal-right">
+      <div>
+        <span class="gateway-panel__kicker">The Human Layer</span>
+        <h2 class="gateway-panel__title">Poetry. Photography. A life shaped by Kashmir.</h2>
+        <p class="gateway-panel__desc">
+          The writing, the landscapes, the contemplation. Not side hobbies pasted onto a technology profile &mdash;
+          part of how I notice systems, communicate clearly, and stay human while operating in technical environments.
+        </p>
+      </div>
+      <div>
+        <div class="gateway-panel__links">
+          <a class="gateway-panel__link gateway-panel__link--primary" href="/poetry/">Poetry</a>
+          <a class="gateway-panel__link gateway-panel__link--secondary" href="/photography/">Photography</a>
+          <a class="gateway-panel__link gateway-panel__link--secondary" href="/writing/human-layer/">Newsletter</a>
+          <a class="gateway-panel__link gateway-panel__link--secondary" href="/now/">Now</a>
+        </div>
+        <div class="gateway-panel__meta">
+          <span class="gateway-panel__meta-tag">Kashmir &middot; Srinagar</span>
+          <span class="gateway-panel__meta-tag">Writer &middot; Poet &middot; Photographer</span>
+        </div>
+      </div>
     </div>
+
   </div>
+  <p class="gateway-scroll">scroll for the full picture</p>
 </section>
 
 <!-- ============================================
@@ -270,6 +304,8 @@ cover-img:
 </section>
 
 {% include newsletter-cta.html %}
+
+{% include human-layer-cta.html %}
 
 <!-- ============================================
      FOR DIFFERENT VISITORS

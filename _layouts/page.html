@@ -34,6 +34,16 @@ layout: base
           {% endif %}
 
           {% include comments.html %}
+
+          {% unless page.no-newsletter-cta or page.url == "/" %}
+            {% assign pl = page.layer | default: "both" %}
+            {% if pl == "systems" or pl == "both" or pl == "gateway" %}
+              {% include newsletter-cta.html %}
+            {% endif %}
+            {% if pl == "human" or pl == "both" or pl == "gateway" %}
+              {% include human-layer-cta.html %}
+            {% endif %}
+          {% endunless %}
         </div>
       </div>
     </div>
