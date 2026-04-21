@@ -52,7 +52,8 @@ full-width: false
   <div class="writing-list" id="writing-list">
 
     {% assign newsletter_posts = site.newsletter | sort: 'date' | reverse %}
-    {% assign all_posts = site.posts | concat: newsletter_posts | sort: 'date' | reverse %}
+    {% assign human_layer_posts = site.human_layer | sort: 'date' | reverse %}
+    {% assign all_posts = site.posts | concat: newsletter_posts | concat: human_layer_posts | sort: 'date' | reverse %}
 
     {% for post in all_posts %}
     {% assign ct = post.content-type | default: "essay" %}
@@ -66,7 +67,7 @@ full-width: false
     {% if post.collection == "newsletter" %}
       {% assign topic = "execution-systems" %}
       {% assign topic_label = "Execution Systems" %}
-    {% elsif series_blob == "the-human-layer" or newsletter_blob contains "human layer" %}
+    {% elsif post.collection == "human_layer" or series_blob == "the-human-layer" or newsletter_blob contains "human layer" %}
       {% assign topic = "reflections" %}
       {% assign topic_label = "Reflections" %}
     {% elsif ct == "technical" and tags_blob contains "ai" or ct == "technical" and tags_blob contains "artificial" or ct == "technical" and tags_blob contains "dataengineering" or ct == "technical" and tags_blob contains "innovation" %}

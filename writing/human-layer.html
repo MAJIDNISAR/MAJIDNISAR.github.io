@@ -16,7 +16,7 @@ layer: human
       Writing about clarity, attention, identity, and the inner layer that still shapes every system we build.
     </p>
     <div class="layer-archive__meta">
-      <span class="layer-archive__chip">{% assign human_posts = site.posts | where: "series", "the-human-layer" %}{{ human_posts.size }} issues published</span>
+      <span class="layer-archive__chip">{{ site.human_layer.size }} issues published</span>
       <span class="layer-archive__chip">Every week on LinkedIn</span>
       <span class="layer-archive__chip">Clarity &middot; Attention &middot; Identity</span>
     </div>
@@ -37,25 +37,9 @@ layer: human
   </section>
 
   <div class="layer-archive__list reveal-stagger">
-    {% assign human_layer_posts = site.posts | where: "series", "the-human-layer" | sort: "date" | reverse %}
-    {% for post in human_layer_posts %}
-    <article class="layer-archive__card layer-archive__card--human">
-      <div class="layer-archive__card-meta">
-        <span class="content-type-badge badge-reflection">Issue #{{ post.issue_number }}</span>
-        <span class="writing-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-      </div>
-      <h2 class="writing-item-title"><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
-      {% if post.subtitle %}<p class="writing-item-subtitle">{{ post.subtitle }}</p>{% endif %}
-      <p class="writing-item-excerpt">{{ post.excerpt | default: post.content | strip_html | truncatewords: 35 }}</p>
-      {% if post.tags.size > 0 %}
-        <div class="writing-item-tags">
-          {% for tag in post.tags limit: 4 %}
-            <a href="{{ '/tags' | absolute_url }}#{{ tag }}" class="writing-tag">{{ tag }}</a>
-          {% endfor %}
-        </div>
-      {% endif %}
-      <a class="layer-archive__link layer-archive__link--human" href="{{ post.url | absolute_url }}">Read issue on site →</a>
-    </article>
+    {% assign issues = site.human_layer | sort: 'date' | reverse %}
+    {% for issue in issues %}
+      {% include newsletter-archive-card.html issue=issue variant="human" %}
     {% endfor %}
   </div>
 </div>

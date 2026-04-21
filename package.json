@@ -11,6 +11,10 @@
     "sync:linkedin:posts": "node scripts/sync-linkedin.js --type=posts",
     "sync:linkedin:newsletters": "node scripts/sync-linkedin.js --type=newsletters",
     "sync:linkedin:rss": "node scripts/sync-linkedin-rss.js",
+    "newsletter:scaffold": "node scripts/pull-newsletter.js --source=manual",
+    "newsletter:scaffold:system": "node scripts/pull-newsletter.js --newsletter=system --source=manual",
+    "newsletter:scaffold:human": "node scripts/pull-newsletter.js --newsletter=human --source=manual",
+    "newsletter:pull": "node scripts/pull-newsletter.js --newsletter=both --source=linkedin-rss",
     "lint": "eslint assets/js/",
     "test": "echo \"No tests specified\" && exit 0"
   },

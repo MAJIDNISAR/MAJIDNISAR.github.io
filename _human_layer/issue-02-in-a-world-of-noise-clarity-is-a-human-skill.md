@@ -3,9 +3,8 @@ title: "In a World of Noise, Clarity Is a Human Skill"
 subtitle: "Clarity comes less from collecting everything and more from removing what is unnecessary."
 date: 2026-04-13
 last-updated: 2026-04-13
-permalink: /2026-04-13-the-human-layer-issue-2-in-a-world-of-noise-clarity-is-a-human-skill/
+permalink: /human-layer/issue-02-in-a-world-of-noise-clarity-is-a-human-skill/
 layer: human
-series: the-human-layer
 issue_number: 2
 newsletter_name: "THE HUMAN LAYER"
 linkedin_url: "https://www.linkedin.com/pulse/human-layer-issue-2-world-noise-clarity-skill-majid-nisar-piqoc"

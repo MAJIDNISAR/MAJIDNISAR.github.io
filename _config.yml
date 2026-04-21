@@ -367,6 +367,12 @@ defaults:
       type: "newsletter"
     values:
       layer: "systems"
+  -
+    scope:
+      path: "_human_layer"
+      type: "human_layer"
+    values:
+      layer: "human"
 
 # Exclude these files from production site
 exclude:
@@ -392,6 +398,9 @@ collections:
   newsletter:
     output: true
     permalink: /newsletter/:title/
+  human_layer:
+    output: true
+    permalink: /human-layer/:title/
   poetry:
     output: true
     permalink: /poetry/:title/

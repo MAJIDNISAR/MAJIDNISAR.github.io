@@ -3,9 +3,8 @@ title: "Before Everything Else, There Is You"
 subtitle: "The human layer sits beneath the tools, titles, systems, and outputs."
 date: 2026-04-12
 last-updated: 2026-04-12
-permalink: /2026-04-12-the-human-layer-issue-1-before-everything-else-there-is-you/
+permalink: /human-layer/issue-01-before-everything-else-there-is-you/
 layer: human
-series: the-human-layer
 issue_number: 1
 newsletter_name: "THE HUMAN LAYER"
 linkedin_url: "https://www.linkedin.com/pulse/human-layer-issue-1-before-everything-else-you-majid-nisar-jloec"

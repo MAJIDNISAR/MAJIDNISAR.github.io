@@ -25,6 +25,13 @@ npm run lint -- --fix
 
 # Jekyll diagnostics
 bundle exec jekyll doctor
+
+# Newsletter management
+npm run newsletter:scaffold              # Scaffold blank issue for both newsletters
+npm run newsletter:scaffold:system       # Scaffold System Layer issue only
+npm run newsletter:scaffold:human        # Scaffold Human Layer issue only
+npm run newsletter:pull                  # Pull both from LinkedIn RSS
+node scripts/pull-newsletter.js --newsletter=system --source=manual --title="Your Title"
 ```
 
 The site is served at `http://localhost:4000`.
@@ -51,6 +58,9 @@ _layouts/base.html        ← Root HTML shell; loads all CSS/JS, nav, footer
 - `index.html` — Homepage; uses `layout: page` with custom hero sections and a paginated post list via `jekyll-paginate`
 - `aboutme.html` — About page; injects `skills.html` and `newsletter.html` via `after-content`
 - `_posts/` — Blog posts; must follow `YYYY-MM-DD-title.md` naming convention
+- `_newsletter/` — THE SYSTEM LAYER issues (Jekyll collection, `site.newsletter`)
+- `_human_layer/` — THE HUMAN LAYER issues (Jekyll collection, `site.human_layer`)
+- `scripts/pull-newsletter.js` — Unified pull/scaffold script for both newsletters
 
 ### Custom additions on top of Beautiful Jekyll
 
@@ -65,6 +75,7 @@ These files were added beyond the base theme:
 | `_includes/search-overlay.html` | Full-screen search overlay (keyboard: Ctrl/Cmd+K) |
 | `_includes/toc-sidebar.html` | Sticky TOC, desktop only (≥1200px) |
 | `_includes/newsletter.html` | Newsletter subscription form |
+| `_includes/newsletter-archive-card.html` | Shared card template for both newsletter archives |
 | `_includes/skills.html` | Skills card grid |
 | `assets/css/aboutme.css` | About page–specific styles |
 | `scripts/sync-linkedin.js` | LinkedIn content sync script (`npm run sync:linkedin`) |
