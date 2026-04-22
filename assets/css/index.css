@@ -629,19 +629,6 @@
   text-decoration: underline;
 }
 
-/* Break CTA sections out of narrow columns on individual issue pages */
-.page-shell--standard .newsletter-cta-section,
-.page-shell--standard .human-layer-cta-section {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  padding-left: max(1.5rem, calc((100vw - 1320px) / 2));
-  padding-right: max(1.5rem, calc((100vw - 1320px) / 2));
-}
-
 .engagement-grid {
   margin-top: 1.5rem;
 }

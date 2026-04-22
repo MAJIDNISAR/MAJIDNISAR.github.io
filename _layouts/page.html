@@ -34,32 +34,31 @@ layout: base
           {% endif %}
 
           {% include comments.html %}
-
-          {% unless page.no-newsletter-cta or page.url == "/" %}
-            {% assign pl = page.layer | default: "both" %}
-            {% assign is_newsletter_issue = false %}
-            {% if page.collection == "newsletter" or page.collection == "human_layer" %}
-              {% assign is_newsletter_issue = true %}
-            {% endif %}
-
-            {% if is_newsletter_issue %}
-              {% comment %} Cross-promote: System Layer issues show Human Layer CTA and vice versa {% endcomment %}
-              {% if page.collection == "newsletter" %}
-                {% include human-layer-cta.html %}
-              {% else %}
-                {% include newsletter-cta.html %}
-              {% endif %}
-            {% else %}
-              {% if pl == "systems" or pl == "both" or pl == "gateway" %}
-                {% include newsletter-cta.html %}
-              {% endif %}
-              {% if pl == "human" or pl == "both" or pl == "gateway" %}
-                {% include human-layer-cta.html %}
-              {% endif %}
-            {% endif %}
-          {% endunless %}
         </div>
       </div>
     </div>
+
+    {% unless page.no-newsletter-cta or page.url == "/" %}
+      {% assign pl = page.layer | default: "both" %}
+      {% assign is_newsletter_issue = false %}
+      {% if page.collection == "newsletter" or page.collection == "human_layer" %}
+        {% assign is_newsletter_issue = true %}
+      {% endif %}
+
+      {% if is_newsletter_issue %}
+        {% if page.collection == "newsletter" %}
+          {% include human-layer-cta.html %}
+        {% else %}
+          {% include newsletter-cta.html %}
+        {% endif %}
+      {% else %}
+        {% if pl == "systems" or pl == "both" or pl == "gateway" %}
+          {% include newsletter-cta.html %}
+        {% endif %}
+        {% if pl == "human" or pl == "both" or pl == "gateway" %}
+          {% include human-layer-cta.html %}
+        {% endif %}
+      {% endif %}
+    {% endunless %}
   </div>
 </div>
