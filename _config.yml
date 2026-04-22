@@ -366,13 +366,21 @@ defaults:
       path: "_newsletter"
       type: "newsletter"
     values:
+      layout: "post"
       layer: "systems"
+      comments: true
+      social-share: true
+      readtime: true
   -
     scope:
       path: "_human_layer"
       type: "human_layer"
     values:
+      layout: "post"
       layer: "human"
+      comments: true
+      social-share: true
+      readtime: true
 
 # Exclude these files from production site
 exclude:

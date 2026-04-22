@@ -61,13 +61,7 @@ layout: base
         </div>
       {% endif %}
 
-      {% if page.newsletter_name == "THE SYSTEM LAYER" or page.collection == "newsletter" %}
-        {% include newsletter-cta.html %}
-      {% endif %}
-
-      {% if page.newsletter_name == "THE HUMAN LAYER" or page.series == "the-human-layer" %}
-        {% include human-layer-newsletter-cta.html %}
-      {% endif %}
+      {% comment %} Newsletter CTAs moved outside narrow column below {% endcomment %}
 
       {% if page.social-share %}
         {% include social-share.html %}
@@ -89,4 +83,25 @@ layout: base
     </div>
   </div>
 </div>
+
+{% assign is_newsletter_issue = false %}
+{% if page.collection == "newsletter" or page.collection == "human_layer" %}
+  {% assign is_newsletter_issue = true %}
+{% endif %}
+
+{% if is_newsletter_issue %}
+  {% if page.collection == "newsletter" %}
+    {% include human-layer-cta.html %}
+  {% else %}
+    {% include newsletter-cta.html %}
+  {% endif %}
+{% else %}
+  {% assign pl = page.layer | default: "systems" %}
+  {% if pl == "systems" or pl == "both" %}
+    {% include newsletter-cta.html %}
+  {% endif %}
+  {% if pl == "human" or pl == "both" %}
+    {% include human-layer-cta.html %}
+  {% endif %}
+{% endif %}
 </div>
