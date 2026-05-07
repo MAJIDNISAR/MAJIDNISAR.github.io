@@ -103,16 +103,18 @@
     {% endfor %}
   {% endif %}
 
-  <!-- Page CSS — render-blocking (needed for page layout) -->
+  <!-- Page CSS — deferred (critical inline CSS covers above-fold layout) -->
   {% if page.ext-css %}
     {% for css in page.ext-css %}
-      {% include ext-css.html css=css %}
+      <link rel="preload" href="{% if css.href %}{{ css.href }}{% else %}{{ css | relative_url }}{% endif %}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript><link rel="stylesheet" href="{% if css.href %}{{ css.href }}{% else %}{{ css | relative_url }}{% endif %}"></noscript>
     {% endfor %}
   {% endif %}
 
   {% if page.css %}
     {% for css in page.css %}
-      <link rel="stylesheet" href="{{ css | relative_url }}">
+      <link rel="preload" href="{{ css | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript><link rel="stylesheet" href="{{ css | relative_url }}"></noscript>
     {% endfor %}
   {% endif %}
 
