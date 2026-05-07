@@ -1,0 +1,138 @@
+/**
+ * Generate critical inline CSS for above-the-fold rendering.
+ * Extracts minimum CSS needed for first paint: CSS variables, resets,
+ * navbar, grid basics, reveal states, and gateway hero.
+ * Output: _includes/critical-css.html (inlined <style> tag)
+ */
+const fs = require('fs');
+const path = require('path');
+
+// Critical CSS — hand-crafted minimum for above-the-fold paint
+// This replaces ALL render-blocking CSS <link> tags
+const criticalCSS = `
+/* === CRITICAL INLINE CSS — above-the-fold only === */
+
+/* Box model reset */
+*,*::before,*::after{box-sizing:border-box}
+
+/* Body base */
+body{margin:0;font-family:'Inter',system-ui,-apple-system,sans-serif;font-size:1rem;line-height:1.6;color:#1C1917;background:#FAFAF9;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth}
+img{max-width:100%;height:auto;display:block}
+a{color:#2563EB;text-decoration:none}
+
+/* CSS Variables (design-system) */
+:root{--font-display:'Playfair Display',Georgia,serif;--font-body:'Source Serif Pro',Georgia,serif;--font-ui:'Inter',system-ui,sans-serif;--font-mono:'JetBrains Mono',monospace;--accent-color:#2563EB;--accent-warm:#B45309;--accent-code:#059669;--text-color:#1C1917;--text-muted:#78716C;--surface-bg:#FAFAF9;--surface-card:rgba(255,255,255,0.88);--surface-raised:#F5F5F4;--border-color:rgba(22,19,17,0.08)}
+[data-theme="dark"]{--text-color:#E7E5E4;--text-muted:#a8a29e;--surface-bg:#0C0A09;--surface-card:rgba(28,25,23,0.92);--surface-raised:#1C1917;--border-color:rgba(231,229,228,0.08);--accent-color:#60A5FA;--accent-warm:#F59E0B}
+[data-theme="dark"] body{color:#E7E5E4;background:#0C0A09}
+
+/* Bootstrap grid essentials */
+.container,.container-md,.container-xl,.container-fluid{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}
+@media(min-width:768px){.container,.container-md{max-width:720px}}
+@media(min-width:992px){.container,.container-md{max-width:960px}}
+@media(min-width:1200px){.container,.container-xl{max-width:1140px}}
+.row{display:flex;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}
+.col,.col-xl-8,.col-lg-10{position:relative;width:100%;padding-right:15px;padding-left:15px}
+.col{flex-basis:0;flex-grow:1;max-width:100%}
+@media(min-width:992px){.col-lg-10{flex:0 0 83.333%;max-width:83.333%}.offset-lg-1{margin-left:8.333%}}
+@media(min-width:1200px){.col-xl-8{flex:0 0 66.667%;max-width:66.667%}.offset-xl-2{margin-left:16.667%}}
+
+/* Navbar critical */
+.navbar-custom{position:fixed;top:0;left:0;right:0;z-index:1030;display:flex;align-items:center;padding:.5rem 1rem;background:rgba(250,250,249,0.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(22,19,17,0.06);transition:transform .3s ease,background .3s ease}
+[data-theme="dark"] .navbar-custom{background:rgba(12,10,9,0.88);border-bottom-color:rgba(231,229,228,0.06)}
+.navbar-custom.top-nav-short{padding:.25rem 1rem}
+.nav-shell{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1140px;margin:0 auto}
+.navbar-brand{font-weight:700;font-size:1.1rem;color:var(--text-color);text-decoration:none;display:flex;align-items:center;gap:.5rem}
+.navbar-brand img{width:36px;height:36px;border-radius:50%;object-fit:cover}
+.navbar-brand-text{font-family:var(--font-display)}
+.navbar-toggler{display:none;background:none;border:1px solid rgba(22,19,17,0.1);border-radius:8px;padding:.4rem .6rem;cursor:pointer}
+@media(max-width:1199.98px){.navbar-toggler{display:block}.navbar-collapse{display:none!important}.navbar-collapse.show{display:block!important}}
+.navbar-nav{display:flex;list-style:none;margin:0;padding:0;gap:.25rem;align-items:center}
+.nav-link{display:inline-flex;align-items:center;padding:.5rem .75rem;font-size:.85rem;font-weight:500;color:var(--text-muted);border-radius:8px;transition:color .2s,background .2s}
+
+/* Header / intro area */
+.header-section{position:relative}
+.intro-header{padding:3rem 0 1.5rem;margin-top:60px}
+.intro-header.big-img{background-size:cover;background-position:center;min-height:400px;position:relative;display:flex;align-items:flex-end}
+.intro-header.big-img::after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(0,0,0,0.65))}
+.intro-header.big-img .container-md{position:relative;z-index:1}
+.intro-header.big-img h1,.intro-header.big-img .page-subheading{color:#fff}
+.intro-header.no-img{display:none}
+.page-heading h1{font-family:var(--font-display);font-size:clamp(2rem,5vw,3.2rem);font-weight:900;letter-spacing:-.03em;margin:0 0 .5rem;line-height:1.08}
+
+/* Reveal animation initial states (prevent CLS) */
+.reveal{opacity:0;transition:opacity .6s ease,transform .6s ease}
+.reveal.reveal-up{transform:translateY(30px)}
+.reveal.reveal-left{transform:translateX(-30px)}
+.reveal.reveal-right{transform:translateX(30px)}
+.reveal.is-visible{opacity:1;transform:none}
+.reveal-stagger>*{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
+.reveal-stagger.is-visible>*{opacity:1;transform:none}
+
+/* Gateway hero (homepage above-fold) */
+.gateway-hero{width:min(100%,1320px);margin:0 auto 2rem;padding:0 1.5rem}
+.gateway-panels{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+@media(max-width:900px){.gateway-panels{grid-template-columns:1fr}}
+.gateway-panel{padding:2rem 2rem 1.75rem;border:1px solid rgba(22,19,17,0.08);border-radius:28px;background:linear-gradient(180deg,rgba(255,255,255,0.92),rgba(255,255,255,0.8));display:flex;flex-direction:column;justify-content:space-between;gap:1.25rem}
+[data-theme="dark"] .gateway-panel{background:rgba(28,25,23,0.92);border-color:rgba(231,229,228,0.08)}
+.gateway-panel--human{background:linear-gradient(180deg,rgba(28,25,23,0.96),rgba(38,33,52,0.92));color:#f7f4ef}
+.gateway-panel__kicker{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-color)}
+.gateway-panel--human .gateway-panel__kicker{color:var(--accent-warm)}
+.gateway-panel__title{font-family:var(--font-display);font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:900;line-height:1.08;letter-spacing:-.03em;margin:0 0 .6rem}
+.gateway-panel__desc{font-size:.92rem;line-height:1.7;opacity:.82;margin:0}
+.gateway-panel__links{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.75rem}
+.gateway-panel__link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.55rem 1.1rem;border-radius:999px;font-size:.82rem;font-weight:600;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.gateway-panel__link--primary{background:linear-gradient(135deg,#1d4ed8,#1e40af);color:#fff;box-shadow:0 8px 20px rgba(29,78,216,.22)}
+.gateway-panel--human .gateway-panel__link--primary{background:var(--accent-warm);box-shadow:0 8px 20px rgba(180,83,9,.2)}
+.gateway-panel__link--secondary{border:1px solid rgba(22,19,17,.1);background:rgba(255,255,255,.6);color:var(--text-color)}
+.gateway-panel--human .gateway-panel__link--secondary{border-color:rgba(255,255,255,.15);background:rgba(255,255,255,.08);color:#f7f4ef}
+.gateway-panel__meta{display:flex;flex-wrap:wrap;gap:.4rem}
+.gateway-panel__meta-tag{padding:.3rem .6rem;border-radius:999px;background:rgba(22,19,17,.04);border:1px solid rgba(22,19,17,.05);font-family:var(--font-mono);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted)}
+.gateway-panel--human .gateway-panel__meta-tag{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1);color:rgba(247,244,239,.65)}
+.gateway-scroll{text-align:center;font-size:.75rem;color:var(--text-muted);margin-top:.75rem;font-style:italic}
+
+/* Bootstrap utilities (prevent CLS when bootstrap loads async) */
+.ml-auto{margin-left:auto!important}
+.mr-auto{margin-right:auto!important}
+.d-none{display:none!important}
+.d-block{display:block!important}
+.d-flex{display:flex!important}
+.d-inline-block{display:inline-block!important}
+@media(min-width:768px){.d-md-inline{display:inline!important}.d-md-block{display:block!important}.d-none.d-md-inline{display:inline!important}}
+@media(min-width:1200px){.d-xl-block{display:block!important}}
+.collapse:not(.show){display:none}
+.navbar-collapse{flex-basis:100%;flex-grow:1;align-items:center}
+@media(min-width:1200px){.navbar-expand-xl .navbar-collapse{display:flex!important;flex-basis:auto}.navbar-expand-xl .navbar-toggler{display:none}.navbar-expand-xl .navbar-nav{flex-direction:row}}
+.dropdown-menu{position:absolute;top:100%;left:0;z-index:1000;display:none;min-width:10rem;padding:.5rem 0;background:#fff;border:1px solid rgba(0,0,0,.15);border-radius:.25rem}
+.dropdown-menu.show,.dropdown.show>.dropdown-menu{display:block}
+.text-center{text-align:center!important}
+.overflow-hidden{overflow:hidden!important}
+.fixed-top{position:fixed;top:0;right:0;left:0;z-index:1030}
+
+/* Layers layout (gateway, page-shell, sections) */
+[data-layer="gateway"] .page-shell__atmosphere{display:none}
+.page-shell--wide .page-shell__content .container-fluid{padding-right:15px;padding-left:15px}
+
+/* Page shell */
+.page-shell{position:relative}
+.page-shell__atmosphere{display:none}
+.page-shell__content{position:relative}
+
+/* Footer placeholder to prevent CLS */
+.site-footer{margin-top:2rem}
+
+/* Reading progress bar */
+#reading-progress{position:fixed;top:0;left:0;height:3px;background:var(--accent-color);z-index:9999;transition:width .15s}
+
+/* Theme toggle */
+.theme-toggle-btn{position:fixed;bottom:1.5rem;right:1.5rem;z-index:1000;width:44px;height:44px;border-radius:50%;border:1px solid var(--border-color);background:var(--surface-card);cursor:pointer;display:flex;align-items:center;justify-content:center}
+`;
+
+// Write the critical CSS as a Jekyll include
+const output = `<style>${criticalCSS.replace(/\n/g, '').replace(/\s{2,}/g, ' ')}</style>`;
+const outPath = path.join(__dirname, '..', '_includes', 'critical-css.html');
+fs.writeFileSync(outPath, output, 'utf8');
+
+const bytes = Buffer.byteLength(output, 'utf8');
+console.log(`  Generated: _includes/critical-css.html (${bytes} bytes / ${(bytes/1024).toFixed(1)} KiB)`);
+console.log('  This replaces ALL render-blocking <link> tags for first paint.');

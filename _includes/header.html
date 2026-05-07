@@ -19,6 +19,7 @@
     {% endfor %}
     {% endfor %}
   ></div>
+  {% comment %}Preload only the first carousel image; remaining loaded lazily by JS{% endcomment %}
 {% endif %}
 
 <header class="header-section {% if page.cover-img %}has-img{% endif %}">

@@ -17,7 +17,13 @@
       "Bash(curl -s http://localhost:4000/)",
       "Bash(curl -s http://localhost:4000/leadership/)",
       "Bash(curl -s http://localhost:4000/aboutme/)",
-      "Bash(curl -s http://localhost:4000/writing/)"
+      "Bash(curl -s http://localhost:4000/writing/)",
+      "Bash(chmod +x:*)",
+      "Bash(node scripts/pull-newsletter.js --newsletter=both --source=manual --title=\"Test Scaffold\")",
+      "Bash(git status:*)",
+      "Bash(curl -sL \"https://media.licdn.com/dms/image/v2/D5612AQHVb-7Ry2SUuQ/article-cover_image-shrink_720_1280/B56Z2QV7IUGoAI-/0/1776243165202?e=2147483647&v=beta&t=pANVMr12MB5-11gY2OYAaF01zvcqSV-BFnDTu-OwPUM\" -o /Users/majidnisar/Developer/myWebsite/MAJIDNISAR.github.io/assets/img/newsletters/human-layer/issue-03.jpg)",
+      "Bash(curl -sL \"https://media.licdn.com/dms/image/v2/D5612AQE2ipPHG-bBcg/article-cover_image-shrink_720_1280/B56Z2v6BiiJgAI-/0/1776772724026?e=2147483647&v=beta&t=lA-Yr0LBYZ3-PJuzlAYyLvSuBo2mAfg6zeIG_yDUyRA\" -o /Users/majidnisar/Developer/myWebsite/MAJIDNISAR.github.io/assets/img/newsletters/human-layer/issue-04.jpg)",
+      "Bash(curl -sI http://localhost:4000/)"
     ]
   }
 }

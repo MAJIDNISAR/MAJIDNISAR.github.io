@@ -74,11 +74,11 @@
       {% assign first_img_entry = page.cover-img[0] %}
       {% for pair in first_img_entry %}
         {% if forloop.first %}
-  <link rel="preload" as="image" href="{{ pair[0] | default: pair | relative_url }}">
+  <link rel="preload" as="image" href="{{ pair[0] | default: pair | relative_url }}" fetchpriority="high">
         {% endif %}
       {% endfor %}
     {% else %}
-  <link rel="preload" as="image" href="{{ page.cover-img | relative_url }}">
+  <link rel="preload" as="image" href="{{ page.cover-img | relative_url }}" fetchpriority="high">
     {% endif %}
   {% endif %}
 
@@ -87,12 +87,10 @@
   {% include google_analytics.html %}
   {% include cloudflare_analytics.html %}
 
-  {% if layout.common-ext-css %}
-    {% for css in layout.common-ext-css %}
-      {% include ext-css.html css=css %}
-    {% endfor %}
-  {% endif %}
+  <!-- CRITICAL CSS — inlined for instant first paint -->
+  {% include critical-css.html %}
 
+  <!-- Layout-essential CSS — render-blocking (prevents CLS) -->
   {% if layout.common-css %}
     {% for css in layout.common-css %}
       <link rel="stylesheet" href="{{ css | relative_url }}">
@@ -105,15 +103,32 @@
     {% endfor %}
   {% endif %}
 
+  <!-- Page CSS — render-blocking (needed for page layout) -->
   {% if page.ext-css %}
     {% for css in page.ext-css %}
       {% include ext-css.html css=css %}
     {% endfor %}
   {% endif %}
-  
+
   {% if page.css %}
     {% for css in page.css %}
       <link rel="stylesheet" href="{{ css | relative_url }}">
+    {% endfor %}
+  {% endif %}
+
+  <!-- Deferred external CSS (Google Fonts — async, non-render-blocking) -->
+  {% if layout.deferred-ext-css %}
+    {% for css in layout.deferred-ext-css %}
+      <link rel="preload" href="{{ css }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript><link rel="stylesheet" href="{{ css }}"></noscript>
+    {% endfor %}
+  {% endif %}
+
+  <!-- Deferred CSS (visual enhancements — async, non-render-blocking) -->
+  {% if layout.deferred-css %}
+    {% for css in layout.deferred-css %}
+      <link rel="preload" href="{{ css | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript><link rel="stylesheet" href="{{ css | relative_url }}"></noscript>
     {% endfor %}
   {% endif %}
 

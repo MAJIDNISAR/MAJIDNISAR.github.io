@@ -1,27 +1,26 @@
 ---
+# ── Critical CSS (render-blocking, layout-essential only — keep small!) ──
 common-css:
-  - "/assets/css/bootstrap.min.css"
-  - "/assets/css/bootstrap-social.css"
   - "/assets/css/beautifuljekyll.css"
-  - "/assets/css/modern-design.css"
   - "/assets/css/typography.css"
   - "/assets/css/design-system.css"
-  - "/assets/css/shared-components.css"
-  - "/assets/css/animations.css"
-  - "/assets/css/projects.css"
-  - "/assets/css/writing-hub.css"
-  - "/assets/css/poetry.css"
-  - "/assets/css/photography.css"
-  - "/assets/css/cv.css"
-  - "/assets/css/premium-theme.css"
   - "/assets/css/navbar-theme.css"
-  - "/assets/css/ui-enhancements.css"
+  - "/assets/css/animations.css"
+# ── Deferred CSS (loaded async — includes bootstrap + visual enhancements) ──
+deferred-css:
+  - "/assets/css/bootstrap.min.css"
   - "/assets/css/layers.css"
+  - "/assets/css/bootstrap-social.css"
+  - "/assets/css/modern-design.css"
+  - "/assets/css/shared-components.css"
+  - "/assets/css/premium-theme.css"
+  - "/assets/css/ui-enhancements.css"
   - "/assets/css/renaissance.css"
   - "/assets/css/renaissance-pages.css"
   - "/assets/css/site-polish.css"
-common-ext-css:
-  - "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap"
+# ── Google Fonts loaded async (font-display:swap prevents FOIT) ──
+deferred-ext-css:
+  - "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400&display=swap"
 common-ext-js:
   - href: "https://code.jquery.com/jquery-3.5.1.slim.min.js"
     sri: "sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
