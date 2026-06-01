@@ -3,6 +3,10 @@ _site
 .sass-cache
 .vagrant
 
+# env / secrets
+.env
+.env.*
+
 # general
 .DS_Store
 Thumbs.db
