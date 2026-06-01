@@ -13,7 +13,7 @@
           document.write('<script src="{{ js | relative_url }}" defer><\/script>');
         }
       </script>
-    {% elsif js contains 'ui-enhancements' or js contains 'renaissance' or js contains 'margin-flow' %}
+    {% elsif js contains 'ui-enhancements' or js contains 'renaissance' or js contains 'margin-flow' or js contains 'motion-3d' %}
       <!-- Desktop-only JS: skip on mobile to reduce main-thread work -->
       <script>if(window.innerWidth>=768){var s=document.createElement('script');s.src='{{ js | relative_url }}';s.defer=true;document.body.appendChild(s);}</script>
     {% else %}

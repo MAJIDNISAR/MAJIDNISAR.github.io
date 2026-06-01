@@ -14,7 +14,8 @@
     "newsletter:scaffold": "node scripts/pull-newsletter.js --source=manual",
     "newsletter:scaffold:system": "node scripts/pull-newsletter.js --newsletter=system --source=manual",
     "newsletter:scaffold:human": "node scripts/pull-newsletter.js --newsletter=human --source=manual",
-    "newsletter:pull": "node scripts/pull-newsletter.js --newsletter=both --source=linkedin-rss",
+    "newsletter:pull": "node scripts/pull-newsletter.js --newsletter=both --source=linkedin-scrape",
+    "newsletter:pull:rss": "node scripts/pull-newsletter.js --newsletter=both --source=linkedin-rss",
     "lint": "eslint assets/js/",
     "test": "echo \"No tests specified\" && exit 0"
   },
@@ -46,5 +47,8 @@
   "bugs": {
     "url": "https://github.com/MAJIDNISAR/MAJIDNISAR.github.io/issues"
   },
-  "homepage": "https://majidnisar.com"
+  "homepage": "https://majidnisar.com",
+  "dependencies": {
+    "motion": "^12.38.0"
+  }
 }

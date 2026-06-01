@@ -13,10 +13,37 @@ support_promo_box: true
 ---
 
 <!-- ============================================
+     HERO VISUAL — Full-width cinematic opener
+     ============================================ -->
+<section class="hero-visual" aria-label="Hero">
+  <div class="hero-visual__bg" role="img" aria-label="Leadership retreat, Sonmarg"></div>
+  <div class="hero-visual__overlay"></div>
+  <div class="hero-visual__content">
+    <span class="hero-visual__kicker">Technology Leader &middot; Writer &middot; Builder</span>
+    <h1 class="hero-visual__name" data-m3d-text-reveal>Majid Nisar</h1>
+    <p class="hero-visual__tagline">Building software organizations, AI products, and systems of execution.</p>
+    <div class="hero-visual__actions">
+      <a href="/case-studies/" class="hero-visual__btn hero-visual__btn--primary">View My Work</a>
+      <a href="/aboutme" class="hero-visual__btn hero-visual__btn--glass">About Me</a>
+    </div>
+  </div>
+  <div class="hero-visual__scroll-hint" aria-hidden="true">
+    <span></span>
+  </div>
+</section>
+
+<!-- ============================================
      GATEWAY HERO — Two doors into one person
      ============================================ -->
-<section class="gateway-hero">
-  <div class="gateway-panels reveal-stagger">
+<section class="gateway-hero" data-m3d-parallax>
+  <div class="m3d-scene" aria-hidden="true">
+    <span class="m3d-shape m3d-shape--cube"></span>
+    <span class="m3d-shape m3d-shape--ring"></span>
+    <span class="m3d-shape m3d-shape--prism"></span>
+    <span class="m3d-shape m3d-shape--orb"></span>
+    <span class="m3d-shape m3d-shape--orb m3d-shape--orb-2"></span>
+  </div>
+  <div class="gateway-panels reveal-stagger m3d-parallax-target">
 
     <!-- THE SYSTEMS LAYER -->
     <div class="gateway-panel gateway-panel--systems reveal reveal-left">

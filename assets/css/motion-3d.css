@@ -1,0 +1,365 @@
+/* ============================================
+   Motion 3D — perspective contexts + GPU hints
+   Pairs with assets/js/motion-3d.js (Motion One)
+
+   IMPORTANT: never set opacity:0 here. If JS fails
+   to load, the page must still render normally.
+   ============================================ */
+
+/* Page-level 3D stage. JS adds .m3d-active to <html> on init.
+   NOTE: perspective/transform must NOT be set on <body> — it makes every
+   position:fixed descendant (overlays, cursors, canvas, theme toggle) resolve
+   against the body box instead of the viewport, inflating scroll height and
+   mis-positioning fixed UI. Per-section perspective contexts below supply the
+   3D depth instead. */
+
+/* Per-section 3D stages */
+.gateway-hero,
+.exec-focus,
+.case-studies-grid,
+.stream-grid,
+.photo-grid,
+.poem-grid,
+.testimonials-grid,
+.identity-grid,
+section[data-m3d-scroll] {
+  perspective: 1400px;
+  perspective-origin: 50% 30%;
+  transform-style: preserve-3d;
+}
+
+/* Elements that hold 3D children */
+.m3d-stage {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* 3D card container */
+.m3d-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+  position: relative;
+  transition: box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html.m3d-active .m3d-card:hover {
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.18);
+}
+
+[data-theme="dark"].m3d-active .m3d-card:hover,
+html.m3d-active [data-theme="dark"] .m3d-card:hover {
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.5);
+}
+
+/* Children that lift forward in 3D */
+.m3d-card .m3d-lift {
+  transform: translateZ(40px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.m3d-card .m3d-lift--deep {
+  transform: translateZ(70px);
+}
+
+/* Glare overlay — appears on hover via spring-tilt JS */
+.m3d-card .m3d-glare {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    600px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(255, 255, 255, 0.22),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  z-index: 2;
+}
+
+html.m3d-active .m3d-card:hover .m3d-glare {
+  opacity: 1;
+}
+
+/* Photos preserve 3D space so translateZ on <img> works */
+.photo-card,
+[data-m3d-photo] {
+  transform-style: preserve-3d;
+}
+
+.photo-card img,
+[data-m3d-photo] img {
+  will-change: transform;
+}
+
+/* Floating depth layers utility */
+.m3d-depth-back  { transform: translateZ(-60px); }
+.m3d-depth-mid   { transform: translateZ(-20px); }
+.m3d-depth-front { transform: translateZ(40px); }
+
+/* Buttons get a 3D press surface */
+html.m3d-active .gateway-panel__link,
+html.m3d-active .exec-focus__cta,
+html.m3d-active .newsletter-cta-subscribe,
+html.m3d-active [data-m3d-press] {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* ============================================
+   3D Scene — floating geometric shapes behind hero
+   ============================================ */
+.gateway-hero {
+  position: relative;
+  overflow: visible;
+}
+
+.m3d-scene {
+  position: absolute;
+  inset: -10% -5% -10% -5%;
+  pointer-events: none;
+  transform-style: preserve-3d;
+  perspective: 1200px;
+  z-index: 0;
+}
+
+.m3d-shape {
+  position: absolute;
+  display: block;
+  transform-style: preserve-3d;
+  will-change: transform;
+  filter: blur(0.5px);
+}
+
+/* Cube — top-left, slow rotation */
+.m3d-shape--cube {
+  top: 8%;
+  left: 6%;
+  width: 90px;
+  height: 90px;
+  background:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.18), rgba(37, 99, 235, 0.06));
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  border-radius: 14px;
+  transform: translateZ(-180px) rotateX(45deg) rotateY(45deg);
+  animation: m3dCubeSpin 18s linear infinite;
+  box-shadow:
+    0 30px 60px -20px rgba(37, 99, 235, 0.25),
+    inset 0 0 40px rgba(37, 99, 235, 0.1);
+}
+
+@keyframes m3dCubeSpin {
+  from { transform: translateZ(-180px) rotateX(45deg) rotateY(0); }
+  to   { transform: translateZ(-180px) rotateX(45deg) rotateY(360deg); }
+}
+
+/* Ring — top-right */
+.m3d-shape--ring {
+  top: 14%;
+  right: 8%;
+  width: 140px;
+  height: 140px;
+  border: 2px solid rgba(180, 83, 9, 0.3);
+  border-radius: 50%;
+  transform: translateZ(-100px) rotateX(70deg);
+  animation: m3dRingFloat 12s ease-in-out infinite;
+  box-shadow: 0 0 60px rgba(180, 83, 9, 0.18);
+}
+
+.m3d-shape--ring::after {
+  content: '';
+  position: absolute;
+  inset: 14px;
+  border: 1px dashed rgba(180, 83, 9, 0.18);
+  border-radius: 50%;
+}
+
+@keyframes m3dRingFloat {
+  0%, 100% { transform: translateZ(-100px) rotateX(70deg) rotateZ(0); }
+  50%      { transform: translateZ(-60px)  rotateX(75deg) rotateZ(180deg); }
+}
+
+/* Prism — bottom-left */
+.m3d-shape--prism {
+  bottom: 12%;
+  left: 14%;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 86px solid rgba(124, 58, 237, 0.18);
+  transform: translateZ(-220px) rotateY(-25deg);
+  animation: m3dPrismDrift 14s ease-in-out infinite;
+  filter: drop-shadow(0 20px 30px rgba(124, 58, 237, 0.25));
+}
+
+@keyframes m3dPrismDrift {
+  0%, 100% { transform: translateZ(-220px) rotateY(-25deg) translateY(0); }
+  50%      { transform: translateZ(-160px) rotateY(25deg)  translateY(-30px); }
+}
+
+/* Orbs — depth atmosphere */
+.m3d-shape--orb {
+  bottom: 18%;
+  right: 22%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.6), rgba(37, 99, 235, 0.25) 60%, transparent);
+  transform: translateZ(-80px);
+  animation: m3dOrbBob 9s ease-in-out infinite;
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.25);
+}
+
+.m3d-shape--orb-2 {
+  top: 38%;
+  right: 38%;
+  width: 28px;
+  height: 28px;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.7), rgba(180, 83, 9, 0.3) 60%, transparent);
+  transform: translateZ(-40px);
+  animation: m3dOrbBob 11s ease-in-out infinite reverse;
+  box-shadow: 0 10px 20px rgba(180, 83, 9, 0.25);
+}
+
+@keyframes m3dOrbBob {
+  0%, 100% { transform: translateZ(-80px) translateY(0); }
+  50%      { transform: translateZ(-30px) translateY(-24px); }
+}
+
+/* Hero panels above the scene */
+.gateway-panels {
+  position: relative;
+  z-index: 1;
+  transform-style: preserve-3d;
+}
+
+/* Cursor-parallax target — JS rotates the whole panels group based on mouse */
+.m3d-parallax-target {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Bigger 3D presence on hover for individual panels */
+html.m3d-active .gateway-panel {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+html.m3d-active .gateway-panel__title,
+html.m3d-active .gateway-panel__links,
+html.m3d-active .gateway-panel__meta {
+  transform: translateZ(20px);
+}
+
+html.m3d-active .gateway-panel__kicker {
+  transform: translateZ(30px);
+}
+
+/* 3D extruded title shadow */
+html.m3d-active .gateway-panel__title {
+  text-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.04),
+    0 2px 0 rgba(0, 0, 0, 0.04),
+    0 4px 0 rgba(0, 0, 0, 0.03),
+    0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+html.m3d-active .gateway-panel--human .gateway-panel__title {
+  text-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.4),
+    0 2px 0 rgba(0, 0, 0, 0.3),
+    0 4px 0 rgba(0, 0, 0, 0.2),
+    0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* Dark-mode shapes — adjust opacity for visibility */
+[data-theme="dark"] .m3d-shape--cube {
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.22), rgba(96, 165, 250, 0.06));
+  border-color: rgba(96, 165, 250, 0.35);
+}
+
+[data-theme="dark"] .m3d-shape--ring {
+  border-color: rgba(245, 158, 11, 0.35);
+}
+
+[data-theme="dark"] .m3d-shape--prism {
+  border-bottom-color: rgba(167, 139, 250, 0.25);
+}
+
+/* Hide scene on mobile — performance + cleaner mobile look */
+@media (max-width: 767.98px) {
+  .m3d-scene { display: none; }
+  html.m3d-active .gateway-panel__title,
+  html.m3d-active .gateway-panel__kicker,
+  html.m3d-active .gateway-panel__links,
+  html.m3d-active .gateway-panel__meta {
+    transform: none;
+  }
+}
+
+/* Honor reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  html.m3d-active body,
+  .gateway-hero,
+  .exec-focus,
+  .case-studies-grid,
+  .stream-grid,
+  .photo-grid,
+  .poem-grid,
+  .testimonials-grid,
+  .identity-grid,
+  section[data-m3d-scroll],
+  .m3d-stage,
+  .m3d-card,
+  .m3d-card .m3d-lift {
+    perspective: none !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .m3d-card .m3d-glare { display: none; }
+}
+
+/* On touch / coarse pointers — keep flat (no hover-driven 3D) */
+@media (pointer: coarse) {
+  .m3d-card .m3d-lift {
+    transform: none !important;
+  }
+  .m3d-card .m3d-glare { display: none; }
+}
+
+/* ============================================
+   Kicker gradient shimmer — triggered on scroll
+   ============================================ */
+.kicker-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--sys-accent, #2563eb) 0%,
+    var(--bridge-accent, #7c3aed) 33%,
+    var(--hum-accent, #b45309) 66%,
+    var(--sys-accent, #2563eb) 100%
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: kickerShimmer 3s ease-in-out 1 forwards;
+}
+
+@keyframes kickerShimmer {
+  0%   { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* After shimmer completes, reset to normal color */
+.kicker-shimmer.shimmer-done {
+  -webkit-text-fill-color: unset;
+  background: none;
+}
+
+/* Hero visual 3D enhancements */
+html.m3d-active .hero-visual__btn--primary,
+html.m3d-active .hero-visual__btn--glass {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
