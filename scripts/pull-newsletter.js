@@ -401,21 +401,28 @@ function removeScaffoldStubs(dir) {
   return removed;
 }
 
-async function pullFromScrape(newsletterKey) {
+async function pullFromScrape(newsletterKey, explicitUrl) {
   const config = NEWSLETTERS[newsletterKey];
-  const landingUrl = config.linkedin_subscribe;
+  let links;
 
-  console.log(`Scraping ${config.name} from ${landingUrl}`);
-  const landingHtml = await fetchURL(landingUrl);
-  const links = extractArticleLinks(landingHtml);
-  if (links.length === 0) {
-    console.log(`  No article links found on landing page.`);
-    return [];
+  if (explicitUrl) {
+    // Pull one specific article (e.g. an issue paginated off the public landing page).
+    links = [explicitUrl];
+    console.log(`Pulling explicit article into ${config.name}: ${explicitUrl}`);
+  } else {
+    const landingUrl = config.linkedin_subscribe;
+    console.log(`Scraping ${config.name} from ${landingUrl}`);
+    const landingHtml = await fetchURL(landingUrl);
+    links = extractArticleLinks(landingHtml);
+    if (links.length === 0) {
+      console.log(`  No article links found on landing page.`);
+      return [];
+    }
+    console.log(`  Found ${links.length} article link(s).`);
+
+    const removedStubs = removeScaffoldStubs(config.dir);
+    for (const f of removedStubs) console.log(`  Removed blank scaffold stub: ${f}`);
   }
-  console.log(`  Found ${links.length} article link(s).`);
-
-  const removedStubs = removeScaffoldStubs(config.dir);
-  for (const f of removedStubs) console.log(`  Removed blank scaffold stub: ${f}`);
 
   const existing = existingLinkedInURLs(config.dir);
   let nextIssue = detectNextIssueNumber(config.dir);
@@ -611,7 +618,11 @@ async function main() {
     } else if (source === 'linkedin-rss') {
       await pullFromRSS(key);
     } else if (source === 'linkedin-scrape') {
-      await pullFromScrape(key);
+      if (args.url && newsletter === 'both') {
+        console.error('--url requires --newsletter=system or --newsletter=human (not both).');
+        process.exit(1);
+      }
+      await pullFromScrape(key, args.url);
     } else {
       console.error(`Unknown source: ${source}. Use "manual", "linkedin-rss", or "linkedin-scrape".`);
       process.exit(1);

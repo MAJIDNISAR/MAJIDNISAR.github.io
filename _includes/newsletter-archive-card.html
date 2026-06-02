@@ -1,37 +1,22 @@
 {% comment %}
-  Unified newsletter archive card.
-  Parameters:
-    include.issue   — the collection item (from site.newsletter or site.human_layer)
-    include.variant — "systems" or "human"
+  Newsletter archive grid card.
+  Params: include.issue (collection item), include.variant ("systems" | "human")
 {% endcomment %}
 {% assign issue = include.issue %}
 {% assign variant = include.variant | default: "systems" %}
-{% if variant == "systems" %}
-  {% assign badge_class = "badge-newsletter" %}
-  {% assign link_class = "layer-archive__link--systems" %}
-{% else %}
-  {% assign badge_class = "badge-reflection" %}
-  {% assign link_class = "layer-archive__link--human" %}
-{% endif %}
-
-<article class="layer-archive__card layer-archive__card--{{ variant }}">
-  <div class="layer-archive__card-meta">
-    {% if issue.issue_number %}
-      <span class="content-type-badge {{ badge_class }}">Issue #{{ issue.issue_number }}</span>
-    {% else %}
-      <span class="content-type-badge {{ badge_class }}">Special Edition</span>
-    {% endif %}
-    <span class="writing-date">{{ issue.date | date: "%b %-d, %Y" }}</span>
-  </div>
-  <h2 class="writing-item-title"><a href="{{ issue.url | absolute_url }}">{{ issue.title }}</a></h2>
-  {% if issue.subtitle %}<p class="writing-item-subtitle">{{ issue.subtitle }}</p>{% endif %}
-  <p class="writing-item-excerpt">{{ issue.content | strip_html | truncatewords: 35 }}</p>
-  {% if issue.tags.size > 0 %}
-    <div class="writing-item-tags">
-      {% for tag in issue.tags limit: 4 %}
-        <a href="{{ '/tags' | absolute_url }}#{{ tag }}" class="writing-tag">{{ tag }}</a>
-      {% endfor %}
+<a class="nl-card nl-card--{{ variant }}" href="{{ issue.url | absolute_url }}">
+  {% if issue.cover-img %}
+    <div class="nl-card__media">
+      <img src="{{ issue.cover-img | relative_url }}" alt="{{ issue.title | strip_html | escape }}" loading="lazy" decoding="async">
     </div>
   {% endif %}
-  <a class="layer-archive__link {{ link_class }}" href="{{ issue.url | absolute_url }}">Read issue on site &rarr;</a>
-</article>
+  <div class="nl-card__body">
+    <div class="nl-card__meta">
+      <span class="nl-card__badge">{% if issue.issue_number %}Issue #{{ issue.issue_number }}{% else %}Special{% endif %}</span>
+      <span class="nl-card__date">{{ issue.date | date: "%b %-d, %Y" }}</span>
+    </div>
+    <h3 class="nl-card__title">{{ issue.title }}</h3>
+    {% if issue.subtitle %}<p class="nl-card__subtitle">{{ issue.subtitle }}</p>{% endif %}
+    <span class="nl-card__link">Read issue →</span>
+  </div>
+</a>

@@ -1,0 +1,24 @@
+{% comment %}
+  Featured "latest issue" showcase card for newsletter archives.
+  Params: include.issue (collection item), include.variant ("systems" | "human")
+{% endcomment %}
+{% assign issue = include.issue %}
+{% assign variant = include.variant | default: "systems" %}
+<a class="nl-showcase nl-showcase--{{ variant }} reveal reveal-up" href="{{ issue.url | absolute_url }}">
+  <div class="nl-showcase__media">
+    {% if issue.cover-img %}
+      <img src="{{ issue.cover-img | relative_url }}" alt="{{ issue.title | strip_html | escape }}" loading="lazy" decoding="async">
+    {% endif %}
+    <span class="nl-showcase__badge">{% if issue.issue_number %}Issue&nbsp;#{{ issue.issue_number }}{% else %}Special Edition{% endif %} · Latest</span>
+  </div>
+  <div class="nl-showcase__body">
+    <span class="nl-showcase__eyebrow">Latest issue</span>
+    <h2 class="nl-showcase__title">{{ issue.title }}</h2>
+    {% if issue.subtitle %}<p class="nl-showcase__subtitle">{{ issue.subtitle }}</p>{% endif %}
+    <p class="nl-showcase__excerpt">{{ issue.content | strip_html | truncatewords: 42 }}</p>
+    <div class="nl-showcase__foot">
+      <span class="nl-showcase__date">{{ issue.date | date: "%b %-d, %Y" }}</span>
+      <span class="nl-showcase__cta">Read issue →</span>
+    </div>
+  </div>
+</a>
