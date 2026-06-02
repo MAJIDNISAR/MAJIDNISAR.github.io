@@ -1,0 +1,81 @@
+---
+layout: page
+title: "Sitemap"
+subtitle: "Every section of the site, in one place"
+layer: both
+permalink: /sitemap/
+css: "/assets/css/page-extras.css"
+---
+
+<div class="sitemap-page">
+
+  <section class="lead-hero reveal reveal-up">
+    <span class="lead-hero__kicker">Site Map</span>
+    <h1 class="lead-hero__title">Find your way around</h1>
+    <p class="lead-hero__lead">A complete index of the site — the systems layer, the human layer, the work, and how to get in touch. Looking for the machine-readable version? It's at <a href="/sitemap.xml">/sitemap.xml</a>.</p>
+  </section>
+
+  <div class="sitemap-grid reveal-stagger">
+
+    <nav class="sitemap-group" aria-label="Systems">
+      <h2>Systems</h2>
+      <ul>
+        <li><a href="/leadership/">Leadership</a></li>
+        <li><a href="/case-studies/">Case Studies</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/projects/astra/">— Astra</a></li>
+        <li><a href="/projects/kun/">— KUN (كن)</a></li>
+        <li><a href="/code/">Code</a></li>
+        <li><a href="/writing/newsletter/system-layer/">The System Layer →</a></li>
+      </ul>
+    </nav>
+
+    <nav class="sitemap-group" aria-label="Human">
+      <h2>Human</h2>
+      <ul>
+        <li><a href="/aboutme/">About Me</a></li>
+        <li><a href="/writing/">Writing</a></li>
+        <li><a href="/writing/newsletter/human-layer/">The Human Layer →</a></li>
+        <li><a href="/poetry/">Poetry</a></li>
+        <li><a href="/photography/">Photography</a></li>
+        <li><a href="/now/">Now</a></li>
+      </ul>
+    </nav>
+
+    <nav class="sitemap-group" aria-label="Work and contact">
+      <h2>Work &amp; Contact</h2>
+      <ul>
+        <li><a href="/work-with-me/">Work With Me</a></li>
+        <li><a href="/speaking/">Speaking &amp; Advisory</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/address/">Coordinates</a></li>
+        <li><a href="/media-kit/">Media Kit</a></li>
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/resume/">Résumé</a></li>
+      </ul>
+    </nav>
+
+    <nav class="sitemap-group" aria-label="Newsletters">
+      <h2>Newsletters</h2>
+      <ul>
+        {% assign sys = site.newsletter | sort: 'date' | reverse %}
+        {% for issue in sys limit: 4 %}
+          <li><a href="{{ issue.url }}">{{ issue.title | truncate: 38 }}</a></li>
+        {% endfor %}
+        <li><a href="/writing/newsletter/system-layer/">All System Layer issues →</a></li>
+        <li><a href="/writing/newsletter/human-layer/">All Human Layer issues →</a></li>
+      </ul>
+    </nav>
+
+    <nav class="sitemap-group" aria-label="Explore">
+      <h2>Explore</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/tags/">Tags Index</a></li>
+        <li><a href="/feed.xml">RSS Feed</a></li>
+        <li><a href="/sitemap.xml">XML Sitemap</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</div>

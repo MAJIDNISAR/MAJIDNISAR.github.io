@@ -327,7 +327,6 @@ future: true
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
-paginate: 5
 
 kramdown:
   input: GFM
@@ -392,6 +391,10 @@ exclude:
   - README.md
   - screenshot.png
   - docs/
+  - vendor/
+  - node_modules/
+  - .claude/
+  - scripts/
 
 plugins:
   - jekyll-paginate

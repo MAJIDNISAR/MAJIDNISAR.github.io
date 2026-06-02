@@ -4,9 +4,16 @@ layer: both
 title: "Code"
 subtitle: "Selected work, samples, and open source contributions"
 permalink: /code/
+css: "/assets/css/page-extras.css"
 ---
 
 <div class="code-showcase">
+
+  <section class="lead-hero reveal reveal-up">
+    <span class="lead-hero__kicker">Code &amp; Open Source</span>
+    <h1 class="lead-hero__title">Code that ships, and the systems beneath it</h1>
+    <p class="lead-hero__lead">Selected engineering work, samples, and the long-horizon projects exploring how language compiles into execution. Most active work lives on <a href="https://github.com/MAJIDNISAR" target="_blank" rel="noopener">GitHub</a>.</p>
+  </section>
 
   {% if site.code_samples.size > 0 %}
     <div class="code-grid">
@@ -34,11 +41,27 @@ permalink: /code/
       {% endfor %}
     </div>
   {% else %}
-    <p class="collection-empty">Code samples coming soon.</p>
+    <p class="pe-label">Where the work lives</p>
+    <div class="code-empty-state reveal-stagger">
+      <a class="code-empty-card" href="https://github.com/MAJIDNISAR" target="_blank" rel="noopener">
+        <span class="code-empty-card__icon"><i class="fab fa-github"></i></span>
+        <h3>GitHub</h3>
+        <p>Repositories, experiments, and open-source contributions across software, tooling, and AI.</p>
+        <span class="code-empty-card__cta">Browse repositories →</span>
+      </a>
+      <a class="code-empty-card" href="/projects/">
+        <span class="code-empty-card__icon"><i class="fas fa-cube"></i></span>
+        <h3>Long-horizon projects</h3>
+        <p>Astra (a systems language) and KUN (LLM-to-binary) — the deeper engineering bets.</p>
+        <span class="code-empty-card__cta">Explore projects →</span>
+      </a>
+      <a class="code-empty-card" href="/writing/newsletter/system-layer/">
+        <span class="code-empty-card__icon"><i class="fas fa-layer-group"></i></span>
+        <h3>The System Layer</h3>
+        <p>Weekly writing on architecture, delivery quality, and AI productization in practice.</p>
+        <span class="code-empty-card__cta">Read the newsletter →</span>
+      </a>
+    </div>
   {% endif %}
-
-  <div class="github-cta">
-    <p>More work on <a href="https://github.com/MAJIDNISAR" target="_blank" rel="noopener">GitHub</a>.</p>
-  </div>
 
 </div>
