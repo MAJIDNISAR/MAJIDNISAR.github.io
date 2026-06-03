@@ -380,6 +380,16 @@ defaults:
       comments: true
       social-share: true
       readtime: true
+  -
+    scope:
+      path: "_substack"
+      type: "substack"
+    values:
+      layout: "post"
+      layer: "both"
+      comments: true
+      social-share: true
+      readtime: true
 
 # Exclude these files from production site
 exclude:
@@ -415,3 +425,6 @@ collections:
   poetry:
     output: true
     permalink: /poetry/:title/
+  substack:
+    output: true
+    permalink: /substack/:title/

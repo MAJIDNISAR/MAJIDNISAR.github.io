@@ -14,6 +14,7 @@
     "newsletter:scaffold": "node scripts/pull-newsletter.js --source=manual",
     "newsletter:scaffold:system": "node scripts/pull-newsletter.js --newsletter=system --source=manual",
     "newsletter:scaffold:human": "node scripts/pull-newsletter.js --newsletter=human --source=manual",
+    "substack:pull": "node scripts/pull-substack.js",
     "newsletter:pull": "node scripts/pull-newsletter.js --newsletter=both --source=linkedin-scrape",
     "newsletter:pull:rss": "node scripts/pull-newsletter.js --newsletter=both --source=linkedin-rss",
     "lint": "eslint assets/js/",

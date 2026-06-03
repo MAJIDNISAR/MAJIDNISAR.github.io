@@ -54,7 +54,8 @@ css: "/assets/css/writing-hub.css"
 
     {% assign newsletter_posts = site.newsletter | sort: 'date' | reverse %}
     {% assign human_layer_posts = site.human_layer | sort: 'date' | reverse %}
-    {% assign all_posts = site.posts | concat: newsletter_posts | concat: human_layer_posts | sort: 'date' | reverse %}
+    {% assign substack_posts = site.substack | sort: 'date' | reverse %}
+    {% assign all_posts = site.posts | concat: newsletter_posts | concat: human_layer_posts | concat: substack_posts | sort: 'date' | reverse %}
 
     {% for post in all_posts %}
     {% assign ct = post.content-type | default: "essay" %}
