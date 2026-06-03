@@ -622,7 +622,15 @@ async function main() {
         console.error('--url requires --newsletter=system or --newsletter=human (not both).');
         process.exit(1);
       }
-      await pullFromScrape(key, args.url);
+      if (args.url) {
+        // Accept one URL or a comma-separated list of URLs (batch pull).
+        const urls = String(args.url).split(',').map(u => u.trim()).filter(Boolean);
+        for (const u of urls) {
+          await pullFromScrape(key, u.replace(/[?#].*$/, ''));
+        }
+      } else {
+        await pullFromScrape(key);
+      }
     } else {
       console.error(`Unknown source: ${source}. Use "manual", "linkedin-rss", or "linkedin-scrape".`);
       process.exit(1);
