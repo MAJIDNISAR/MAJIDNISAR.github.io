@@ -56,10 +56,17 @@ jobs:
           git diff --staged --quiet || git commit -m "Auto-sync LinkedIn content [skip ci]"
           git push
       
-      - name: Build Jekyll site
-        uses: helaili/jekyll-action@v2
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          ruby-version: '3.3'
+          bundler-cache: true
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build --future --baseurl ""
+        env:
+          JEKYLL_ENV: production
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
