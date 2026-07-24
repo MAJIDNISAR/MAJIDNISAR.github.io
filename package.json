@@ -1,0 +1,55 @@
+{
+  "name": "majidnisar-website",
+  "version": "2.0.0",
+  "description": "Personal website and blog for Majid Nisar - Software Engineer & Cybersecurity Professional",
+  "main": "index.js",
+  "scripts": {
+    "dev": "./scripts/jekyll.sh serve --livereload",
+    "build": "./scripts/jekyll.sh build",
+    "build:prod": "JEKYLL_ENV=production ./scripts/jekyll.sh build",
+    "sync:linkedin": "node scripts/sync-linkedin.js",
+    "sync:linkedin:posts": "node scripts/sync-linkedin.js --type=posts",
+    "sync:linkedin:newsletters": "node scripts/sync-linkedin.js --type=newsletters",
+    "sync:linkedin:rss": "node scripts/sync-linkedin-rss.js",
+    "newsletter:scaffold": "node scripts/pull-newsletter.js --source=manual",
+    "newsletter:scaffold:system": "node scripts/pull-newsletter.js --newsletter=system --source=manual",
+    "newsletter:scaffold:human": "node scripts/pull-newsletter.js --newsletter=human --source=manual",
+    "substack:pull": "node scripts/pull-substack.js",
+    "newsletter:pull": "node scripts/pull-newsletter.js --newsletter=both --source=linkedin-scrape",
+    "newsletter:pull:rss": "node scripts/pull-newsletter.js --newsletter=both --source=linkedin-rss",
+    "lint": "eslint assets/js/",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "jekyll",
+    "personal-website",
+    "blog",
+    "portfolio",
+    "software-engineering",
+    "cybersecurity",
+    "data-engineering",
+    "linkedin-integration"
+  ],
+  "author": "Majid Nisar",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "eslint": "^8.0.0",
+    "terser": "^5.47.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MAJIDNISAR/MAJIDNISAR.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MAJIDNISAR/MAJIDNISAR.github.io/issues"
+  },
+  "homepage": "https://majidnisar.com",
+  "dependencies": {
+    "motion": "^12.38.0"
+  }
+}

@@ -1,21 +1,237 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}</link>
-    <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
-    {% for post in site.posts limit:10 %}
+    
+    <title>Majid Nisar.com</title>
+    
+    
+    <description>Writing on software leadership, AI implementation, engineering execution, and systems thinking.</description>
+    
+    <link>https://majidnisar.com/</link>
+    <atom:link href="https://majidnisar.com/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-        <link>{{ site.url }}{{ post.url }}</link>
-        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+        <title>AI &amp; Data Engineering Trends 2024</title>
+        <description>
+          Opportunities, Challenges, and a Roadmap for Success - 
+          AI &amp;amp; Data Engineering Trends 2024: Opportunities, Challenges, and a Roadmap for Success 2024 marks a pivotal year for companies embracing AI and data engineering. Recent trends emphasize sustainable, value-driven AI models, accessible data, and robust security frameworks. Here’s a look at the key opportunities, challenges, and strategies to harness...
+        </description>
+        <pubDate>Tue, 29 Oct 2024 10:32:00 -0400</pubDate>
+        <link>https://majidnisar.com/blog/ai-data-engineering-trends-2024/</link>
+        <guid isPermaLink="true">https://majidnisar.com/blog/ai-data-engineering-trends-2024/</guid>
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Building Courses Like Products</title>
+        <description>
+          How Modern Universities Can Leverage VPC and BMC for Educational Excellence - 
+          Building Courses Like Products: How Modern Universities Can Leverage VPC and BMC for Educational Excellence As industries evolve at an unprecedented pace, universities must adapt to remain relevant and ensure their courses meet modern workforce needs. Traditional course creation, which often operates on outdated syllabi, is being disrupted by approaches...
+        </description>
+        <pubDate>Thu, 19 Sep 2024 10:32:00 -0400</pubDate>
+        <link>https://majidnisar.com/blog/Building-Courses-Like-Products/</link>
+        <guid isPermaLink="true">https://majidnisar.com/blog/Building-Courses-Like-Products/</guid>
+      </item>
+    
+      <item>
+        <title>The true essence of Silences and Pauses in communication</title>
+        <description>
+          Breathing the key to communication - 
+          The True Essence of Silences and Pauses in Communication: Breathing, the Key to Connecting Good communication is more than the words we choose. It is about how meaning is carried — through pace, pause, breath, and the spaces between statements. These elements are often treated as incidental, but they are...
+        </description>
+        <pubDate>Tue, 31 Oct 2023 10:59:00 -0400</pubDate>
+        <link>https://majidnisar.com/blog/true-essence-of-Silences-and-Pauses-in-communication/</link>
+        <guid isPermaLink="true">https://majidnisar.com/blog/true-essence-of-Silences-and-Pauses-in-communication/</guid>
+      </item>
+    
+      <item>
+        <title>The Magnetic Hill of Civilization</title>
+        <description>
+          The Deceptive path of progress - 
+          The Magnetic Hill of Civilization: The Deceptive Path of Progress Throughout history, humanity has celebrated the progress and advancements made by civilizations. We often assume that we are on an upward trajectory towards greater sophistication, enlightenment, and well-being. However, if we step back and critically assess the state of our...
+        </description>
+        <pubDate>Thu, 25 May 2023 10:33:00 -0400</pubDate>
+        <link>https://majidnisar.com/blog/the-magnetic-Hill-of-Civilization/</link>
+        <guid isPermaLink="true">https://majidnisar.com/blog/the-magnetic-Hill-of-Civilization/</guid>
+      </item>
+    
+      <item>
+        <title>AI Wars!</title>
+        <description>
+          Microsoft Vs Google - 
+          The AI War: Microsoft vs. Google Artificial Intelligence (AI) is one of the most rapidly advancing technologies of our time, and the competition between tech giants Microsoft and Google to lead the AI industry is heating up. Both companies have been investing heavily in AI research and development and are...
+        </description>
+        <pubDate>Sat, 11 Feb 2023 06:33:00 -0500</pubDate>
+        <link>https://majidnisar.com/blog/AI-Wars/</link>
+        <guid isPermaLink="true">https://majidnisar.com/blog/AI-Wars/</guid>
+      </item>
+    
+      <item>
+        <title>Heaven must be a Library!</title>
+        <description>
+          Heaven: A place of books and lore - 
+          Heaven Must Be a Library Heaven, a place of peace and light, A realm beyond our earthly sight. Where souls do bask in blissful grace, And every heart finds a resting place. Yet what if heaven holds a treasure, A wealth of knowledge beyond measure? A library, a place of...
+        </description>
+        <pubDate>Wed, 01 Feb 2023 06:33:00 -0500</pubDate>
+        <link>https://majidnisar.com/blog/heaven-must-be-a-library/</link>
+        <guid isPermaLink="true">https://majidnisar.com/blog/heaven-must-be-a-library/</guid>
+      </item>
+    
+      <item>
+        <title>Person you would want to meet!</title>
+        <description>
+          Belive starts with Be! - 
+          Be the person you would want to meet! Belive starts with Be! Be the person you would want to meet, With kindness in your eyes and a smile so sweet. Look in the mirror and see the best, Be the person you would want yourself to be impressed. Be the...
+        </description>
+        <pubDate>Sat, 28 Jan 2023 06:00:00 -0500</pubDate>
+        <link>https://majidnisar.com/blog/be-that-person/</link>
+        <guid isPermaLink="true">https://majidnisar.com/blog/be-that-person/</guid>
+      </item>
+    
+      <item>
+        <title>NodeJS Backend!</title>
+        <description>
+          Focus on Design Patterns - 
+          NodeJS Backend Design: A Focus on Design Patterns Node.js is a powerful backend technology that allows developers to build fast and scalable web applications. It is built on top of the V8 JavaScript engine, which is the same engine that powers Google Chrome. This means that Node.js applications can run...
+        </description>
+        <pubDate>Fri, 27 Jan 2023 07:28:00 -0500</pubDate>
+        <link>https://majidnisar.com/blog/design-patterns-nodejs/</link>
+        <guid isPermaLink="true">https://majidnisar.com/blog/design-patterns-nodejs/</guid>
+      </item>
+    
+      <item>
+        <title>Noah&apos;s Ark in Kashmir!</title>
+        <description>
+          Where is Noah&apos;s Ark in Kashmir - 
+          Where is Noah’s Ark In Kashmir Floods in Jammu and Kashmir have become a recurring problem, with little progress made in terms of disaster preparedness and infrastructure development since 2014. The recent turmoil and conflict in the region has only made the situation worse, with inadequate infrastructure and lack of...
+        </description>
+        <pubDate>Wed, 25 Jan 2023 06:33:00 -0500</pubDate>
+        <link>https://majidnisar.com/blog/where-is-noahs-ark/</link>
+        <guid isPermaLink="true">https://majidnisar.com/blog/where-is-noahs-ark/</guid>
+      </item>
+    
+      <item>
+        <title>Fragility of Life!</title>
+        <description>
+          Life is a an Oxymoron of strength and fragility - 
+          Fragility of Life! Life is fragile, like a delicate flower Born to bloom, but wilt in an hour A fleeting moment, a flicker of light Gone in a blink, without a fight A butterfly’s wings, so thin and frail A gust of wind, and it’s on the trail Of a...
+        </description>
+        <pubDate>Wed, 25 Jan 2023 06:33:00 -0500</pubDate>
+        <link>https://majidnisar.com/blog/fragility-of-life/</link>
+        <guid isPermaLink="true">https://majidnisar.com/blog/fragility-of-life/</guid>
+      </item>
+    
+      <item>
+        <title>Cat Named Cat</title>
+        <description>
+          Humour at workplace: There is an Aha behind the Ha Ha... - 
+          Humour is a multi-tool, a swiss army knife. It enables you to connect with your audience, it can alleviate tension, elevate status, and persuade others to your point of view, and it can do so &amp;amp; much more. While humour can help you and your message stand out, most of...
+        </description>
+        <pubDate>Sat, 20 Aug 2022 08:00:00 -0400</pubDate>
+        <link>https://majidnisar.com/blog/cat-named-cat/</link>
+        <guid isPermaLink="true">https://majidnisar.com/blog/cat-named-cat/</guid>
+      </item>
+    
+      <item>
+        <title>Changing One&apos;s Mind</title>
+        <description>
+          Changing One&apos;s Mind: A new approach - 
+          If you develop an R package on GitHub and aren’t using GitHub Actions, this post is for you. Whether you want to move your repository from TravisCI to GitHub Actions, or you’re not sure why that’s necessary, or even if you don’t know what GitHub Actions is, you should definitely...
+        </description>
+        <pubDate>Fri, 05 Aug 2022 13:00:00 -0400</pubDate>
+        <link>https://majidnisar.com/blog/changing-ones-mind/</link>
+        <guid isPermaLink="true">https://majidnisar.com/blog/changing-ones-mind/</guid>
+      </item>
+    
+      <item>
+        <title>Brilliant Mistakes</title>
+        <description>
+          Why the best learning comes from failure — and how to make your mistakes count - 
+          Brilliant Mistakes By Majid Nisar FAIL = First Attempt In Learning THE GOAL: Discover breakthrough innovation, and accelerate organizational learning, by adopting a mindset and a process for deliberate mistake making. BREAKTHROUGH INNOVATION FROM BRILLIANT MISTAKES What if some of your most tried-and-true assumptions about the way you do business...
+        </description>
+        <pubDate>Sun, 03 Jul 2022 00:00:00 -0400</pubDate>
+        <link>https://majidnisar.com/2022-07-03-Brilliant-Mistakes/</link>
+        <guid isPermaLink="true">https://majidnisar.com/2022-07-03-Brilliant-Mistakes/</guid>
+      </item>
+    
+      <item>
+        <title>Spring Of Hope!</title>
+        <description>
+          A poem on renewal, hope, and the quiet return of light - 
+          Spring Of Hope! By Majid Nisar Dedicated to #MURDERED yet not #DYING #NATION Spring of Hope, Always finds a way, It Always has... Spring Will Find a way, It Always Has… Through the Stones- our weapons, It Always Has … Spring Will Find a way, It Always Has … Through...
+        </description>
+        <pubDate>Wed, 01 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://majidnisar.com/2020-04-01-SpringOfHope/</link>
+        <guid isPermaLink="true">https://majidnisar.com/2020-04-01-SpringOfHope/</guid>
+      </item>
+    
+      <item>
+        <title>Sample blog post</title>
+        <description>
+          Each post also has a subtitle - 
+          This is a demo post to show you how to write blog posts with markdown. I strongly encourage you to take 5 minutes to learn how to write in markdown - it’ll teach you how to transform regular text into bold/italics/headings/tables/etc. Here is some bold text Here is a secondary...
+        </description>
+        <pubDate>Fri, 28 Feb 2020 00:00:00 -0500</pubDate>
+        <link>https://majidnisar.com/2020-02-28-test-markdown/</link>
+        <guid isPermaLink="true">https://majidnisar.com/2020-02-28-test-markdown/</guid>
+      </item>
+    
+      <item>
+        <title>Acquainted with the Night</title>
+        <description>
+          A poem on solitude, restlessness, and the long walk through the dark - 
+          Acquainted with the Night By Majid Nisar “I have looked down the saddest city lane. I have passed by the watchman on his beat And dropped my eyes, unwilling to explain.” I have been one acquainted with the night. I have walked out in rain—and back in rain. I have...
+        </description>
+        <pubDate>Mon, 19 Feb 2018 12:00:00 -0500</pubDate>
+        <link>https://majidnisar.com/blog/acquainted-with-the-night/</link>
+        <guid isPermaLink="true">https://majidnisar.com/blog/acquainted-with-the-night/</guid>
+      </item>
+    
+      <item>
+        <title>Fallacies of I, Me, Myself, My World and Educated Mind</title>
+        <description>
+          On the educated mind, ego, and the illusions we build around ourselves - 
+          Fallacies of I, Me, Myself, My World and Educated Mind By Majid Nisar Trappings of crystal heart, That it fears breaking, It lacks the leap of faith, For heart is not a balloon It bursts on a prick, For it is full of blood, It bleeds and keeps on beating,...
+        </description>
+        <pubDate>Wed, 17 Jan 2018 00:00:00 -0500</pubDate>
+        <link>https://majidnisar.com/2018-01-17-Fallacies/</link>
+        <guid isPermaLink="true">https://majidnisar.com/2018-01-17-Fallacies/</guid>
+      </item>
+    
+      <item>
+        <title>Node.js Security Checklist</title>
+        <description>
+          The essential security checklist every Node.js developer should follow - 
+          ELEPHANT in the ROOM Security - the elephant in the room. Everyone agrees that it is very important but few takes it seriously. Most of these items are general and applies to all languages and frameworks not just Node.js - however some of the tools presented are Node.js specific. You...
+        </description>
+        <pubDate>Sun, 14 Jan 2018 07:00:00 -0500</pubDate>
+        <link>https://majidnisar.com/blog/nodejs-security-checklist/</link>
+        <guid isPermaLink="true">https://majidnisar.com/blog/nodejs-security-checklist/</guid>
+      </item>
+    
+      <item>
+        <title>Note to Self</title>
+        <description>
+          Purposeful Thinking! - 
+          NoteToSelf I have made my peace, emptied my buckets… I have emptied my quirks, pulled out my pockets… I have nothing that drags me, pulls me, or holds me down I smile more, live more , at times die more but no more frown I pray more , love more...
+        </description>
+        <pubDate>Wed, 18 Oct 2017 00:00:00 -0400</pubDate>
+        <link>https://majidnisar.com/2017-10-18-PurposefulThinking/</link>
+        <guid isPermaLink="true">https://majidnisar.com/2017-10-18-PurposefulThinking/</guid>
+      </item>
+    
+      <item>
+        <title>Note to Self</title>
+        <description>
+          Wishful Thinking! - 
+          #NoteToSelf
+How I Wishfully Think of Killing my Wishful Thinking!
+
+        </description>
+        <pubDate>Wed, 04 Oct 2017 00:00:00 -0400</pubDate>
+        <link>https://majidnisar.com/2017-10-04-WishfulThinking/</link>
+        <guid isPermaLink="true">https://majidnisar.com/2017-10-04-WishfulThinking/</guid>
+      </item>
+    
   </channel>
 </rss>
