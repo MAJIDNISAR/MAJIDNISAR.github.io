@@ -96,25 +96,36 @@ function slugify(text) {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '')
-    .substring(0, 60);
+    .substring(0, 60)
+    .replace(/-+$/, '');
 }
 
 function todayISO() {
   return new Date().toISOString().split('T')[0];
 }
 
+// Unnumbered articles (no "Issue N" in the LinkedIn title) are named by slug only,
+// matching _newsletter/the-gemma-4-era.md, so they never collide with numbered issues.
+function issueBase(issueNumber, slug) {
+  return issueNumber ? `issue-${padIssue(issueNumber)}-${slug}` : slug;
+}
+
+function imageBase(issueNumber, slug) {
+  return issueNumber ? `issue-${padIssue(issueNumber)}` : slug;
+}
+
 function buildFrontMatter(config, issueNumber, title, subtitle, opts) {
   const slug = slugify(title);
   const date = opts.date || todayISO();
   const tags = opts.tags || config.default_tags;
-  const imgFile = `${config.img_dir}issue-${padIssue(issueNumber)}.jpg`;
+  const imgFile = `${config.img_dir}${imageBase(issueNumber, slug)}.jpg`;
 
   const fm = {
     title,
     subtitle,
     date,
     'last-updated': date,
-    permalink: `${config.permalink_prefix}issue-${padIssue(issueNumber)}-${slug}/`,
+    permalink: `${config.permalink_prefix}${issueBase(issueNumber, slug)}/`,
     layer: config.layer,
     issue_number: issueNumber,
     newsletter_name: config.name,
@@ -425,7 +436,6 @@ async function pullFromScrape(newsletterKey, explicitUrl) {
   }
 
   const existing = existingLinkedInURLs(config.dir);
-  let nextIssue = detectNextIssueNumber(config.dir);
   const created = [];
 
   for (const link of links) {
@@ -460,16 +470,14 @@ async function pullFromScrape(newsletterKey, explicitUrl) {
     const date = ld.datePublished
       ? new Date(ld.datePublished).toISOString().split('T')[0]
       : todayISO();
-    const finalIssue = issueNumber || nextIssue;
-
-    const frontMatter = buildFrontMatter(config, finalIssue, title, subtitle, {
+    const frontMatter = buildFrontMatter(config, issueNumber, title, subtitle, {
       date,
       tags: config.default_tags,
       linkedin_url: link,
     });
 
     const slug = slugify(title);
-    const filename = `issue-${padIssue(finalIssue)}-${slug}.md`;
+    const filename = `${issueBase(issueNumber, slug)}.md`;
     const filepath = path.join(config.dir, filename);
 
     const fullBody = `${body}
@@ -481,12 +489,12 @@ async function pullFromScrape(newsletterKey, explicitUrl) {
 *${config.name} publishes on LinkedIn. Subscribe [here](${config.linkedin_subscribe}).*
 `;
     fs.writeFileSync(filepath, frontMatter + '\n\n' + fullBody.trim() + '\n');
-    console.log(`  Created: ${filename} (issue ${finalIssue})`);
+    console.log(`  Created: ${filename} (${issueNumber ? `issue ${issueNumber}` : 'unnumbered'})`);
 
     // Best-effort cover image download to the site's local convention.
     const imgUrl = ld.image && (ld.image.url || (Array.isArray(ld.image) && ld.image[0] && ld.image[0].url));
     if (imgUrl) {
-      const imgDest = path.join(ROOT, config.img_dir.replace(/^\//, ''), `issue-${padIssue(finalIssue)}.jpg`);
+      const imgDest = path.join(ROOT, config.img_dir.replace(/^\//, ''), `${imageBase(issueNumber, slug)}.jpg`);
       try {
         await fetchBinary(imgUrl, imgDest);
         console.log(`    Cover image saved: ${path.relative(ROOT, imgDest)}`);
@@ -497,7 +505,6 @@ async function pullFromScrape(newsletterKey, explicitUrl) {
 
     created.push(filepath);
     existing.add(link);
-    if (!issueNumber) nextIssue++;
   }
 
   console.log(`  Created ${created.length} new issue(s) for ${config.name}.`);
