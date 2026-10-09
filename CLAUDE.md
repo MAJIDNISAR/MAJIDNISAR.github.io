@@ -58,7 +58,7 @@ _layouts/base.html        ← Root HTML shell; loads all CSS/JS, nav, footer
 - `index.html` — Homepage; uses `layout: page` with custom hero sections and a paginated post list via `jekyll-paginate`
 - `aboutme.html` — About page; injects `skills.html` and `newsletter.html` via `after-content`
 - `_posts/` — Blog posts; must follow `YYYY-MM-DD-title.md` naming convention
-- `_newsletter/` — THE SYSTEM LAYER issues (Jekyll collection, `site.newsletter`)
+- `_newsletter/` — The System Layer issues (Jekyll collection, `site.newsletter`)
 - `_human_layer/` — THE HUMAN LAYER issues (Jekyll collection, `site.human_layer`)
 - `scripts/pull-newsletter.js` — Unified pull/scaffold script for both newsletters
 
