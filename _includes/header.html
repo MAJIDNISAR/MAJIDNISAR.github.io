@@ -2,6 +2,8 @@
 
 {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
 {% assign current_layer = page.layer | default: "both" %}
+{% comment %}The gateway homepage hides this header and carries its own visible <h1> in the hero.{% endcomment %}
+{% if current_layer == "gateway" %}{% assign title_tag = "p" %}{% else %}{% assign title_tag = "h1" %}{% endif %}
 
 {% if page.cover-img or page.title %}
 
@@ -34,7 +36,7 @@
               {% if page.newsletter_name %}
               <span class="header-series-kicker">{{ page.newsletter_name }}</span>
               {% endif %}
-              <h1>{% if page.title %}{{ page.title | strip_html }}{% else %}<br/>{% endif %}</h1>
+              <{{ title_tag }}>{% if page.title %}{{ page.title | strip_html }}{% else %}<br/>{% endif %}</{{ title_tag }}>
               {% if page.subtitle %}
                 {% if include.type == "page" %}
                   <hr class="small">
@@ -93,7 +95,7 @@
               {% if page.newsletter_name %}
               <span class="header-series-kicker">{{ page.newsletter_name }}</span>
               {% endif %}
-              <h1>{% if page.title %}{{ page.title | strip_html }}{% else %}<br/>{% endif %}</h1>
+              <{{ title_tag }}>{% if page.title %}{{ page.title | strip_html }}{% else %}<br/>{% endif %}</{{ title_tag }}>
               {% if page.subtitle %}
                 {% if include.type == "page" %}
                   <hr class="small">
