@@ -6,6 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="dns-prefetch" href="https://code.jquery.com">
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
@@ -51,8 +52,8 @@
   {% endif %}
 
   <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="{{ '/assets/img/avatar.jpg' | relative_url }}">
-  <link rel="apple-touch-icon" href="{{ '/assets/img/avatar.jpg' | relative_url }}">
+  <link rel="icon" type="image/jpeg" href="{{ '/assets/img/avatar-180.jpg' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/img/avatar-180.jpg' | relative_url }}">
 
   {% if site.keywords %}
   <meta name="keywords" content="{{ site.keywords }}">
@@ -82,6 +83,11 @@
     {% endif %}
   {% endif %}
 
+  {% comment %}LCP images set as CSS backgrounds are invisible to the preload scanner.{% endcomment %}
+  {% for img in page.preload-images %}
+  <link rel="preload" as="image" href="{{ img | relative_url }}" fetchpriority="high">
+  {% endfor %}
+
   {% include gtag.html %}
   {% include gtm_head.html %}
   {% include google_analytics.html %}
@@ -89,6 +95,9 @@
 
   <!-- CRITICAL CSS — inlined for instant first paint -->
   {% include critical-css.html %}
+  {% if page.inline-css %}
+  <style>{% for css in page.inline-css %}{% include {{ css }} %}{% endfor %}</style>
+  {% endif %}
 
   <!-- Layout-essential CSS — render-blocking (prevents CLS) -->
   {% if layout.common-css %}
