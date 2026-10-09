@@ -6,7 +6,7 @@ last-updated: "2026-02-20"
 permalink: "/newsletter/issue-08-the-incentive-architecture-problem/"
 layer: "systems"
 issue_number: 8
-newsletter_name: "THE SYSTEM LAYER"
+newsletter_name: "The System Layer"
 linkedin_url: "https://www.linkedin.com/pulse/issue-8-incentive-architecture-problem-majid-nisar-uvi8c"
 header-logo: "/assets/img/newsletters/system-layer/logo.png"
 cover-img: "/assets/img/newsletters/system-layer/issue-08.jpg"
@@ -165,4 +165,4 @@ Majid Nisar The System Layer Thinking clearly about products, software, and lead
 
 *[Read the full issue on LinkedIn →](https://www.linkedin.com/pulse/issue-8-incentive-architecture-problem-majid-nisar-uvi8c)*
 
-*THE SYSTEM LAYER publishes on LinkedIn. Subscribe [here](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/).*
+*The System Layer publishes on LinkedIn. Subscribe [here](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/).*

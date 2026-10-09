@@ -3,7 +3,7 @@ title: "The Alignment Illusion — Why Everyone Agrees and Nothing Changes"
 subtitle: "When consensus becomes a substitute for clarity"
 date: 2026-03-27
 issue_number: 13
-newsletter_name: "THE SYSTEM LAYER"
+newsletter_name: "The System Layer"
 permalink: /newsletter/issue-13-alignment-illusion/
 linkedin_url: "https://www.linkedin.com/pulse/issue-13-alignment-illusion-why-everyone-agrees-nothing-majid-nisar-z0ycc"
 header-logo: "/assets/img/newsletters/system-layer/logo.png"
@@ -66,4 +66,4 @@ If those four questions have vague answers, the alignment was not real.
 
 *[Read the full issue on LinkedIn →](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/)*
 
-*THE SYSTEM LAYER publishes weekly. Subscribe on [LinkedIn](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/).*
+*The System Layer publishes weekly. Subscribe on [LinkedIn](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/).*

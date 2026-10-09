@@ -6,7 +6,7 @@ last-updated: "2026-08-02"
 permalink: "/newsletter/issue-21-the-coordination-tax/"
 layer: "systems"
 issue_number: 21
-newsletter_name: "THE SYSTEM LAYER"
+newsletter_name: "The System Layer"
 linkedin_url: "https://www.linkedin.com/pulse/system-layer-issue-21-coordination-tax-why-systems-become-majid-nisar-h7ufc"
 header-logo: "/assets/img/newsletters/system-layer/logo.png"
 cover-img: "/assets/img/newsletters/system-layer/issue-21.jpg"
@@ -302,4 +302,4 @@ Thinking clearly about products, software, leadership, and AI—by examining the
 
 *[Read the full issue on LinkedIn →](https://www.linkedin.com/pulse/system-layer-issue-21-coordination-tax-why-systems-become-majid-nisar-h7ufc)*
 
-*THE SYSTEM LAYER publishes on LinkedIn. Subscribe [here](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/).*
+*The System Layer publishes on LinkedIn. Subscribe [here](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/).*

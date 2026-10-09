@@ -103,7 +103,7 @@ css:
 
     <div class="projects-grid">
       <a href="https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/" target="_blank" rel="noopener" class="project-card card-lift" style="text-decoration:none; color:inherit;">
-        <h3 style="color:var(--accent-warm);">THE SYSTEM LAYER</h3>
+        <h3 style="color:var(--accent-warm); text-transform:uppercase;">The System Layer</h3>
         <p>Newsletter work on software, products, leadership, trust, alignment, and the operating systems beneath technology decisions.</p>
         <div class="project-card-tags">
           <span class="lang-badge" style="background:rgba(180,83,9,0.1);color:var(--accent-warm);">Newsletter</span>

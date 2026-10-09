@@ -3,7 +3,7 @@ title: "The Resilient System: What Organizations That Survive Disruption Actuall
 subtitle: "Resilience is not contingency. It is structural adaptability without losing coherence."
 date: 2026-03-11
 issue_number: 11
-newsletter_name: "THE SYSTEM LAYER"
+newsletter_name: "The System Layer"
 permalink: /newsletter/issue-11-resilient-system/
 linkedin_url: "https://www.linkedin.com/pulse/system-layer-issue-11-resilient-what-organizations-survive-nisar-vtluc"
 header-logo: "/assets/img/newsletters/system-layer/logo.png"
@@ -32,4 +32,4 @@ When pressure rises, culture slogans are not enough. The system design becomes v
 
 *[Read the full issue on LinkedIn →](https://www.linkedin.com/pulse/system-layer-issue-11-resilient-what-organizations-survive-nisar-vtluc)*
 
-*THE SYSTEM LAYER publishes weekly. Subscribe on [LinkedIn](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/).*
+*The System Layer publishes weekly. Subscribe on [LinkedIn](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/).*

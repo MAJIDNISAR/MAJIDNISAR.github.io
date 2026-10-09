@@ -3,7 +3,7 @@ title: "The Trust Debt Accumulation Model"
 subtitle: "Trust compounds slower than code. But it breaks faster."
 date: 2026-03-06
 issue_number: 10
-newsletter_name: "THE SYSTEM LAYER"
+newsletter_name: "The System Layer"
 permalink: /newsletter/issue-10-trust-debt/
 linkedin_url: "https://www.linkedin.com/pulse/system-layer-issue-10-trust-debt-accumulation-model-majid-nisar-2gntc"
 header-logo: "/assets/img/newsletters/system-layer/logo.png"
@@ -50,4 +50,4 @@ Organizations with low trust debt are not organizations that never take shortcut
 
 *[Read the full issue on LinkedIn →](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/)*
 
-*THE SYSTEM LAYER publishes weekly. Subscribe on [LinkedIn](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/).*
+*The System Layer publishes weekly. Subscribe on [LinkedIn](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/).*

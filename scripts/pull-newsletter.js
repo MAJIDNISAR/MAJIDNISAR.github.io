@@ -3,7 +3,7 @@
 /**
  * Unified Newsletter Pull & Scaffold Script
  *
- * Supports both THE SYSTEM LAYER (_newsletter/) and THE HUMAN LAYER (_human_layer/).
+ * Supports both The System Layer (_newsletter/) and THE HUMAN LAYER (_human_layer/).
  * Modes: --source=manual (scaffold blank issue) or --source=linkedin-rss (fetch via RSS).
  *
  * Usage:
@@ -42,7 +42,7 @@ loadDotenv();
 
 const NEWSLETTERS = {
   system: {
-    name: 'THE SYSTEM LAYER',
+    name: 'The System Layer',
     dir: path.join(ROOT, '_newsletter'),
     filenamePrefix: 'issue-',
     permalink_prefix: '/newsletter/',

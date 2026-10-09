@@ -6,7 +6,7 @@ last-updated: "2026-06-01"
 permalink: "/newsletter/issue-17-the-purpose-layer/"
 layer: "systems"
 issue_number: 17
-newsletter_name: "THE SYSTEM LAYER"
+newsletter_name: "The System Layer"
 linkedin_url: "https://www.linkedin.com/pulse/system-layer-issue-17-purpose-why-ai-separating-tasks-majid-nisar-kqjnc"
 header-logo: "/assets/img/newsletters/system-layer/logo.png"
 cover-img: "/assets/img/newsletters/system-layer/issue-17.jpg"
@@ -348,4 +348,4 @@ Thinking clearly about products, software, and leadership — by examining the s
 
 *[Read the full issue on LinkedIn →](https://www.linkedin.com/pulse/system-layer-issue-17-purpose-why-ai-separating-tasks-majid-nisar-kqjnc)*
 
-*THE SYSTEM LAYER publishes on LinkedIn. Subscribe [here](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/).*
+*The System Layer publishes on LinkedIn. Subscribe [here](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/).*

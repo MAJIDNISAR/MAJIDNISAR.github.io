@@ -6,7 +6,7 @@ last-updated: "2026-05-13"
 permalink: "/newsletter/issue-07-when-ai-becomes-an-operating-system-the-local-vs-cloud-intel/"
 layer: "systems"
 issue_number: 7
-newsletter_name: "THE SYSTEM LAYER"
+newsletter_name: "The System Layer"
 linkedin_url: "https://www.linkedin.com/pulse/systems-layer-newsletter-issue-7-when-ai-becomes-operating-nisar-vc23c"
 header-logo: "/assets/img/newsletters/system-layer/logo.png"
 cover-img: "/assets/img/newsletters/system-layer/issue-07.jpg"
@@ -16,7 +16,7 @@ tags: [systems, leadership]
 content-type: "newsletter"
 ---
 
-## Systems Layer — Issue #7
+## System Layer — Issue #7
 
 ## When AI Becomes an Operating System: The Local vs Cloud Intelligence Shift
 
@@ -257,7 +257,7 @@ The answer may define the next decade of AI.
 
 The agent is emerging. And intelligence is becoming infrastructure.**
 
-— Systems Layer
+— System Layer
 
 ---
 
@@ -271,4 +271,4 @@ Next Issue: Multi-Agent Societies — When AIs Start Collaborating Without Us
 
 *[Read the full issue on LinkedIn →](https://www.linkedin.com/pulse/systems-layer-newsletter-issue-7-when-ai-becomes-operating-nisar-vc23c)*
 
-*THE SYSTEM LAYER publishes on LinkedIn. Subscribe [here](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/).*
+*The System Layer publishes on LinkedIn. Subscribe [here](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/).*

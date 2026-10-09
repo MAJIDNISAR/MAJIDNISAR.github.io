@@ -3,7 +3,7 @@ title: "The Complexity Threshold — When Systems Become Unmanageable"
 subtitle: "Systems often fail when understanding disappears before functionality does."
 date: 2026-04-13
 issue_number: 15
-newsletter_name: "THE SYSTEM LAYER"
+newsletter_name: "The System Layer"
 permalink: /newsletter/issue-15-complexity-threshold/
 linkedin_url: "https://www.linkedin.com/pulse/issue-15-complexity-threshold-when-systems-become-majid-nisar-l491c"
 header-logo: "/assets/img/newsletters/system-layer/logo.png"
@@ -32,4 +32,4 @@ The warning sign is not only outages. It is the slower erosion of shared underst
 
 *[Read the full issue on LinkedIn →](https://www.linkedin.com/pulse/issue-15-complexity-threshold-when-systems-become-majid-nisar-l491c)*
 
-*THE SYSTEM LAYER publishes weekly. Subscribe on [LinkedIn](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/).*
+*The System Layer publishes weekly. Subscribe on [LinkedIn](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/).*

@@ -5,7 +5,7 @@ date: 2026-04-06
 last-updated: 2026-04-06
 permalink: /newsletter/the-gemma-4-era/
 layer: systems
-newsletter_name: "THE SYSTEM LAYER"
+newsletter_name: "The System Layer"
 linkedin_url: "https://www.linkedin.com/pulse/gemma-4-era-why-local-sovereign-agentic-ai-just-changed-majid-nisar-m3ric"
 header-logo: "/assets/img/newsletters/system-layer/logo.png"
 cover-img: "/assets/img/newsletters/system-layer/gemma-4-era.jpg"
@@ -94,4 +94,4 @@ The power balance in AI is shifting: from centralized to distributed, cloud to e
 
 *[Read the full article on LinkedIn →](https://www.linkedin.com/pulse/gemma-4-era-why-local-sovereign-agentic-ai-just-changed-majid-nisar-m3ric)*
 
-*THE SYSTEM LAYER publishes weekly. Subscribe on [LinkedIn](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/).*
+*The System Layer publishes weekly. Subscribe on [LinkedIn](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/).*

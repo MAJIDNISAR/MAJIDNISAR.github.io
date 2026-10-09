@@ -451,3 +451,7 @@
   .nl-showcase:hover, .nl-card:hover { transform: none; }
   .nl-showcase__badge::before { animation: none; }
 }
+
+.nl-hero__title--caps {
+  text-transform: uppercase;
+}

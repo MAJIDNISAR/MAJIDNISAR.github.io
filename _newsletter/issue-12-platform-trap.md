@@ -3,7 +3,7 @@ title: "The Platform Trap — Why Scaling Products Break the Systems That Built 
 subtitle: "Products optimize for features. Platforms have to optimize for interactions, dependencies, and ecosystems."
 date: 2026-03-23
 issue_number: 12
-newsletter_name: "THE SYSTEM LAYER"
+newsletter_name: "The System Layer"
 permalink: /newsletter/issue-12-platform-trap/
 linkedin_url: "https://www.linkedin.com/pulse/issue-12-platform-trap-why-scaling-products-break-systems-majid-nisar-l0zrc"
 header-logo: "/assets/img/newsletters/system-layer/logo.png"
@@ -32,4 +32,4 @@ Organizations often miss the moment where their product stops being simple. The 
 
 *[Read the full issue on LinkedIn →](https://www.linkedin.com/pulse/issue-12-platform-trap-why-scaling-products-break-systems-majid-nisar-l0zrc)*
 
-*THE SYSTEM LAYER publishes weekly. Subscribe on [LinkedIn](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/).*
+*The System Layer publishes weekly. Subscribe on [LinkedIn](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/).*

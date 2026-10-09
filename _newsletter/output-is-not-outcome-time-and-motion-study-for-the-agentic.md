@@ -5,7 +5,7 @@ date: "2026-10-07"
 last-updated: "2026-10-07"
 permalink: "/newsletter/output-is-not-outcome-time-and-motion-study-for-the-agentic/"
 layer: "systems"
-newsletter_name: "THE SYSTEM LAYER"
+newsletter_name: "The System Layer"
 linkedin_url: "https://www.linkedin.com/pulse/output-outcome-time-motion-study-agentic-era-majid-nisar-qvgbc"
 header-logo: "/assets/img/newsletters/system-layer/logo.png"
 cover-img: "/assets/img/newsletters/system-layer/output-is-not-outcome-time-and-motion-study-for-the-agentic.jpg"
@@ -113,4 +113,4 @@ What is the oldest item waiting in your system right now, and who is it waiting 
 
 *[Read the full issue on LinkedIn →](https://www.linkedin.com/pulse/output-outcome-time-motion-study-agentic-era-majid-nisar-qvgbc)*
 
-*THE SYSTEM LAYER publishes on LinkedIn. Subscribe [here](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/).*
+*The System Layer publishes on LinkedIn. Subscribe [here](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/).*

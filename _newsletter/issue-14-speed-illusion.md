@@ -3,7 +3,7 @@ title: "The Speed Illusion — Why Moving Faster Can Slow You Down"
 subtitle: "Speed measures motion, not direction."
 date: 2026-04-03
 issue_number: 14
-newsletter_name: "THE SYSTEM LAYER"
+newsletter_name: "The System Layer"
 permalink: /newsletter/issue-14-speed-illusion/
 linkedin_url: "https://www.linkedin.com/pulse/issue-14-speed-illusion-why-moving-faster-can-slow-you-majid-nisar-d6wkc"
 header-logo: "/assets/img/newsletters/system-layer/logo.png"
@@ -32,4 +32,4 @@ Execution quality is not just about pace. It is about whether momentum is couple
 
 *[Read the full issue on LinkedIn →](https://www.linkedin.com/pulse/issue-14-speed-illusion-why-moving-faster-can-slow-you-majid-nisar-d6wkc)*
 
-*THE SYSTEM LAYER publishes weekly. Subscribe on [LinkedIn](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/).*
+*The System Layer publishes weekly. Subscribe on [LinkedIn](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/).*

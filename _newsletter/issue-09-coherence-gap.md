@@ -3,7 +3,7 @@ title: "The Coherence Gap — Why Strategy Breaks Between Layers"
 subtitle: "The distance between what leadership says and what the team does"
 date: 2026-02-23
 issue_number: 9
-newsletter_name: "THE SYSTEM LAYER"
+newsletter_name: "The System Layer"
 permalink: /newsletter/issue-09-coherence-gap/
 linkedin_url: "https://www.linkedin.com/pulse/issue-9-coherence-gap-why-strategy-breaks-between-layers-majid-nisar-azxcc"
 header-logo: "/assets/img/newsletters/system-layer/logo.png"
@@ -54,4 +54,4 @@ The answers to those questions — stated clearly, in writing, in the language o
 
 *[Read the full issue on LinkedIn →](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/)*
 
-*THE SYSTEM LAYER publishes weekly. Subscribe on [LinkedIn](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/).*
+*The System Layer publishes weekly. Subscribe on [LinkedIn](https://www.linkedin.com/newsletters/the-system-layer-7422728207159865345/).*
