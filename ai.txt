@@ -51,7 +51,7 @@ Allow: /work-with-me/
 Allow: /contact/
 
 # Contact information for AI companies
-Contact: majidnisar@majidnisar.com
+Contact: majidnisar@gmail.com
 
 # Website owner preferences
 # - Public content may be used for AI training

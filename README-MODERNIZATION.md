@@ -332,7 +332,7 @@ debug: true
 
 For issues or questions:
 - **GitHub Issues**: Create an issue in the repository
-- **Email**: MAJIDNISAR@MAJIDNISAR.com
+- **Email**: majidnisar@gmail.com
 - **LinkedIn**: [Majid Nisar](https://linkedin.com/in/MAJIDNISAR)
 
 ## 📄 License

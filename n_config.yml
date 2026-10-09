@@ -73,7 +73,7 @@ title-img: "/assets/img/avatar.jpg"
 # Select the social network links that you want to show in the footer.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "MAJIDNISAR@MAJIDNISAR.com"
+  email: "majidnisar@gmail.com"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
   facebook: MAJIDNISAR
   github: MAJIDNISAR
